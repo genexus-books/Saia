@@ -1,3 +1,12 @@
+Table of contents
+=================
+
+* [Overview](#gbrain-the-ai-brain-for-your-enterprise-applications)
+* [Playground](#gbrain-playgroud)
+* [API Reference](#gbrain-api-reference)
+* [Backoffice](#gbrain-backoffice)
+
+
 # GBrain: the AI Brain for Your Enterprise Applications
 
 Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
@@ -78,3 +87,9 @@ You can create a complete regression test suite with the new version of a new as
 
 Access to GBrain's various layers is generally programmable using any programming language. Access is granted via access tokens per project or organization. 
 In addition to programmatic interfaces, you can quickly create Playgrounds for demonstrating AI technology capabilities. 
+
+# GBrain Playgroud
+
+# GBrain API Reference
+
+# GBrain Backoffice
