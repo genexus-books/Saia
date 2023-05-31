@@ -3,7 +3,7 @@ Table of contents
 
 * [Overview](#gbrain-the-ai-brain-for-your-enterprise-applications)
 * [Playground](#playground)
-* [API Reference](#api-reference)
+* [API Reference](APIReference.md)
 * [Backoffice](#backoffice)
 
 
