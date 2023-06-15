@@ -1,78 +1,79 @@
 # GBrain Assistants API
 
-This API allows you to interact with GBrain Assistants.
+Version: 20230607171556
 
-## Endpoints
+## Introduction
+This API provides endpoints to interact with GBrain Assistants.
 
-| Path              | Description             |
-| ----------------- | ----------------------- |
-| POST /assistant    | Create a new assistant  |
-| POST /assistantChat| Send a chat message     |
+## Table of Contents
+- [Assistant](#assistant)
+- [Assistant Chat](#assistant-chat)
 
-## POST /assistant
+## Assistant
+- Endpoint: `POST /assistant`
+- Description: This endpoint allows you to send a request to the GBrain assistant.
+- Request Body:
 
-Create a new assistant.
+  | Parameter    | Type   | Description   |
+  | ------------ | ------ | ------------- |
+  | assistant    | string |               |
+  | prompt       | string |               |
+  | revision     | integer|               |
+  | revisionName | string |               |
 
-### Description
+- Response:
 
-This endpoint allows you to create a new assistant.
+  ```json
+  {
+    "response": "Assistant response"
+  }
+  ```
 
-### Request Body
-
-| Name                  | Type      | Description                    |
-| --------------------- | --------- | ------------------------------ |
-| assistant__postInput  | Object    | The input data for the assistant creation. |
-
-### Response
-
-Sample Response:
-```json
-{
-  "id": "3b29b51e-1266-4460-ae70-44288a8d0282",
-  "name": "My Assistant",
-  "status": "active"
-}
-```
-
-Sample CURL Request:
-```bash
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistant \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "name": "My Assistant"
+- Sample CURL:
+  ```shell
+  curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistant -H "Content-Type: application/json" -d '{
+    "assistant": "Assistant name",
+    "prompt": "Prompt text",
+    "revision": 1,
+    "revisionName": "Revision name"
   }'
-```
+  ```
 
-## POST /assistantChat
+## Assistant Chat
+- Endpoint: `POST /assistantChat`
+- Description: This endpoint allows you to have a conversation with the GBrain assistant.
+- Request Body:
 
-Send a chat message to an assistant.
+  | Parameter    | Type   | Description         |
+  | ------------ | ------ | ------------------- |
+  | assistant    | string |                     |
+  | messages     | array  | Chat Request Data   |
+  | revision     | integer|                     |
+  | revisionName | string |                     |
 
-### Description
+- Response:
 
-This endpoint allows you to send a chat message to an existing GBrain assistant.
+  ```json
+  {
+    "response": "Assistant response"
+  }
+  ```
 
-### Request Body
-
-| Name                      | Type      | Description                           |
-| ------------------------- | --------- | ------------------------------------- |
-| assistantChat__postInput  | Object    | The input data for the chat message.   |
-
-### Response
-
-Sample Response:
-```json
-{
-  "message": "Hello!",
-  "sender": "user"
-}
-```
-
-Sample CURL Request:
-```bash
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistantChat \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "message": "Hello!",
-    "sender": "user"
+- Sample CURL:
+  ```shell
+  curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistantChat -H "Content-Type: application/json" -d '{
+    "assistant": "Assistant name",
+    "messages": [
+      {
+        "message": "Hello",
+        "role": "User"
+      },
+      {
+        "message": "Hi!",
+        "role": "Assistant"
+      }
+    ],
+    "revision": 1,
+    "revisionName": "Revision name"
   }'
-```
+  ```
