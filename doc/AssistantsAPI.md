@@ -1,74 +1,78 @@
 # GBrain Assistants API
 
-This API allows you to interact with GBrain Assistants. GBrain Assistants are intelligent virtual assistants that can perform various tasks based on your input.
-
-## What is a REST API?
-
-A REST API (Representational State Transfer) is an architectural style for designing networked applications. It is based on a set of principles that allow clients to interact with resources on a server through standard HTTP methods such as GET, POST, PUT, and DELETE. REST APIs are widely used in web development and are particularly suited for building scalable and flexible systems.
+This API allows you to interact with GBrain Assistants.
 
 ## Endpoints
 
-### /assistant
+| Path              | Description             |
+| ----------------- | ----------------------- |
+| POST /assistant    | Create a new assistant  |
+| POST /assistantChat| Send a chat message     |
 
-This endpoint allows you to interact with a GBrain Assistant by sending a POST request. The assistant will perform an action based on the provided input.
+## POST /assistant
 
-#### Parameters
+Create a new assistant.
 
-| Name    | Type          | Description                               |
-|---------|---------------|-------------------------------------------|
-| Request | application/json | The JSON object containing the request data. |
+### Description
 
-#### Response Example
+This endpoint allows you to create a new assistant.
 
+### Request Body
+
+| Name                  | Type      | Description                    |
+| --------------------- | --------- | ------------------------------ |
+| assistant__postInput  | Object    | The input data for the assistant creation. |
+
+### Response
+
+Sample Response:
 ```json
 {
-  "status": "success",
-  "message": "Action performed successfully",
-  "data": {
-    "result": "Some result"
-  }
+  "id": "3b29b51e-1266-4460-ae70-44288a8d0282",
+  "name": "My Assistant",
+  "status": "active"
 }
 ```
 
-#### CURL Example
-
+Sample CURL Request:
 ```bash
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistant -H "Content-Type: application/json" -d '{"request": "Some request"}'
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistant \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "My Assistant"
+  }'
 ```
 
-### /assistantChat
+## POST /assistantChat
 
-This endpoint allows you to have a chat conversation with a GBrain Assistant by sending a POST request. The assistant will respond to your messages accordingly.
+Send a chat message to an assistant.
 
-#### Parameters
+### Description
 
-| Name    | Type          | Description                               |
-|---------|---------------|-------------------------------------------|
-| Request | application/json | The JSON object containing the chat messages. |
+This endpoint allows you to send a chat message to an existing GBrain assistant.
 
-#### Response Example
+### Request Body
 
+| Name                      | Type      | Description                           |
+| ------------------------- | --------- | ------------------------------------- |
+| assistantChat__postInput  | Object    | The input data for the chat message.   |
+
+### Response
+
+Sample Response:
 ```json
 {
-  "status": "success",
-  "message": "Chat conversation completed",
-  "data": {
-    "conversation": [
-      {
-        "message": "Hello",
-        "response": "Hi, how can I assist you?"
-      },
-      {
-        "message": "Can you tell me the weather tomorrow?",
-        "response": "Sure, the weather tomorrow will be sunny with a high of 25°C."
-      }
-    ]
-  }
+  "message": "Hello!",
+  "sender": "user"
 }
 ```
 
-#### CURL Example
-
+Sample CURL Request:
 ```bash
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistantChat -H "Content-Type: application/json" -d '{"message": "Hello"}'
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistantChat \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "message": "Hello!",
+    "sender": "user"
+  }'
 ```
