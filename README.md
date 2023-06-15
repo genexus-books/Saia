@@ -3,8 +3,8 @@ Table of contents
 
 * [Overview](#gbrain-the-ai-brain-for-your-enterprise-applications)
 * [Playground](#playground)
-* [API Reference](APIReference.md)
-* [Backoffice](Backoffice.md)
+* [API Reference](doc/APIReference.md)
+* [Backoffice](doc/Backoffice.md)
 
 
 # GBrain: the AI Brain for Your Enterprise Applications
