@@ -1,16 +1,16 @@
 ## GBrain Proxy AI API
 
-GBrain Proxy AI is an observability tool designed for businesses that interact with AI. It provides a unified view of models, enabling traceability of their usage. It is easy to use and can be integrated with multiple AI providers, allowing centralized access without the need for specific API keys for each provider.
+GBrain Proxy AI is a powerful observability tool designed for businesses that leverage artificial intelligence. It allows organizations to gain a unified view of all their AI models, ensuring full traceability of their usage and providing valuable metrics to improve AI performance over time. 
 
-### What is it used for?
+With minimal adjustments to existing API requests, this tool eliminates the need for individual API keys for all providers. Instead, it utilizes GBrain-specific APITokens that are managed at the organization and project levels, providing seamless integration with multiple AI providers and simple centralized access.
 
-With minimal changes to the traditional invocation of each provider's APIs, this component eliminates the need for specific API keys for each provider, streamlining the usage through a GBrain-specific APIToken. These APITokens are linked at the organization and project levels, allowing, among other things, the tracking of usage costs at those levels.
+Some of the key features of GBrain Proxy AI include:
 
-Some of its features include:
+- Request logging: GBrain Proxy AI generates comprehensive logs detailing all requests sent to AI providers, including both inputs and outputs.
+- Request latency: The response time for each request is measured, providing valuable insights for understanding performance and identifying potential issues as early as possible.
+- Cost monitoring: With GBrain Proxy AI organizations can easily track usage costs at an organization and project level, so that they can monitor and optimize their AI workloads.
 
-- Request logging: GBrain Http Proxy generates logs of all requests sent to AI providers, including the inputs and outputs.
-- Request latency: The time consumed in responses is measured, providing valuable information for understanding the performance of the used models and identifying issues early on.
-- Cost monitoring: The tool records the usage costs of each AI model.
+By leveraging the powerful features provided by GBrain Proxy AI, organizations can dramatically improve their AI workflows, optimize costs, and ultimately drive greater business success
 
 ### How to use it?
 
