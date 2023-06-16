@@ -1,0 +1,339 @@
+openapi: 3.0.0
+info:
+  title: "GBrain Assistant Api"
+  version: "20230615180940"
+servers:
+  - url: https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant
+paths:
+  /text/begin:
+    post:
+      tags:
+        - GBrain.API.v1  
+      operationId: "GBrain.API.v1.AssistantApi.assistantAsync__post"
+      summary: "assistantAsync__post"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/assistantAsync__postInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GBrain.API.v1.GenericQueryResponse"  
+
+        404:
+          description: "Not found"
+
+  /text:
+    post:
+      tags:
+        - GBrain.API.v1  
+      operationId: "GBrain.API.v1.AssistantApi.assistant__post"
+      summary: "assistant__post"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/assistant__postInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GBrain.API.v1.GenericQueryResponse"  
+
+        404:
+          description: "Not found"
+
+  /chat:
+    post:
+      tags:
+        - GBrain.API.v1  
+      operationId: "GBrain.API.v1.AssistantApi.assistantChat__post"
+      summary: "assistantChat__post"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/assistantChat__postInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GBrain.API.v1.GenericQueryResponse"  
+
+        404:
+          description: "Not found"
+
+  /text2img:
+    post:
+      tags:
+        - GBrain.API.v1  
+      operationId: "GBrain.API.v1.AssistantApi.text2img__post"
+      summary: "text2img__post"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/text2img__postInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GBrain.API.v1.Images.GenerateImageResponse"  
+
+        404:
+          description: "Not found"
+
+  /request/{requestId}/status:
+    get:
+      tags:
+        - GBrain.API.v1  
+      operationId: "GBrain.API.v1.AssistantApi.status"
+      summary: "status"
+      parameters:
+        - name: "requestId"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GBrain.API.v1.Images.GenerateImageResponse"  
+
+        404:
+          description: "Not found"
+
+  /request/{requestId}/cancel:
+    post:
+      tags:
+        - GBrain.API.v1  
+      operationId: "GBrain.API.v1.AssistantApi.cancel__post"
+      summary: "cancel__post"
+      parameters:
+        - name: "requestId"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/cancel__postInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GBrain.API.v1.CancelResponse"  
+
+        404:
+          description: "Not found"
+
+components:
+  schemas:
+    assistantAsync__postInput:
+      properties:
+        assistant:
+          type: "string"
+        prompt:
+          type: "string"
+        revision:
+          type: "integer"
+          format: "int32"
+        revisionName:
+          type: "string"
+
+    assistant__postInput:
+      properties:
+        assistant:
+          type: "string"
+        prompt:
+          type: "string"
+        revision:
+          type: "integer"
+          format: "int32"
+        revisionName:
+          type: "string"
+
+    assistantChat__postInput:
+      properties:
+        assistant:
+          type: "string"
+        messages:
+          description: Chat Request Data
+          type: array
+          items:
+            $ref: "#/components/schemas/GBrain.API.v1.ChatRequestData_ChatRequestDataItem"
+        revision:
+          type: "integer"
+          format: "int32"
+        revisionName:
+          type: "string"
+
+    text2img__postInput:
+      properties:
+        prompt:
+          type: "string"
+
+
+    cancel__postInput:
+      properties:
+        requestId:
+          type: "string"
+          format: "uuid"
+  
+    GBrain.API.v1.GenericQueryResponse:
+      properties:
+        requestId:
+          description: Request Id
+          type: "string"
+          format: "uuid"
+        error:
+          description: Response Error
+          $ref: "#/components/schemas/GBrain.API.v1.ResponseError"
+        success:
+          description: success
+          type: "boolean"
+        providerName:
+          description: Provider Name
+          type: "string"
+        providerResponse:
+          description: provider Response
+          type: "string"
+        progress:
+          description: progress
+          type: "integer"
+          format: "int32"
+        timestamp:
+          description: timestamp
+          type: "string"
+          format: "date-time"
+        status:
+          description: status
+          type: "string"
+        text:
+          description: text
+          type: "string"
+
+
+
+    GBrain.API.v1.ChatRequestData_ChatRequestDataItem:
+      properties:
+        role:
+          description: role
+          type: "string"
+        content:
+          description: content
+          type: "string"
+
+
+
+    GBrain.API.v1.Images.GenerateImageResponse:
+      properties:
+        requestId:
+          description: Request Id
+          type: "string"
+          format: "uuid"
+        error:
+          description: Response Error
+          $ref: "#/components/schemas/GBrain.API.v1.ResponseError"
+        providerName:
+          description: Provider Name
+          type: "string"
+        providerResponse:
+          description: provider Response
+          type: "string"
+        progress:
+          description: progress
+          type: "integer"
+          format: "int32"
+        timestamp:
+          description: timestamp
+          type: "string"
+          format: "date-time"
+        status:
+          description: status
+          type: "string"
+        hotlink:
+          description: hotlink
+          type: "boolean"
+
+        output:
+          type: array
+          items:
+            description: outputItem
+            $ref: "#/components/schemas/GBrain.API.v1.Images.GenerateImageResponse.output_outputItem"
+
+
+    GBrain.API.v1.Images.GenerateImageResponse.output_outputItem:
+      properties:
+        image_url:
+          description: image_url
+          type: "string"
+
+
+      x-gx-level: "GenerateImageResponse"
+
+    GBrain.API.v1.CancelResponse:
+      properties:
+        requestId:
+          description: Request Id
+          type: "string"
+          format: "uuid"
+        error:
+          description: Response Error
+          $ref: "#/components/schemas/GBrain.API.v1.ResponseError"
+        providerResponse:
+          description: provider Response
+          type: "string"
+        timestamp:
+          description: timestamp
+          type: "string"
+          format: "date-time"
+        status:
+          description: status
+          type: "string"
+
+
+
+    GBrain.API.v1.ResponseError:
+      properties:
+        code:
+          description: Error Code
+          type: "integer"
+          format: "int32"
+        message:
+          description: Error Message
+          type: "string"
+
+
+
+ 
