@@ -1,79 +1,261 @@
-# GBrain Assistants API
+# GBrain Assistant Api
 
-Version: 20230607171556
+This is the documentation for the GBrain Assistant API.
 
-## Introduction
-This API provides endpoints to interact with GBrain Assistants.
+## Endpoints
 
-## Table of Contents
-- [Assistant](#assistant)
-- [Assistant Chat](#assistant-chat)
+| Path | Description |
+|---|---|
+| POST /text/begin | Begins a text conversation with the GBrain Assistant. |
+| POST /text | Sends a text prompt to the GBrain Assistant. |
+| POST /chat | Sends a chat request to the GBrain Assistant. |
+| POST /text2img | Generates an image based on the given text. |
+| GET /request/{requestId}/status | Retrieves the status of a request. |
+| POST /request/{requestId}/cancel | Cancels a request. |
 
-## Assistant
-- Endpoint: `POST /assistant`
-- Description: This endpoint allows you to send a request to the GBrain assistant.
-- Request Body:
+## POST /text/begin
 
-  | Parameter    | Type   | Description   |
-  | ------------ | ------ | ------------- |
-  | assistant    | string |               |
-  | prompt       | string |               |
-  | revision     | integer|               |
-  | revisionName | string |               |
+Begins a text conversation with the GBrain Assistant.
 
-- Response:
+### Parameters
 
-  ```json
-  {
-    "response": "Assistant response"
-  }
-  ```
+| Name | Type | Description |
+|---|---|---|
+| assistant | string | The name of the assistant. |
+| prompt | string | The text prompt for the assistant. |
+| revision | integer | The revision number. |
+| revisionName | string | The name of the revision. |
 
-- Sample CURL:
-  ```shell
-  curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistant -H "Content-Type: application/json" -d '{
-    "assistant": "Assistant name",
-    "prompt": "Prompt text",
-    "revision": 1,
-    "revisionName": "Revision name"
+### Response
+
+```json
+{
+  "requestId": "string",
+  "error": {
+    "code": 0,
+    "message": "string"
+  },
+  "success": true,
+  "providerName": "string",
+  "providerResponse": "string",
+  "progress": 0,
+  "timestamp": "string",
+  "status": "string",
+  "text": "string"
+}
+```
+
+### CURL Example
+
+```shell
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text/begin \
+  -H "Content-Type: application/json" \
+  -d '{
+    "assistant": "string",
+    "prompt": "string",
+    "revision": 0,
+    "revisionName": "string"
   }'
-  ```
+```
 
-## Assistant Chat
-- Endpoint: `POST /assistantChat`
-- Description: This endpoint allows you to have a conversation with the GBrain assistant.
-- Request Body:
+## POST /text
 
-  | Parameter    | Type   | Description         |
-  | ------------ | ------ | ------------------- |
-  | assistant    | string |                     |
-  | messages     | array  | Chat Request Data   |
-  | revision     | integer|                     |
-  | revisionName | string |                     |
+Sends a text prompt to the GBrain Assistant.
 
-- Response:
+### Parameters
 
-  ```json
-  {
-    "response": "Assistant response"
-  }
-  ```
+| Name | Type | Description |
+|---|---|---|
+| assistant | string | The name of the assistant. |
+| prompt | string | The text prompt for the assistant. |
+| revision | integer | The revision number. |
+| revisionName | string | The name of the revision. |
 
-- Sample CURL:
-  ```shell
-  curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1/assistantChat -H "Content-Type: application/json" -d '{
-    "assistant": "Assistant name",
+### Response
+
+```json
+{
+  "requestId": "string",
+  "error": {
+    "code": 0,
+    "message": "string"
+  },
+  "success": true,
+  "providerName": "string",
+  "providerResponse": "string",
+  "progress": 0,
+  "timestamp": "string",
+  "status": "string",
+  "text": "string"
+}
+```
+
+### CURL Example
+
+```shell
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text \
+  -H "Content-Type: application/json" \
+  -d '{
+    "assistant": "string",
+    "prompt": "string",
+    "revision": 0,
+    "revisionName": "string"
+  }'
+```
+
+## POST /chat
+
+Sends a chat request to the GBrain Assistant.
+
+### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| assistant | string | The name of the assistant. |
+| messages | array | The chat request data. |
+| revision | integer | The revision number. |
+| revisionName | string | The name of the revision. |
+
+### Response
+
+```json
+{
+  "requestId": "string",
+  "error": {
+    "code": 0,
+    "message": "string"
+  },
+  "success": true,
+  "providerName": "string",
+  "providerResponse": "string",
+  "progress": 0,
+  "timestamp": "string",
+  "status": "string",
+  "text": "string"
+}
+```
+
+### CURL Example
+
+```shell
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "assistant": "string",
     "messages": [
       {
-        "message": "Hello",
-        "role": "User"
-      },
-      {
-        "message": "Hi!",
-        "role": "Assistant"
+        "role": "string",
+        "content": "string"
       }
     ],
-    "revision": 1,
-    "revisionName": "Revision name"
+    "revision": 0,
+    "revisionName": "string"
   }'
-  ```
+```
+
+## POST /text2img
+
+Generates an image based on the given text.
+
+### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| prompt | string | The text to generate the image from. |
+
+### Response
+
+```json
+{
+  "requestId": "string",
+  "error": {
+    "code": 0,
+    "message": "string"
+  },
+  "providerName": "string",
+  "providerResponse": "string",
+  "progress": 0,
+  "timestamp": "string",
+  "status": "string",
+  "hotlink": true,
+  "output": [
+    {
+      "image_url": "string"
+    }
+  ]
+}
+```
+
+### CURL Example
+
+```shell
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text2img \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "string"
+  }'
+```
+
+## GET /request/{requestId}/status
+
+Retrieves the status of a request.
+
+### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| requestId | string (uuid) | The ID of the request. |
+
+### Response
+
+```json
+{
+  "requestId": "string",
+  "error": {
+    "code": 0,
+    "message": "string"
+  },
+  "providerName": "string",
+  "providerResponse": "string",
+  "progress": 0,
+  "timestamp": "string",
+  "status": "string"
+}
+```
+
+### CURL Example
+
+```shell
+curl -X GET https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/request/{requestId}/status
+```
+
+## POST /request/{requestId}/cancel
+
+Cancels a request.
+
+### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| requestId | string (uuid) | The ID of the request. |
+
+### Response
+
+```json
+{
+  "requestId": "string",
+  "error": {
+    "code": 0,
+    "message": "string"
+  },
+  "providerResponse": "string",
+  "timestamp": "string",
+  "status": "string"
+}
+```
+
+### CURL Example
+
+```shell
+curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/request/{requestId}/cancel
+```
