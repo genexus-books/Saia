@@ -20,9 +20,9 @@ By understanding the functionality of each layer, you can better leverage the AP
 ![image](https://github.com/genexus-books/GBrain/assets/33163715/c11cd9a3-9a71-46b9-a4f6-625058293972)
 
 Follow these links to see more details about each API layer:
-* [Proxy AI API](doc/ProxyAIAPI.md)
-* [Assistants API](doc/AssistantsAPI.md)
-* [Search and Chat API](doc/SearchAndChatAPI.md)
+* [Proxy AI API](ProxyAIAPI.md)
+* [Assistants API](AssistantsAPI.md)
+* [Search and Chat API](SearchAndChatAPI.md)
 
 ## Authentication
 In order to use our API, you need to authenticate each request using API Tokens. These tokens are managed in GBrain [backoffice](https://github.com/genexus-books/GBrain/blob/main/doc/Backoffice.md) and uniquely identify the sender of the request.
