@@ -12,50 +12,70 @@ Some of the key features of GBrain Proxy AI include:
 
 By leveraging the powerful features provided by GBrain Proxy AI, organizations can dramatically improve their AI workflows, optimize costs, and ultimately drive greater business success
 
+As a technical writer, I would like to suggest the following markdown improvements:
+
 ### How to use it?
 
 Incorporating the use of GBrain Http Proxy does not require programming-level changes. The modifications simply involve altering two elements present in each request:
 
-The BaseURL used to invoke AI providers should now reference the GBrain component. The URL format to be used will be: "https://beta.pia.genexus.dev/api/{AIProviderName}/{hostRelativeProviderURL}"
+1. The `BaseURL` used to invoke AI providers should now reference the GBrain component. The URL format to be used will be: 
 
-The Authorization header present in each request should be replaced with the GBrain APIToken provided beforehand (without the need to specify the provider being invoked).
+    ```
+    "https://beta.pia.genexus.dev/api/{AIProviderName}/{hostRelativeProviderURL}"
+    ```
+
+2. The `Authorization` header present in each request should be replaced with the GBrain `APIToken` provided beforehand (without the need to specify the provider being invoked).
 
 The response received from the call will be the same as if directly invoking the provider.
 
-Example 1: If the original URL being invoked was:
+#### **Examples:**
 
-"https://api.openai.com/v1/chat/completions"
+1. If the original URL being invoked was:
 
-To use GBrain Http Proxy, it should be invoked as:
+    ```
+    "https://api.openai.com/v1/chat/completions"
+    ```
 
-"https://beta.pia.genexus.dev/api/openai/v1/chat/completions"
+    To use GBrain Http Proxy, it should be invoked as:
 
-Example 2: For the original URL:
+    ```
+    "https://beta.pia.genexus.dev/api/openai/v1/chat/completions"
+    ```
 
-"https://api.replicate.com/v1/predictions"
+2. For the original URL:
 
-Using GBrain Http Proxy, it would be:
+    ```
+    "https://api.replicate.com/v1/predictions"
+    ```
 
-"https://beta.pia.genexus.dev/api/replicate/v1/predictions"
+    Using GBrain Http Proxy, it should be:
 
-Example 3: cURL specification for OpenAI (traditional):
-```
-curl https://api.openai.com/v1/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $OPENAI_API_KEY" \
-  -d '{
-    "model": "gpt-3.5-turbo",
-    "messages": [{"role": "user", "content": "Hello!"}]
-  }'
-  ```
-  
-  Using GBrain Proxy AI
-  ```
-  curl https://beta.pia.genexus.dev/api/openai/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: $GBRAIN_APITOKEN" \
-  -d '{
-    "model": "gpt-3.5-turbo",
-    "messages": [{"role": "user", "content": "Hello!"}]
-  }'
-  ```
+    ```
+    "https://beta.pia.genexus.dev/api/replicate/v1/predictions"
+    ```
+
+3. **cURL specification for OpenAI (traditional):**
+
+    ```shell
+    curl https://api.openai.com/v1/completions \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $OPENAI_API_KEY" \
+      -d '{
+        "model": "gpt-3.5-turbo",
+        "messages": [{"role": "user", "content": "Hello!"}]
+      }'
+    ```
+
+   **Using GBrain Proxy AI:**
+
+    ```shell
+    curl https://beta.pia.genexus.dev/api/openai/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -H "Authorization: $GBRAIN_APITOKEN" \
+      -d '{
+        "model": "gpt-3.5-turbo",
+        "messages": [{"role": "user", "content": "Hello!"}]
+      }'
+    ``` 
+
+By following the above steps, you can easily integrate GBrain Http Proxy into your application and manage your AI models with ease.
