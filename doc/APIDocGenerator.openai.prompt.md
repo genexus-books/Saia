@@ -17,3 +17,11 @@ Follow these criteria:
 - For each endpoint generate a sample snippet code for the response.
 - For each endpoint generate a sample CURL snippet code.
 ```
+
+# How to use it
+
+Using the gpt-3.5-turbo-16K model from OpenAI you must set the previous prompt for the System rol and the for the User rol give the command "Create the documentation for this OpenAPI description:" followed by all the yaml file content that describe your API.
+
+The settings used with this prompt for this model were the following
+
+![image](https://github.com/genexus-books/GBrain/assets/33163715/9bf2423e-e4e5-4007-8672-4d4a9e83f30a)
