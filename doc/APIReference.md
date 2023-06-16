@@ -7,9 +7,9 @@ Table of contents
 * [Authentication ](#authentication)
 * [Errors ](#errors)
 * [Versioning ](#versioning)
-* [Proxy AI API](doc/ProxyAIAPI.md)
-* [Assistants API](doc/AssistantsAPI.md)
-* [Search and Chat API](doc/SearchAndChatAPI.md)
+* [Proxy AI API](ProxyAIAPI.md)
+* [Assistants API](AssistantsAPI.md)
+* [Search and Chat API](SearchAndChatAPI.md)
 
 
 # Introduction
