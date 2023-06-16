@@ -10,9 +10,7 @@ Some of the key features of GBrain Proxy AI include:
 - Request latency: The response time for each request is measured, providing valuable insights for understanding performance and identifying potential issues as early as possible.
 - Cost monitoring: With GBrain Proxy AI organizations can easily track usage costs at an organization and project level, so that they can monitor and optimize their AI workloads.
 
-By leveraging the powerful features provided by GBrain Proxy AI, organizations can dramatically improve their AI workflows, optimize costs, and ultimately drive greater business success
-
-As a technical writer, I would like to suggest the following markdown improvements:
+By leveraging the powerful features provided by GBrain Proxy AI, organizations can dramatically improve their AI workflows, optimize costs, and ultimately drive greater business success.
 
 ### How to use it?
 
