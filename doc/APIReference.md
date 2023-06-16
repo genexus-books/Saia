@@ -10,6 +10,7 @@ Table of contents
 * [Proxy AI API](ProxyAIAPI.md)
 * [Assistants API](AssistantsAPI.md)
 * [Search and Chat API](SearchAndChatAPI.md)
+* [Organization API](OrganizationAPI.md)
 
 
 # Introduction
