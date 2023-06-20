@@ -11,8 +11,7 @@ Table of contents
    * [Creating a Chat Assistant](#creating-a-chat-assistant)
 * [Search domains](#search-domains)
 * [Observability](#observability)
-  *[Dashboard](#dashboard) 
-  *[Requests](#requests)   
+  * [Requests](#requests)   
 * [API Tokens](#api-tokens)
 
 ## Introduction
