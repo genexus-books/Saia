@@ -44,6 +44,25 @@ You have the option to set a specific project as the active project. This featur
 Upon setting a project as active, all subsequent actions and filters within the GBrain backoffice will be applied specifically to that project. 
 
 ## Members
+The Members option enables you to add new members to the selected project. Adding members allows you to grant individuals access and involvement in the project's activities. To invite a new member, you only need to specify their email address. 
+
+To add members to a project, follow the steps below:
+
+1. Access the GBrain backoffice interface and log in with your organization administrator credentials.
+
+2. Once logged in, select the project to which you want to add members.
+
+4. Go to "Members" option.
+
+5. Press "Add Member" button.
+
+6. Enter the email address of the user you wish to invite as a new member.
+
+7. After entering the email address, click on the "Invite Member" to send the invitation.
+
+The system will send an invitation email to the specified user, prompting them to join the project. Once the invited user accepts the invitation, they will gain access to the project.
+
+Note: Make sure to provide the correct email address of the user you wish to invite.
 
 ## Assistants
 
