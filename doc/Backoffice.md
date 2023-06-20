@@ -11,6 +11,8 @@ Table of contents
    * [Creating a Chat Assistant](#creating-a-chat-assistant)
 * [Search domains](#search-domains)
 * [Observability](#observability)
+  *[Dashboard](#dashboard) 
+  *[Requests](#requests)   
 * [API Tokens](#api-tokens)
 
 ## Introduction
@@ -118,6 +120,20 @@ Note: When creating prompt or chat assistants, ensure that the instructions, pro
 ## Search domains
 
 ## Observability
+GBrain stores and tracks every request made through its API layers, providing organizations with complete visibility into the usage of assistants, AI models, and the associated cost for each request. This allows organizations to monitor and analyze resource utilization, make informed decisions about resource allocation and optimize usage for cost-efficiency. 
+
+With clear visibility into both usage and cost, organizations can effectively manage their AI-driven workflows, control expenses, and maximize their return on investment. 
+
+By leveraging these features, organizations can maintain control over their AI infrastructure, identify areas for improvement, and make data-driven decisions to enhance operational efficiency.
+
+### Requests
+In the Requests options of GBrain, you have access to a comprehensive trace that provides complete observability for each request made. 
+
+The trace allows you to easily filter requests by model, assistant, API token, datetime range, and status, enabling you to quickly identify specific requests of interest. Furthermore, by clicking on the Module column for a particular request, you can access detailed information about that request.
+
+Within the request details, you can view the input and output data, the specific model used for the request, the associated cost, and the timestamp indicating when the request was executed. This level of detail enables you to gain insights into the specific details of each request, facilitating troubleshooting, analysis, and optimization of your AI workflows.
+
+The ability to access and review the complete details of each request empowers you to understand the underlying data and processes, making it easier to identify and address any issues or areas for improvement. With this comprehensive observability feature, organizations can ensure the accuracy, efficiency, and cost-effectiveness of their AI-driven workflows in GBrain.
 
 ## API Tokens
 
