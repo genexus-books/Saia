@@ -38,6 +38,11 @@ Congratulations! You have successfully created a new project in the GBrain backo
 
 Note: It is recommended to choose project names and descriptions that accurately reflect the intended purpose and scope of the project. This facilitates better organization and improves clarity for all users involved in project management.
 
+### Set as active
+You have the option to set a specific project as the active project. This feature allows you to define which project will be used as a filter for all options that require project-specific filtering. The "Set as Active" function provides the same action as changing the project selection in the header combo containing the project list.
+
+Upon setting a project as active, all subsequent actions and filters within the GBrain backoffice will be applied specifically to that project. 
+
 ## Members
 
 ## Assistants
