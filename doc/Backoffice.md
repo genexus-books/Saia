@@ -19,6 +19,15 @@ Table of contents
 
 Welcome to GBrain backoffice. This backoffice provides organization administrators with a range of essential options to configure projects and manage key settings. In the GBrain backoffice, administrators can easily customize projects, define and test assistants, define search domains, generate API tokens, manage members, and adjust observability options. This documentation will guide you through the various features and functionalities of the GBrain backoffice.
 
+When accessing the GBrain backoffice, you will be presented with a dashboard on the home screen. This dashboard displays essential indicators related to usage and costs for the selected project. 
+
+In the header section, you can easily select the project you want to view, which then filters the information not only on the dashboard but also across all menu options under the Project section. In addition, the header provides a user menu where you can access user-specific functionalities, and a configuration menu that allows you to customize settings such as dark mode or font size.
+
+On the left side of the screen, you will find the backoffice menu, which grants access to different options based on your permission levels. This menu serves as a central navigation point, enabling you to navigate through the various features and functionalities of the GBrain backoffice.
+
+![image](https://github.com/genexus-books/GBrain/assets/33163715/3b23b14f-eec0-40a0-9013-df30ce10fdd8)
+
+
 ## Projects
 Projects are the core entities where various configurations and settings are defined. Within each project, administrators can define assistants, generate API tokens for API access, and manage document management functionalities. The project management feature allows administrators to seamlessly add, update, or delete projects within the organization. The following sections will guide developers on how to perform project-related operations within the GBrain backoffice, empowering them to efficiently manage projects and their associated settings.
 
