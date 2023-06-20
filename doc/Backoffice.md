@@ -145,4 +145,10 @@ Within the request details, you can view the input and output data, the specific
 The ability to access and review the complete details of each request empowers you to understand the underlying data and processes, making it easier to identify and address any issues or areas for improvement. With this comprehensive observability feature, organizations can ensure the accuracy, efficiency, and cost-effectiveness of their AI-driven workflows in GBrain.
 
 ## API Tokens
+API Tokens play a crucial role in executing GBrain APIs. These tokens are required to access and utilize the functionality provided by the APIs. 
 
+For each project, you have the ability to define multiple API Tokens. This allows for granular control and tracking of usage, as well as the management of access permissions for specific assistants or models available through the GBrain API.
+
+By defining API Tokens for each assistant, you can conveniently monitor the usage of assistants individually and gain insights into their performance and resource utilization. Moreover, the ability to assign API Tokens to specific projects and assistants allows for fine-grained access control, ensuring that only authorized individuals or systems can execute requests on behalf of the defined assistants or models.
+
+With this level of granularity, organizations can effectively manage access permissions, track usage patterns, and maintain control over their assistants and models within the GBrain API.
