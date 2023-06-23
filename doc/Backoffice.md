@@ -30,16 +30,18 @@ On the left side of the screen, you will find the backoffice menu, which grants 
 
 
 ## Projects
-Projects are the core entities where several configurations and settings are defined. Within each project, administrators can define assistants, generate API tokens for API access, and manage document management functionalities. The project management feature allows administrators to seamlessly add, update, or delete projects within the organization. The following sections will guide developers on how to perform project-related operations within the GBrain backoffice, empowering them to efficiently manage projects and their associated settings.
+Projects are the core entities where several configurations and settings are defined. Within each project, you can define assistants, generate API tokens for API access, and handle document management functionalities. The project management feature allows administrators to seamlessly add, update, or delete projects within the organization. 
+
+The following sections will guide you on how to perform project-related operations within the GBrain backoffice, empowering them to efficiently manage projects and their associated settings.
 
 ### Adding a project
 To define a new project in the GBrain backoffice, follow the steps below:
 
 1. Access the GBrain backoffice interface and log in with your organization administrator credentials.
 
-2. Once logged in, navigate to the "Projects" section.
+2. Once logged in, go to the "Projects" section.
 
-3. Locate the option to create a new project and click on it.
+3. Click on the Create a new project option.
 
 4. In the project creation form, provide the following information:
 
@@ -48,35 +50,35 @@ To define a new project in the GBrain backoffice, follow the steps below:
 
 5. After entering the necessary information, click on the "Confirm" button to save the project details.
 
-Congratulations! You have successfully created a new project in the GBrain backoffice. Now, you can proceed to configure assistants, define API tokens, and manage document management settings for this project.
+Congratulations! You have successfully created a new project using the GBrain backoffice. Now, you can proceed to configure assistants, define API tokens, and manage document management settings for this project.
 
 Note: It is recommended to choose project names and descriptions that accurately reflect the intended purpose and scope of the project. This facilitates better organization and improves clarity for all users involved in project management.
 
 ### Set as active
-You have the option to set a specific project as the active project. This feature allows you to define which project will be used as a filter for all options that require project-specific filtering. The "Set as Active" function provides the same action as changing the project selection in the header combo containing the project list.
+You have the option to set a specific project as the active project. This feature allows you to define which project will be used as a filter for all options that require project-specific filtering. To do so, you can select the "Set as Active" option or select a project in the combo box that contains the projects list.
 
 Upon setting a project as active, all subsequent actions and filters within the GBrain backoffice will be applied specifically to that project. 
 
 ## Members
-The Members option enables you to add new members to the selected project. Adding members allows you to grant individuals access and involvement in the project's activities. To invite a new member, you only need to specify their email address. 
+The Members option, available in the backoffice menu (located on the left side of the screen), enables you to add new members to the selected project. Adding members allows you to grant individuals access and involvement in the project's activities. 
 
-To add members to a project, follow the steps below:
+To invite a new member, you only need to specify their email address, follow the steps below:
 
 1. Access the GBrain backoffice interface and log in with your organization administrator credentials.
 
 2. Once logged in, select the project to which you want to add members.
 
-4. Go to "Members" option.
+4. Go to the "Members" option.
 
-5. Press "Add Member" button.
+5. Press the "Add Member" button.
 
-6. Enter the email address of the user you wish to invite as a new member.
+6. Enter the email address of the user you want to invite as a new member.
 
-7. After entering the email address, click on the "Invite Member" to send the invitation.
+7. Click on the "Invite Member" to send the invitation.
 
-The system will send an invitation email to the specified user, prompting them to join the project. Once the invited user accepts the invitation, they will gain access to the project.
+The system will send an invitation email to the specified user, to join the project. Once the invited user accepts the invitation, they will gain access to the project.
 
-Note: Make sure to provide the correct email address of the user you wish to invite.
+Note: Make sure to provide the correct email address of the user you want to invite.
 
 ## Assistants
 There are two types of assistants that you can define: Prompt assistants for text completion and Chat assistants for interactive conversations. This section will guide you through the process of creating both types of assistants.
