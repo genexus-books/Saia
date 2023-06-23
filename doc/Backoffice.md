@@ -16,7 +16,9 @@ Table of contents
 
 ## Introduction
 
-Welcome to GBrain backoffice. This backoffice provides organization administrators with a range of essential options to configure projects and manage key settings. In the GBrain backoffice, administrators can easily customize projects, define and test assistants, define search domains, generate API tokens, manage members, and adjust observability options. This documentation will guide you through the various features and functionalities of the GBrain backoffice.
+Welcome to GBrain backoffice. This backoffice provides organization administrators with a range of essential options to configure projects and manage key settings. Through the GBrain backoffice, administrators can easily customize projects, define and test assistants, define search domains, generate API tokens, manage members, and adjust observability options. 
+
+This documentation will guide you through the several features and functionalities of the GBrain backoffice.
 
 When accessing the GBrain backoffice, you will be presented with a dashboard on the home screen. This dashboard displays essential indicators related to usage and costs for the selected project. 
 
