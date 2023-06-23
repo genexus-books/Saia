@@ -30,7 +30,7 @@ On the left side of the screen, you will find the backoffice menu, which grants 
 
 
 ## Projects
-Projects are the core entities where various configurations and settings are defined. Within each project, administrators can define assistants, generate API tokens for API access, and manage document management functionalities. The project management feature allows administrators to seamlessly add, update, or delete projects within the organization. The following sections will guide developers on how to perform project-related operations within the GBrain backoffice, empowering them to efficiently manage projects and their associated settings.
+Projects are the core entities where several configurations and settings are defined. Within each project, administrators can define assistants, generate API tokens for API access, and manage document management functionalities. The project management feature allows administrators to seamlessly add, update, or delete projects within the organization. The following sections will guide developers on how to perform project-related operations within the GBrain backoffice, empowering them to efficiently manage projects and their associated settings.
 
 ### Adding a project
 To define a new project in the GBrain backoffice, follow the steps below:
