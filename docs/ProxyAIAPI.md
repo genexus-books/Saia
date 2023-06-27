@@ -95,8 +95,8 @@ By following the above steps, you can easily integrate GBrain Http Proxy into yo
 #### OpenAI SDK for Python
 ```
 import openai
-**openai.api_key = "$GBRAIN_APITOKEN"
-openai.api_base = "https://pia.genexus.dev/api/openai/v1/"**
+openai.api_key = "$GBRAIN_APITOKEN"
+openai.api_base = "https://beta.pia.genexus.dev/api/openai/v1"
 
 # create a chat completion
 chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
