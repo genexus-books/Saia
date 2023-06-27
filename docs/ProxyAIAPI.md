@@ -82,18 +82,18 @@ By following the above steps, you can easily integrate GBrain Http Proxy into yo
 ### How to integrate GBrain with Third Party SDKs
 
 #### cURL
-    ```shell
-    curl https://api.openai.com/v1/completions \
-      -H "Content-Type: application/json" \
-      -H "Authorization: Bearer $OPENAI_API_KEY" \
-      -d '{
-        "model": "gpt-3.5-turbo",
-        "messages": [{"role": "user", "content": "Hello!"}]
-      }'
-    ```
+```curl
+curl https://api.openai.com/v1/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-3.5-turbo",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'
+```
     
 #### OpenAI SDK for Python
-```
+```python
 import openai
 openai.api_key = "$GBRAIN_APITOKEN"
 openai.api_base = "https://beta.pia.genexus.dev/api/openai/v1"
@@ -105,8 +105,8 @@ chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[
 print(chat_completion.choices[0].message.content)
 ```
 
-#### OpenAI SDK for NodeJS
-```
+#### OpenAI SDK for Typescript
+```typescript
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
@@ -127,7 +127,7 @@ async function main() {
 main();
 ```
 #### Langchain
-```
+```typescript
  const model = new OpenAI({
     temperature: options?.llm?.temperature || DefaultLLM.TEMPERATURE, // increase temperature to get more creative answers
     verbose: options?.llm?.verbose || DefaultLLM.VERBOSE,
