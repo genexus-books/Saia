@@ -3,15 +3,15 @@ Table of contents
 
 * [Overview](#gbrain-the-ai-brain-for-your-enterprise-applications)
 * [Playground](#playground)
-* [API Reference](doc/APIReference.md)
-* [Backoffice](doc/Backoffice.md)
+* [API Reference](docs/APIReference.md)
+* [Backoffice](docs/Backoffice.md)
 
 
 # GBrain: the AI Brain for Your Enterprise Applications
 
 Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
 
-![image](https://github.com/genexuslabs/GBrain/assets/33163715/bd34114d-e6cf-4354-a0ee-3eb4e4b25942)
+![image](docs/assets/images/GBrain-Architecture.png)
 
 ## Non-functional Characteristics 
 - Observability 
@@ -33,10 +33,9 @@ GBrain was designed with an architecture of multiple logical layers which can be
 
 So you can just start by just consuming some particular model, but then conceptualize those accesses as assistants and then as a use case.
 
-![image](https://github.com/genexuslabs/GBrain/assets/33163715/aeff6b5a-8bec-45aa-a68a-937539a194df)
+![image](docs/assets/images/GBrain-FunctionalCharacteristics.png)
 
 # What problems does GBrain solve with a unique time to market? 
-
 
 + Centralized data and cost observability 
 + Development of POCs (Proof Of Concept) or products that quickly “cognifying” business, reducing costs or time for a specific business area 

@@ -26,7 +26,7 @@ In the header section, you can easily select the project you want to view, which
 
 On the left side of the screen, you will find the backoffice menu, which grants access to different options based on your permission levels. This menu serves as a central navigation point, enabling you to navigate through the various features and functionalities of the GBrain backoffice.
 
-![image](https://github.com/genexus-books/GBrain/assets/33163715/3b23b14f-eec0-40a0-9013-df30ce10fdd8)
+![image](assets/images/GBrain-BackOffice.png)
 
 
 ## Projects
@@ -127,7 +127,6 @@ To create a Chat assistant, follow these steps:
 6. Once you are satisfied with the response, save the first version of your Chat assistant.
 
 Note: When creating prompt or chat assistants, ensure that the instructions, prompts, or initial context provided are clear and concise to elicit accurate and meaningful responses from the AI models.
-
 
 ## Search domains
 

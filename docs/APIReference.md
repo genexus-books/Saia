@@ -18,7 +18,7 @@ The API has three main layers, each with its specific functions and features. Th
 
 By understanding the functionality of each layer, you can better leverage the API's capabilities in your application and provide a more seamless experience to your users.
 
-![image](https://github.com/genexus-books/GBrain/assets/33163715/c11cd9a3-9a71-46b9-a4f6-625058293972)
+![image](assets/images/APIReference.png)
 
 Follow these links to see more details about each API layer:
 * [Proxy AI API](ProxyAIAPI.md)
@@ -26,7 +26,7 @@ Follow these links to see more details about each API layer:
 * [Search and Chat API](SearchAndChatAPI.md)
 
 ## Authentication
-In order to use our API, you need to authenticate each request using API Tokens. These tokens are managed in GBrain [backoffice](https://github.com/genexus-books/GBrain/blob/main/doc/Backoffice.md) and uniquely identify the sender of the request.
+In order to use our API, you need to authenticate each request using API Tokens. These tokens are managed in GBrain [backoffice](Backoffice.md) and uniquely identify the sender of the request.
 
 To authenticate your requests, you need to provide your token via HTTP Basic Auth. This means that your token is encoded in the username field, and the password field should be left empty. Once authenticated, you will be able to access all endpoints within your API scope.
 
