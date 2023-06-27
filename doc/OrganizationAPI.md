@@ -54,6 +54,7 @@ Get projects.
 
 ```shell
 curl -X GET "https://beta.pia.genexus.dev/GBrain/API/v1.0/organization/project/get" \
+  -H "Authorization: Bearer $GBRAIN_APITOKEN" \
   -H "Accept: application/json"
 ```
 
@@ -92,5 +93,6 @@ Export request data.
 
 ```shell
 curl -X GET "https://beta.pia.genexus.dev/GBrain/API/v1.0/organization/request/export?Assistantname=example&Status=completed" \
+  -H "Authorization: Bearer $GBRAIN_APITOKEN" \
   -H "Accept: application/json"
 ```
