@@ -26,7 +26,7 @@ In the header section, you can easily select the project you want to view, which
 
 On the left side of the screen, you will find the backoffice menu, which grants access to different options based on your permission levels. This menu serves as a central navigation point, enabling you to navigate through the various features and functionalities of the GBrain backoffice.
 
-![image](docs/assets/images/GBrain-BackOffice.png)
+![image](assets/images/GBrain-BackOffice.png)
 
 
 ## Projects
