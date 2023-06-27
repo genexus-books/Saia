@@ -18,7 +18,7 @@ The API has three main layers, each with its specific functions and features. Th
 
 By understanding the functionality of each layer, you can better leverage the API's capabilities in your application and provide a more seamless experience to your users.
 
-![image](docs/assets/images/APIReference.png)
+![image](assets/images/APIReference.png)
 
 Follow these links to see more details about each API layer:
 * [Proxy AI API](ProxyAIAPI.md)
