@@ -77,3 +77,56 @@ The response received from the call will be the same as if directly invoking the
     ``` 
 
 By following the above steps, you can easily integrate GBrain Http Proxy into your application and manage your AI models with ease.
+
+
+### How to integrate GBrain with Third Party SDKs
+
+#### OpenAI SDK for Python
+```shell
+import openai
+**openai.api_key = "$GBRAIN_APITOKEN"
+openai.api_base = "https://pia.genexus.dev/api/openai/v1/"**
+
+# create a chat completion
+chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+
+# print the chat completion
+print(chat_completion.choices[0].message.content)
+```
+
+#### OpenAI SDK for NodeJS
+```shell
+const { Configuration, OpenAIApi } = require("openai");
+
+**const configuration = new Configuration({
+  apiKey: 'j....tTUewpI60sXB6H7IGi6vkuBM5scP7f7bwRPjGwq6x6Uok8GRW8bGGRpOFMC....',
+  basePath: "https://beta.pia.genexus.dev/api/openai/v1",  
+});**
+const openai = new OpenAIApi(configuration);
+
+async function main() {
+  const chatCompletion = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{role: "user", content: "Hello world"}],
+  });
+  
+  console.log(chatCompletion.data.choices[0].message);
+}
+
+main();
+```
+#### Langchain
+```shell
+ const model = new OpenAI({
+    temperature: options?.llm?.temperature || DefaultLLM.TEMPERATURE, // increase temperature to get more creative answers
+    verbose: options?.llm?.verbose || DefaultLLM.VERBOSE,
+    cache: options?.llm?.cache || DefaultLLM.CACHE,
+    modelName: options?.llm?.modelName || DefaultLLM.MODEL_NAME,
+  },
+   ** {
+      basePath: process.env.GBRAIN_API_BASE_URL,
+      apiKey: process.env.GBRAIN_API_KEY
+    }**
+  );
+```
+
