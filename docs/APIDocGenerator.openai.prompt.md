@@ -24,4 +24,4 @@ Using the gpt-3.5-turbo-16K model from OpenAI you must set the previous prompt f
 
 The settings used with this prompt for this model were the following
 
-![image](docs/assets/images/APIDocGenerator-Settings.png)
+![image](assets/images/APIDocGenerator-Settings.png)
