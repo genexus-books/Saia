@@ -24,7 +24,7 @@ Incorporating the use of GBrain Http Proxy does not require programming-level ch
 
 2. The `Authorization` header present in each request should be replaced with the GBrain `APIToken` provided beforehand (without the need to specify the provider being invoked).
 
-The response received from the call will be the same as if directly invoking the provider.
+The request and response received from the call will be the same as if directly invoking the provider.
 
 #### **Examples:**
 
@@ -109,10 +109,10 @@ print(chat_completion.choices[0].message.content)
 ```
 const { Configuration, OpenAIApi } = require("openai");
 
-**const configuration = new Configuration({
+const configuration = new Configuration({
   apiKey: 'j....tTUewpI60sXB6H7IGi6vkuBM5scP7f7bwRPjGwq6x6Uok8GRW8bGGRpOFMC....',
   basePath: "https://beta.pia.genexus.dev/api/openai/v1",  
-});**
+});
 const openai = new OpenAIApi(configuration);
 
 async function main() {
@@ -134,10 +134,10 @@ main();
     cache: options?.llm?.cache || DefaultLLM.CACHE,
     modelName: options?.llm?.modelName || DefaultLLM.MODEL_NAME,
   },
-   ** {
+   {
       basePath: process.env.GBRAIN_API_BASE_URL,
       apiKey: process.env.GBRAIN_API_KEY
-    }**
+    }
   );
 ```
 
