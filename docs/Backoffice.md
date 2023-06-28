@@ -76,7 +76,7 @@ To invite a new member, you only need to specify their email address, follow the
 
 7. Click on the "Invite Member" to send the invitation.
 
-An invitation email to the specified user will be sent, to join the project. Once the invited user accepts the invitation, they will gain access to the project.
+An invitation email to the specified user will be sent to join the project. Once the invited user accepts the invitation, they will gain access to the project.
 
 Note: Make sure to provide the correct email address of the user you want to invite.
 
