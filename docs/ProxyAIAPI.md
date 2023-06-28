@@ -19,7 +19,7 @@ Incorporating the use of GBrain Http Proxy does not require programming-level ch
 1. The `BaseURL` used to invoke AI providers should now reference the GBrain component. The URL format to be used will be: 
 
     ```
-    "https://beta.pia.genexus.dev/api/{AIProviderName}/{hostRelativeProviderURL}"
+    "https://beta.pia.genexus.dev/proxy/{AIProviderName}/{hostRelativeProviderURL}"
     ```
 
 2. The `Authorization` header present in each request should be replaced with the GBrain `APIToken` provided beforehand (without the need to specify the provider being invoked).
@@ -37,7 +37,7 @@ The request and response received from the call will be the same as if directly 
     To use GBrain Http Proxy, it should be invoked as:
 
     ```
-    "https://beta.pia.genexus.dev/api/openai/v1/chat/completions"
+    "https://beta.pia.genexus.dev/proxy/openai/v1/chat/completions"
     ```
 
 2. For the original URL:
@@ -49,7 +49,7 @@ The request and response received from the call will be the same as if directly 
     Using GBrain Http Proxy, it should be:
 
     ```
-    "https://beta.pia.genexus.dev/api/replicate/v1/predictions"
+    "https://beta.pia.genexus.dev/proxy/replicate/v1/predictions"
     ```
 
 3. **cURL specification for OpenAI (traditional):**
@@ -67,7 +67,7 @@ The request and response received from the call will be the same as if directly 
    **Using GBrain Proxy AI:**
 
     ```shell
-    curl https://beta.pia.genexus.dev/api/openai/v1/chat/completions \
+    curl https://beta.pia.genexus.dev/proxy/openai/v1/chat/completions \
       -H "Content-Type: application/json" \
       -H "Authorization: $GBRAIN_APITOKEN" \
       -d '{
@@ -96,7 +96,7 @@ curl https://api.openai.com/v1/completions \
 ```python
 import openai
 openai.api_key = "$GBRAIN_APITOKEN"
-openai.api_base = "https://beta.pia.genexus.dev/api/openai/v1"
+openai.api_base = "https://beta.pia.genexus.dev/proxy/openai/v1"
 
 # create a chat completion
 chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
@@ -111,7 +111,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
   apiKey: GBRAIN_APITOKEN,
-  basePath: "https://beta.pia.genexus.dev/api/openai/v1",  
+  basePath: "https://beta.pia.genexus.dev/proxy/openai/v1",  
 });
 const openai = new OpenAIApi(configuration);
 
