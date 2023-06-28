@@ -110,7 +110,7 @@ print(chat_completion.choices[0].message.content)
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: 'j....tTUewpI60sXB6H7IGi6vkuBM5scP7f7bwRPjGwq6x6Uok8GRW8bGGRpOFMC....',
+  apiKey: GBRAIN_APITOKEN,
   basePath: "https://beta.pia.genexus.dev/api/openai/v1",  
 });
 const openai = new OpenAIApi(configuration);
