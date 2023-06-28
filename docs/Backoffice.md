@@ -22,7 +22,7 @@ This documentation will guide you through the several features and functionaliti
 
 When accessing the GBrain backoffice, you will be presented with a dashboard on the home screen. This dashboard displays essential indicators related to usage and costs for the selected project. 
 
-At the right top of the header, you can select the project you want to view. Next, the information on the dashboard is filtered as well as all menu options under the Project section. In addition, the header provides a user menu where you can access user-specific functionalities, and a configuration menu that allows you to customize settings such as dark mode or font size.
+At the right top of the header, you can select the project you want to view. Next, the information on the dashboard is filtered as well as all the left menu options offered. In addition, the header provides a user menu where you can access user-specific functionalities, and a configuration menu that allows you to customize settings such as dark mode or font size.
 
 On the left side of the screen, you will find the backoffice menu, which grants access to different options based on your permission levels. This menu serves as a central navigation point, enabling you to navigate through the various features and functionalities of the GBrain backoffice.
 
