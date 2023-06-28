@@ -140,10 +140,10 @@ GBrain stores and tracks every request made through its API layers, providing or
 
 With clear visibility into both usage and cost, organizations can effectively manage their AI-driven workflows, control expenses, and maximize their return on investment. 
 
-By leveraging these features, organizations can maintain control over their AI infrastructure, identify areas for improvement, and make data-driven decisions to enhance operational efficiency.
+By taking advantage of these features, organizations can maintain control over their AI infrastructure, identify areas for improvement, and make data-driven decisions to enhance operational efficiency.
 
 ### Requests
-In the Requests options of GBrain, you have access to a comprehensive trace that provides complete observability for each request made. 
+In the left menu of GBrain the Requests option gives you access to a comprehensive trace that provides complete observability for each request made. 
 
 The trace allows you to easily filter requests by model, assistant, API token, datetime range, and status, enabling you to quickly identify specific requests of interest. Furthermore, by clicking on the Module column for a particular request, you can access detailed information about that request.
 
