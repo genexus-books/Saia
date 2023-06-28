@@ -131,7 +131,7 @@ To create a Chat assistant, follow these steps:
 
 6. Once you are satisfied with the response, save the first version of your Chat assistant.
 
-Note: When creating prompt or chat assistants, ensure that the instructions, prompts, or initial context provided are clear and concise to elicit accurate and meaningful responses from the AI models.
+Note: When creating prompt or chat assistants, ensure that the instructions, prompts, or initial context provided are clear and concise to obtain accurate and meaningful responses from the AI models.
 
 ## Search domains
 
