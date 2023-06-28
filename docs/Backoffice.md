@@ -81,19 +81,24 @@ An invitation email to the specified user will be sent to join the project. Once
 Note: Make sure to provide the correct email address of the user you want to invite.
 
 ## Assistants
-There are two types of assistants that you can define: Prompt assistants for text completion and Chat assistants for interactive conversations. This section will guide you through the process of creating both types of assistants.
+You can define two types of assistants: 
 
-### Creating a Prompt Assistant
+- Prompt assistants for text completion
+- Chat assistants for interactive conversations
+
+This section will guide you through the process of creating both types of assistants.
+
+### Prompt Assistant creation
 
 To create a Prompt assistant, follow these steps:
 
 1. Access the GBrain backoffice interface and log in with your organization administrator credentials.
 
-2. Navigate to the "Assistants" section.
+2. Go to the "Assistants" section.
 
-3. Click on the option to Create Prompt Assistant.
+3. Click on the "Create Prompt Assistant" link.
 
-4. Fill in the required details:
+4. Complete the required details:
 
    - Name: Give a unique name to your Prompt assistant.
    - Assistant Prompt: Specify the initial prompt or context for the assistant to generate text completion.
@@ -105,13 +110,13 @@ To create a Prompt assistant, follow these steps:
 
 6. Once you are satisfied with the response, save the first version of your Prompt assistant.
 
-### Creating a Chat Assistant
+### Chat Assistant creation
 
 To create a Chat assistant, follow these steps:
 
 1. Access the GBrain backoffice interface and log in with your organization administrator credentials.
 
-2. Navigate to the "Assistants" section.
+2. Go to the "Assistants" section.
 
 3. Click on the option to Create Chat Assistant.
 
