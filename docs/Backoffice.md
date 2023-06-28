@@ -41,7 +41,7 @@ To define a new project in the GBrain backoffice, follow the steps below:
 
 2. Once logged in, go to the "Projects" section.
 
-3. Click on the Create a new project option.
+3. Click on the "New Project" button.
 
 4. In the project creation form, provide the following information:
 
