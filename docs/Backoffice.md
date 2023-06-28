@@ -143,7 +143,7 @@ With clear visibility into both usage and cost, organizations can effectively ma
 By taking advantage of these features, organizations can maintain control over their AI infrastructure, identify areas for improvement, and make data-driven decisions to enhance operational efficiency.
 
 ### Requests
-In the left menu of GBrain the Requests option gives you access to a comprehensive trace that provides complete observability for each request made. 
+In the left menu of GBrain the "Requests" option gives you access to a comprehensive trace that provides complete observability for each request made. 
 
 The trace allows you to easily filter requests by model, assistant, API token, datetime range, and status, enabling you to quickly identify specific requests of interest. Furthermore, by clicking on the Module column for a particular request, you can access detailed information about that request.
 
@@ -152,10 +152,10 @@ Within the request details, you can view the input and output data, the specific
 The ability to access and review the complete details of each request empowers you to understand the underlying data and processes, making it easier to identify and address any issues or areas for improvement. With this comprehensive observability feature, organizations can ensure the accuracy, efficiency, and cost-effectiveness of their AI-driven workflows in GBrain.
 
 ## API Tokens
-API Tokens play a crucial role in executing GBrain APIs. These tokens are required to access and utilize the functionality provided by the APIs. 
+API Tokens play a crucial role in executing GBrain APIs. These tokens are required to access and use the functionality provided by the APIs. 
 
-For each project, you have the ability to define multiple API Tokens. This allows for granular control and tracking of usage, as well as the management of access permissions for specific assistants or models available through the GBrain API.
+For each project, you can define multiple API Tokens. This allows for granular control and tracking of usage, as well as the management of access permissions for specific assistants or models available through the GBrain API.
 
-By defining API Tokens for each assistant, you can conveniently monitor the usage of assistants individually and gain insights into their performance and resource utilization. Moreover, the ability to assign API Tokens to specific projects and assistants allows for fine-grained access control, ensuring that only authorized individuals or systems can execute requests on behalf of the defined assistants or models.
+By defining API Tokens for each assistant, you can conveniently monitor the usage of assistants individually and gain insights into their performance and resource usage. Moreover, the ability to assign API Tokens to specific projects and assistants allows for fine-grained access control, ensuring that only authorized individuals or systems can execute requests on behalf of the defined assistants or models.
 
 With this level of granularity, organizations can effectively manage access permissions, track usage patterns, and maintain control over their assistants and models within the GBrain API.
