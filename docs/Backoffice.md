@@ -136,7 +136,7 @@ Note: When creating prompt or chat assistants, ensure that the instructions, pro
 ## Search domains
 
 ## Observability
-GBrain stores and tracks every request made through its API layers, providing organizations with complete visibility into the usage of assistants, AI models, and the associated cost for each request. This allows organizations to monitor and analyze resource utilization, make informed decisions about resource allocation and optimize usage for cost-efficiency. 
+GBrain stores and tracks every request made through its API layers, providing organizations with complete visibility into the usage of assistants, AI models, and the associated cost for each request. This allows organizations to monitor and analyze resource usage, make informed decisions about resource allocation and optimize usage for cost-efficiency. 
 
 With clear visibility into both usage and cost, organizations can effectively manage their AI-driven workflows, control expenses, and maximize their return on investment. 
 
