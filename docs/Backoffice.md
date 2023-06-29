@@ -55,7 +55,11 @@ Congratulations! You have successfully created a new project using the GBrain ba
 Note: It is recommended to choose project names and descriptions that accurately reflect the intended purpose and scope of the project. This facilitates better organization and improves clarity for all users involved in project management.
 
 ### Set as active
-You have the option to set a certain project as the active project. This feature allows you to define which project will be used as a filter for all options that require project-specific filtering. To do so, you can select the "Set as Active" option or select a project in the combo box that contains the projects list.
+You have the option to set a certain project as the active project. 
+
+The "Set as Active" function provides the same action as selecting a certain project in the header combo box.
+
+To set a project as active, select "Manage Projects" in the left menu, the projects will be displayed and for the desired project you only have to click on the "Set as Active" button.
 
 Upon setting a project as active, all subsequent actions and filters within the GBrain backoffice will be applied specifically to that project. 
 
