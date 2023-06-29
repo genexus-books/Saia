@@ -24,7 +24,7 @@ When accessing the GBrain backoffice, you will be presented with a dashboard on 
 
 At the right top of the header, you can select the project you want to view. After selecting a project, the information shown on the dashboard is filtered as well as all the options offered in the left menu. In addition, next to the project name you can find a user menu to access user-specific tasks and a configuration menu that allows you to customize settings such as dark mode or font size.
 
-On the left side of the screen, you will find the backoffice menu, which grants access to different options based on your permission levels. This menu serves as a central navigation point, enabling you to navigate through the various features and functionalities of the GBrain backoffice.
+On the left side of the screen, you can find the backoffice menu, which grants access to different options based on your credentials. This menu enables you to navigate through the several features and functionalities offered by the GBrain backoffice.
 
 ![image](assets/images/GBrain-BackOffice.png)
 
