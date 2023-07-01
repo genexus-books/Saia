@@ -95,9 +95,9 @@ To create a Prompt assistant, follow these steps:
 
 1. Access the GBrain backoffice interface and log in with your organization administrator credentials.
 
-2. Go to the "Assistants" section.
+2. Select the "Assistants" option offered in the left menu.
 
-3. Click on the "Create Prompt Assistant" link.
+3. Click on the "CREATE PROMPT ASSISTANT" link.
 
 4. Complete the required details:
 
