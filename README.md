@@ -7,7 +7,7 @@ Table of contents
 * [Backoffice](docs/Backoffice.md)
 
 
-# GBrain: the AI Brain for Your Enterprise Applications
+# Saia: the AI Brain for Your Enterprise Applications
 
 Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
 
@@ -29,13 +29,13 @@ Enterprise applications utilizing Large Language Models (LLMs) as a foundation a
 
 From a process perspective, it is also crucial to consider development elements such as versioning assistants, testing assistants, and deploying them. 
 
-GBrain was designed with an architecture of multiple logical layers which can be accessed independently and incrementally.
+Saia was designed with an architecture of multiple logical layers which can be accessed independently and incrementally.
 
 So you can just start by just consuming some particular model, but then conceptualize those accesses as assistants and then as a use case.
 
 ![image](docs/assets/images/GBrain-FunctionalCharacteristics.png)
 
-# What problems does GBrain solve with a unique time to market? 
+# What problems does Saia solve with a unique time to market? 
 
 + Centralized data and cost observability 
 + Development of POCs (Proof Of Concept) or products that quickly “cognifying” business, reducing costs or time for a specific business area 
@@ -54,19 +54,19 @@ Business applications need to understand which business domains are using which 
 ## Maintainability, Future Proofing 
 
 AI models are evolving rapidly. Can businesses keep up with the pace? Can our interfaces fluctuate and test each model without breaking connection interfaces? How can we become independent of these decisions, often tied to cost, privacy, or other factors? 
-GBrain allows for the independence of created interfaces from the accessed models, enabling agents to evolve with a business perspective, separate from the underlying AI models' evolution. 
+Saia allows for the independence of created interfaces from the accessed models, enabling agents to evolve with a business perspective, separate from the underlying AI models' evolution. 
 
 ## Security 
 
-Businesses require access security, data security, data governance, and alerts for potential rule breaches. GBrain provides everything needed to achieve control over what happens with data within the company, ensuring data travels securely and adheres to business-imposed rules. 
+Businesses require access security, data security, data governance, and alerts for potential rule breaches. Saia provides everything needed to achieve control over what happens with data within the company, ensuring data travels securely and adheres to business-imposed rules. 
 
 ## Scalability 
 
-Performance should not degrade with business success. Having infrastructure designed for secure and scalable communication with models is essential when deploying products in production. Using GBrain ensures that if the business succeeds, scalability concerns are addressed. 
+Performance should not degrade with business success. Having infrastructure designed for secure and scalable communication with models is essential when deploying products in production. Using Saia ensures that if the business succeeds, scalability concerns are addressed. 
 
 ## Built-in Patterns Solved 
 
-GBrain provides all the services and abstractions necessary for implementing emerging UX patterns. It offers the following services: 
+Saia provides all the services and abstractions necessary for implementing emerging UX patterns. It offers the following services: 
 
 - Search & Chat creation for any document set, essentially building a private ChatGPT for unstructured company documents 
 - Assistant creation and chaining for various business objectives 
@@ -75,16 +75,16 @@ GBrain provides all the services and abstractions necessary for implementing eme
 
 ## Testing your assistants
 
-GBrain allows you to version all your assistants, this is a great feature that allows you to evolve assistants without breaking things.
+Saia allows you to version all your assistants, this is a great feature that allows you to evolve assistants without breaking things.
 You need to be aware that programming with non-deterministic agents could be a challenge without help.
 
-By using GBrain you can declare different versions of your assistants and start enabling different access to them depending on the consumer.
+By using Saia you can declare different versions of your assistants and start enabling different access to them depending on the consumer.
 
 You can create a complete regression test suite with the new version of a new assistant before entering production. Actually, you can match your current staging planning in order to evolve your solution with confidence.
 
-## Access to GBrain 
+## Access to Saia 
 
-Access to GBrain's various layers is generally programmable using any programming language. Access is granted via access tokens per project or organization. 
+Access to Saia's various layers is generally programmable using any programming language. Access is granted via access tokens per project or organization. 
 In addition to programmatic interfaces, you can quickly create Playgrounds for demonstrating AI technology capabilities. 
 
 # Playground
