@@ -1,10 +1,10 @@
-# GBrain Organization API
+# Saia Organization API
 
-This API allows you to interact with GBrain organization data.
+This API allows you to interact with Saia organization data.
 
 ## Introduction
 
-The GBrain Organization API provides endpoints to retrieve organization data, such as projects and requests. It allows you to fetch project details and export request data.
+The Saia Organization API provides endpoints to retrieve organization data, such as projects and requests. It allows you to fetch project details and export request data.
 
 ## Endpoints
 
@@ -54,7 +54,7 @@ Get projects.
 
 ```shell
 curl -X GET "https://beta.pia.genexus.dev/GBrain/API/v1.0/organization/project/get" \
-  -H "Authorization: Bearer $GBRAIN_APITOKEN" \
+  -H "Authorization: Bearer $SAIA_APITOKEN" \
   -H "Accept: application/json"
 ```
 
