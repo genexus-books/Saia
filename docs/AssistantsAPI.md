@@ -1,21 +1,21 @@
-# GBrain Assistant Api
+# Saia Assistant Api
 
-This is the documentation for the GBrain Assistant API.
+This is the documentation for the Saia Assistant API.
 
 ## Endpoints
 
 | Path | Description |
 |---|---|
-| POST /text/begin | Begins a text conversation with the GBrain Assistant. |
-| POST /text | Sends a text prompt to the GBrain Assistant. |
-| POST /chat | Sends a chat request to the GBrain Assistant. |
+| POST /text/begin | Begins a text conversation with the Saia Assistant. |
+| POST /text | Sends a text prompt to the Saia Assistant. |
+| POST /chat | Sends a chat request to the Saia Assistant. |
 | POST /text2img | Generates an image based on the given text. |
 | GET /request/{requestId}/status | Retrieves the status of a request. |
 | POST /request/{requestId}/cancel | Cancels a request. |
 
 ## POST /text/begin
 
-Begins a text conversation with the GBrain Assistant.
+Begins a text conversation with the Saia Assistant.
 
 ### Parameters
 
@@ -60,7 +60,7 @@ curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text/begin \
 
 ## POST /text
 
-Sends a text prompt to the GBrain Assistant.
+Sends a text prompt to the Saia Assistant.
 
 ### Parameters
 
@@ -105,7 +105,7 @@ curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text \
 
 ## POST /chat
 
-Sends a chat request to the GBrain Assistant.
+Sends a chat request to the Saia Assistant.
 
 ### Parameters
 
