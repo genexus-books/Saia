@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Saia SearchChat API is a RESTful API that provides search functionality for chat conversations. It allows you to execute searches based on specific profiles and questions, and retrieves search results along with relevant metadata. This documentation provides detailed information on the available endpoints and how to interact with them.
+The Saia SearchChat API is a RESTful API that provides search functionality for chat conversations. It allows you to execute searches based on specific profiles and questions, and retrieves search results along with relevant metadata. This documentation provides detailed information on the available endpoints and how to interact with them. If you want to change parameters configuration use the [Search Index Profile](SearchIndexProfile.md) section.
 
 ## Endpoints
 
