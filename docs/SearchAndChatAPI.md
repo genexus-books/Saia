@@ -1,12 +1,12 @@
-# GBrain SearchChat API
+# Saia SearchChat API
 
 ## Introduction
 
-The GBrain SearchChat API is a RESTful API that provides search functionality for chat conversations. It allows you to execute searches based on specific profiles and questions, and retrieves search results along with relevant metadata. This documentation provides detailed information on the available endpoints and how to interact with them.
+The Saia SearchChat API is a RESTful API that provides search functionality for chat conversations. It allows you to execute searches based on specific profiles and questions, and retrieves search results along with relevant metadata. This documentation provides detailed information on the available endpoints and how to interact with them.
 
 ## Endpoints
 
-The GBrain SearchChat API provides the following endpoint:
+The Saia SearchChat API provides the following endpoint:
 
 | Method | Path                  |
 | ------ | --------------------- |
