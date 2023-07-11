@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: "GBrain Assistant Api"
+  title: "Saia Assistant Api"
   version: "20230615180940"
 servers:
   - url: https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant
