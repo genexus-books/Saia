@@ -83,7 +83,7 @@ The `Score Threshold` defines the minimal valid value to consider the informatio
 
 ## Retrievers
 
-It specifies how is obtained the augmented information sent to the context.
+It specifies how is obtained the augmented information sent to the context. Previously you need to [upload documents](Documents.md).
 
 ### VectorStore
 
