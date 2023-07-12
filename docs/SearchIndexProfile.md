@@ -79,7 +79,11 @@ The `History Count` enables the usage of chat mode keeping in-context the latest
 
 The `Document Count` defines how many documents are retrieved from the vectorestore to augment the context.
 
-The `Score Threshold` defines the minimal valid value to consider the information as valid when retrieved from the vectorstore, otherwise is discarded. In case there are no valid `Documents` no interaction is done with the LLM.
+The `Score Threshold` (defaults to 0.0) defines the minimal valid value to consider the information as valid when retrieved from the vectorstore, otherwise is discarded. In case there are no valid `Documents`, no interaction is done with the LLM. The following return value is expected:
+
+```json
+{"result":{"messages":["Score threshold not met"],"success":false},"text":""}
+```
 
 ## Retrievers
 
