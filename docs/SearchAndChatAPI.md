@@ -10,9 +10,9 @@ The Saia SearchChat API provides the following endpoint:
 
 | Method | Path                  |
 | ------ | --------------------- |
-| POST   | /execute              |
+| POST   | /SearchChat           |
 
-### 1. `/execute` - Execute Search Query
+### 1. `/SearchChat` - Execute Search Query
 
 Executes a search query based on a specific profile and question.
 
@@ -34,7 +34,7 @@ Executes a search query based on a specific profile and question.
   | Parameter | Type   | Description                     |
   | --------- | ------ | ------------------------------- |
   | profile   | string | The profile to search           |
-  | question  | string | The question to search          |
+  | question  | string | The question to ask             |
 
 #### Response
 
@@ -58,16 +58,7 @@ Executes a search query based on a specific profile and question.
         }
       }
     ],
-    "text": "Example text",
-    "log": "Example log",
-    "requestId": "12345678-1234-1234-1234-123456789abc",
-    "error": {
-      "code": 500,
-      "message": "Internal Server Error"
-    },
-    "success": true,
-    "timestamp": "2023-06-15T18:09:40Z",
-    "status": "success",
+    "text": "Example reply",
     "result": {
       "success": true,
       "messages": [
@@ -93,8 +84,11 @@ Executes a search query based on a specific profile and question.
 #### Sample CURL Request
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{
+curl -X POST
+  -H "Content-Type: application/json"
+  -H "Authorization: Bearer {YOUR_API_TOKEN}"
+  -d '{
   "profile": "example_profile",
   "question": "example_question"
-}' https://beta.pia.genexus.dev/GBrain/API/v1.0/search/execute
+}' https://beta.pia.genexus.dev/GBrain/API/v1/SearchChat
 ```
