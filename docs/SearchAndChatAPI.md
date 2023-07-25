@@ -90,5 +90,5 @@ curl -X POST
   -d '{
   "profile": "example_profile",
   "question": "example_question"
-}' https://beta.pia.genexus.dev/GBrain/API/v1/SearchChat
+}' https://api.beta.saia.ai/v1/search/execute
 ```

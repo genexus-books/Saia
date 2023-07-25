@@ -48,7 +48,7 @@ Begins a text conversation with the Saia Assistant.
 ### CURL Example
 
 ```shell
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text/begin \
+curl -X POST https://api.beta.saia.ai/v1/assistant/text/begin \
   -H "Content-Type: application/json" \
   -d '{
     "assistant": "string",
@@ -93,7 +93,7 @@ Sends a text prompt to the Saia Assistant.
 ### CURL Example
 
 ```shell
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text \
+curl -X POST https://api.beta.saia.ai/v1/assistant/text \
   -H "Content-Type: application/json" \
   -d '{
     "assistant": "string",
@@ -138,7 +138,7 @@ Sends a chat request to the Saia Assistant.
 ### CURL Example
 
 ```shell
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/chat \
+curl -X POST https://api.beta.saia.ai/v1/assistant/chat \
   -H "Content-Type: application/json" \
   -d '{
     "assistant": "string",
@@ -189,7 +189,7 @@ Generates an image based on the given text.
 ### CURL Example
 
 ```shell
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/text2img \
+curl -X POST https://api.beta.saia.ai/v1/assistant/text2img \
   -H "Content-Type: application/json" \
   -d '{
     "prompt": "string"
@@ -226,7 +226,7 @@ Retrieves the status of a request.
 ### CURL Example
 
 ```shell
-curl -X GET https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/request/{requestId}/status
+curl -X GET https://api.beta.saia.ai/v1/assistant/request/{requestId}/status
 ```
 
 ## POST /request/{requestId}/cancel
@@ -257,5 +257,5 @@ Cancels a request.
 ### CURL Example
 
 ```shell
-curl -X POST https://beta.pia.genexus.dev/GBrain/API/v1.0/assistant/request/{requestId}/cancel
+curl -X POST https://api.beta.saia.ai/v1/assistant/request/{requestId}/cancel
 ```

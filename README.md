@@ -1,7 +1,7 @@
 Table of contents
 =================
 
-* [Overview](#gbrain-the-ai-brain-for-your-enterprise-applications)
+* [Overview](#Saia-the-ai-brain-for-your-enterprise-applications)
 * [Playground](#playground)
 * [API Reference](docs/APIReference.md)
 * [Backoffice](docs/Backoffice.md)
@@ -11,7 +11,7 @@ Table of contents
 
 Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
 
-![image](docs/assets/images/GBrain-Architecture.png)
+![image](docs/assets/images/Saia-Architecture.png)
 
 ## Non-functional Characteristics 
 - Observability 
@@ -33,7 +33,7 @@ Saia was designed with an architecture of multiple logical layers which can be a
 
 So you can just start by just consuming some particular model, but then conceptualize those accesses as assistants and then as a use case.
 
-![image](docs/assets/images/GBrain-FunctionalCharacteristics.png)
+![image](docs/assets/images/Saia-FunctionalCharacteristics.png)
 
 # What problems does Saia solve with a unique time to market? 
 

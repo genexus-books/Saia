@@ -53,7 +53,7 @@ Get projects.
 ### CURL Example
 
 ```shell
-curl -X GET "https://beta.pia.genexus.dev/GBrain/API/v1.0/organization/project/get" \
+curl -X GET "https://api.beta.saia.ai/v1/organization/project/get" \
   -H "Authorization: Bearer $SAIA_APITOKEN" \
   -H "Accept: application/json"
 ```
@@ -92,7 +92,7 @@ Export request data.
 ### CURL Example
 
 ```shell
-curl -X GET "https://beta.pia.genexus.dev/GBrain/API/v1.0/organization/request/export?Assistantname=example&Status=completed" \
-  -H "Authorization: Bearer $GBRAIN_APITOKEN" \
+curl -X GET "https://api.beta.saia.ai/v1/organization/request/export?Assistantname=example&Status=completed" \
+  -H "Authorization: Bearer $Saia_APITOKEN" \
   -H "Accept: application/json"
 ```

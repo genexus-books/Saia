@@ -1,15 +1,15 @@
 openapi: 3.0.0
 info:
-  title: "GBrain SearchChat Api"
+  title: "Saia SearchChat Api"
   version: "20230615180940"
 servers:
-  - url: https://beta.pia.genexus.dev/GBrain/API/v1.0/search
+  - url: https://api.beta.saia.ai/v1/search
 paths:
   /execute:
     post:
       tags:
-        - GBrain.API.v1  
-      operationId: "GBrain.API.v1.SearchChatApi.execute__post"
+        - Saia.API.v1  
+      operationId: "Saia.API.v1.SearchChatApi.execute__post"
       summary: "execute__post"
       requestBody:
         required: false
@@ -24,7 +24,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GBrain.API.Search.SearchChatResponse"  
+                $ref: "#/components/schemas/Saia.API.Search.SearchChatResponse"  
 
         404:
           description: "Not found"
@@ -38,13 +38,13 @@ components:
         question:
           type: "string"
   
-    GBrain.API.Search.SearchChatResponse:
+    Saia.API.Search.SearchChatResponse:
       properties:
         documents:
           description: Document SDT
           type: array
           items:
-            $ref: "#/components/schemas/GBrain.SearchChat.Impl.DocumentSDT"
+            $ref: "#/components/schemas/Saia.SearchChat.Impl.DocumentSDT"
         text:
           description: text
           type: "string"
@@ -57,7 +57,7 @@ components:
           format: "uuid"
         error:
           description: Response Error
-          $ref: "#/components/schemas/GBrain.API.v1.ResponseError"
+          $ref: "#/components/schemas/Saia.API.v1.ResponseError"
         success:
           description: success
           type: "boolean"
@@ -70,10 +70,10 @@ components:
           type: "string"
 
         result:
-          $ref: "#/components/schemas/GBrain.API.Search.SearchChatResponse.result"
+          $ref: "#/components/schemas/Saia.API.Search.SearchChatResponse.result"
 
 
-    GBrain.API.Search.SearchChatResponse.result:
+    Saia.API.Search.SearchChatResponse.result:
       properties:
         success:
           description: success
@@ -87,7 +87,7 @@ components:
 
       x-gx-level: "SearchChatResponse"
 
-    GBrain.API.v1.ResponseError:
+    Saia.API.v1.ResponseError:
       properties:
         code:
           description: Error Code
@@ -99,17 +99,17 @@ components:
 
 
 
-    GBrain.SearchChat.Impl.DocumentSDT:
+    Saia.SearchChat.Impl.DocumentSDT:
       properties:
         pageContent:
           description: page Content
           type: "string"
 
         metadata:
-          $ref: "#/components/schemas/GBrain.SearchChat.Impl.DocumentSDT.metadata"
+          $ref: "#/components/schemas/Saia.SearchChat.Impl.DocumentSDT.metadata"
 
 
-    GBrain.SearchChat.Impl.DocumentSDT.metadata:
+    Saia.SearchChat.Impl.DocumentSDT.metadata:
       properties:
         source:
           description: source

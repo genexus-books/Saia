@@ -1,15 +1,15 @@
 openapi: 3.0.0
 info:
-  title: "GBrain Organization Api"
+  title: "Saia Organization Api"
   version: "20230615180940"
 servers:
-  - url: https://beta.pia.genexus.dev/GBrain/API/v1.0/organization
+  - url: https://api.beta.saia.ai/v1/organization
 paths:
   /project/get:
     get:
       tags:
-        - GBrain.API.v1  
-      operationId: "GBrain.API.v1.OrganizationApi.projects__get"
+        - Saia.API.v1  
+      operationId: "Saia.API.v1.OrganizationApi.projects__get"
       summary: "projects__get"
       
       responses:
@@ -18,7 +18,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GBrain.API.GetProjectsDataResponse"  
+                $ref: "#/components/schemas/Saia.API.GetProjectsDataResponse"  
 
         404:
           description: "Not found"
@@ -26,8 +26,8 @@ paths:
   /request/export:
     get:
       tags:
-        - GBrain.API.v1  
-      operationId: "GBrain.API.v1.OrganizationApi.requestData"
+        - Saia.API.v1  
+      operationId: "Saia.API.v1.OrganizationApi.requestData"
       summary: "requestData"
       parameters:
         - name: "Assistantname"
@@ -63,7 +63,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/GBrain.API.v1.RequestDataResponse_RequestDataResponseItem"  
+                  $ref: "#/components/schemas/Saia.API.v1.RequestDataResponse_RequestDataResponseItem"  
 
         404:
           description: "Not found"
@@ -71,7 +71,7 @@ paths:
 components:
   schemas:
   
-    GBrain.API.GetProjectsDataResponse:
+    Saia.API.GetProjectsDataResponse:
       properties:
         ApiTokenName:
           description: Api Token Name
@@ -88,10 +88,10 @@ components:
           type: array
           items:
             description: ProjectsItem
-            $ref: "#/components/schemas/GBrain.API.GetProjectsDataResponse.Projects_ProjectsItem"
+            $ref: "#/components/schemas/Saia.API.GetProjectsDataResponse.Projects_ProjectsItem"
 
 
-    GBrain.API.GetProjectsDataResponse.Projects_ProjectsItem:
+    Saia.API.GetProjectsDataResponse.Projects_ProjectsItem:
       properties:
         ProjectId:
           description: Project Id
@@ -105,11 +105,11 @@ components:
           type: array
           items:
             description: SearchIndexProfileItem
-            $ref: "#/components/schemas/GBrain.API.GetProjectsDataResponse.Projects.SearchIndexProfile_SearchIndexProfileItem"
+            $ref: "#/components/schemas/Saia.API.GetProjectsDataResponse.Projects.SearchIndexProfile_SearchIndexProfileItem"
 
       x-gx-level: "GetProjectsDataResponse"
 
-    GBrain.API.GetProjectsDataResponse.Projects.SearchIndexProfile_SearchIndexProfileItem:
+    Saia.API.GetProjectsDataResponse.Projects.SearchIndexProfile_SearchIndexProfileItem:
       properties:
         Id:
           description: Search Index Profile Name
@@ -121,15 +121,15 @@ components:
 
       x-gx-level: "GetProjectsDataResponse.Projects"
 
-    GBrain.API.v1.RequestDataResponse_RequestDataResponseItem:
+    Saia.API.v1.RequestDataResponse_RequestDataResponseItem:
       properties:
         item:
           description: Request Data Item
-          $ref: "#/components/schemas/GBrain.API.v1.RequestDataItem"
+          $ref: "#/components/schemas/Saia.API.v1.RequestDataItem"
 
 
 
-    GBrain.API.v1.RequestDataItem:
+    Saia.API.v1.RequestDataItem:
       properties:
         assistant:
           description: assistant
