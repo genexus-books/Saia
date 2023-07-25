@@ -10,7 +10,7 @@ The Saia SearchChat API provides the following endpoint:
 
 | Method | Path                  |
 | ------ | --------------------- |
-| POST   | /SearchChat           |
+| POST   | /execute              |
 
 ### 1. `/SearchChat` - Execute Search Query
 
