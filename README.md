@@ -7,7 +7,7 @@ Table of contents
 * [Backoffice](docs/Backoffice.md)
 
 
-# Saia: the AI Brain for Your Enterprise Applications
+# Saia: the Spine of AI  Applications
 
 Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
 
