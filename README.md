@@ -2,7 +2,7 @@ Table of contents
 =================
 
 * [Overview](#Saia-the-ai-brain-for-your-enterprise-applications)
-* [API Reference](saia-docs/docs\apis/APIReference.md)
+* [API Reference](saia-docs/docs/apis/APIReference.md)
 * [Backoffice](saia-docs/docs/Backoffice.md)
 
 
