@@ -21,7 +21,7 @@ Table of contents
 
 ## Introduction
 
-Welcome to Saia backoffice. This backoffice provides organization administrators with a range of essential options to configure projects and manage key settings. Through the Saia backoffice, you can easily customize projects, define and test assistants, define search domains, generate API tokens, manage members, and adjust observability options. 
+Welcome to Saia. This backoffice provides organization administrators with a range of essential options to configure projects and manage key settings. Through the Saia backoffice, you can easily customize projects, define and test assistants, define search domains, generate API tokens, manage members, and adjust observability options. 
 
 This documentation will guide you through the several features and functionalities of the Saia backoffice.
 
@@ -31,7 +31,8 @@ At the right top of the header, you can select the project you want to view. Aft
 
 On the left side of the screen, you can find the backoffice menu, which grants access to different options based on your credentials. This menu enables you to navigate through the several features and functionalities offered by the Saia backoffice.
 
-![image](../assets/images/GBrain-BackOffice.png)
+![image](https://github.com/genexus-books/Saia/assets/33163715/7aa079cd-21ef-461a-9f29-d536240155ca)
+
 
 
 ## Projects
