@@ -8,7 +8,6 @@ Table of contents
 =================
 
 * [Overview](#Saia-the-ai-brain-for-your-enterprise-applications)
-* [Playground](#playground)
 * [API Reference](docs/apis/APIReference.md)
 * [Backoffice](docs/Backoffice.md)
 
@@ -93,9 +92,3 @@ You can create a complete regression test suite with the new version of a new as
 
 Access to Saia's various layers is generally programmable using any programming language. Access is granted via access tokens per project or organization. 
 In addition to programmatic interfaces, you can quickly create Playgrounds for demonstrating AI technology capabilities. 
-
-# Playground
-
-This playground allows you to try the built-in assistant. 
-
-For example [here](https://apps-angular.genexus.com/Id5902578315db0d0929d5bab63eb6ff79/Chat_ChatPanel/Chat/ChatPanel-Level_Detail) you can test the Search and Chat assistant that has been ingested with documents about political history from Uruguay and also transit rules applied in Uruguay.
