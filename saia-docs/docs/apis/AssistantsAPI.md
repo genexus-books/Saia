@@ -3,24 +3,24 @@ sidebar_position: 2
 sidebar_label: 'Assistant Api'
 ---
 
-# Saia Assistant Api
+# SAIA Assistant Api
 
-This is the documentation for the Saia Assistant API.
+This is the documentation for the SAIA Assistant API.
 
 ## Endpoints
 
 | Path | Description |
 |---|---|
-| POST /text/begin | Begins a text conversation with the Saia Assistant. |
-| POST /text | Sends a text prompt to the Saia Assistant. |
-| POST /chat | Sends a chat request to the Saia Assistant. |
+| POST /text/begin | Begins a text conversation with the SAIA Assistant. |
+| POST /text | Sends a text prompt to the SAIA Assistant. |
+| POST /chat | Sends a chat request to the SAIA Assistant. |
 | POST /text2img | Generates an image based on the given text. |
 | GET /request/{requestId}/status | Retrieves the status of a request. |
 | POST /request/{requestId}/cancel | Cancels a request. |
 
 ## POST /text/begin
 
-Begins a text conversation with the Saia Assistant.
+Begins a text conversation with the SAIA Assistant.
 
 ### Parameters
 
@@ -65,7 +65,7 @@ curl -X POST https://api.beta.saia.ai/v1/assistant/text/begin \
 
 ## POST /text
 
-Sends a text prompt to the Saia Assistant.
+Sends a text prompt to the SAIA Assistant.
 
 ### Parameters
 
@@ -110,7 +110,7 @@ curl -X POST https://api.beta.saia.ai/v1/assistant/text \
 
 ## POST /chat
 
-Sends a chat request to the Saia Assistant.
+Sends a chat request to the SAIA Assistant.
 
 ### Parameters
 

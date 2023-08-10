@@ -3,31 +3,31 @@ sidebar_label: 'Proxy Overview'
 sidebar_position: 2
 ---
 
-## Saia Proxy AI API
+## SAIA Proxy AI API
 
-Saia Proxy AI is a powerful observability tool designed for businesses that leverage artificial intelligence. It allows organizations to gain a unified view of all their AI models, ensuring full traceability of their usage and providing valuable metrics to improve AI performance over time. 
+SAIA Proxy AI is a powerful observability tool designed for businesses that leverage artificial intelligence. It allows organizations to gain a unified view of all their AI models, ensuring full traceability of their usage and providing valuable metrics to improve AI performance over time. 
 
-With minimal adjustments to existing API requests, this tool eliminates the need for individual API keys for all providers. Instead, it utilizes Saia-specific APITokens that are managed at the organization and project levels, providing seamless integration with multiple AI providers and simple centralized access.
+With minimal adjustments to existing API requests, this tool eliminates the need for individual API keys for all providers. Instead, it utilizes SAIA-specific APITokens that are managed at the organization and project levels, providing seamless integration with multiple AI providers and simple centralized access.
 
-Some of the key features of Saia Proxy AI include:
+Some of the key features of SAIA Proxy AI include:
 
-- Request logging: Saia Proxy AI generates comprehensive logs detailing all requests sent to AI providers, including both inputs and outputs.
+- Request logging: SAIA Proxy AI generates comprehensive logs detailing all requests sent to AI providers, including both inputs and outputs.
 - Request latency: The response time for each request is measured, providing valuable insights for understanding performance and identifying potential issues as early as possible.
-- Cost monitoring: With Saia Proxy AI organizations can easily track usage costs at an organization and project level, so that they can monitor and optimize their AI workloads.
+- Cost monitoring: With SAIA Proxy AI organizations can easily track usage costs at an organization and project level, so that they can monitor and optimize their AI workloads.
 
-By leveraging the powerful features provided by Saia Proxy AI, organizations can dramatically improve their AI workflows, optimize costs, and ultimately drive greater business success.
+By leveraging the powerful features provided by SAIA Proxy AI, organizations can dramatically improve their AI workflows, optimize costs, and ultimately drive greater business success.
 
 ### How to use it?
 
-Incorporating the use of Saia Http Proxy does not require programming-level changes. The modifications simply involve altering two elements present in each request:
+Incorporating the use of SAIA Http Proxy does not require programming-level changes. The modifications simply involve altering two elements present in each request:
 
-1. The `BaseURL` used to invoke AI providers should now reference the Saia component. The URL format to be used will be: 
+1. The `BaseURL` used to invoke AI providers should now reference the SAIA component. The URL format to be used will be: 
 
     ```
     "https://api.beta.saia.ai/proxy/{AIProviderName}/{hostRelativeProviderURL}"
     ```
 
-2. The `Authorization` header present in each request should be replaced with the Saia `APIToken` provided beforehand (without the need to specify the provider being invoked).
+2. The `Authorization` header present in each request should be replaced with the SAIA `APIToken` provided beforehand (without the need to specify the provider being invoked).
 
 The request and response received from the call will be the same as if directly invoking the provider.
 
@@ -39,7 +39,7 @@ The request and response received from the call will be the same as if directly 
     "https://api.openai.com/v1/chat/completions"
     ```
 
-    To use Saia Http Proxy, it should be invoked as:
+    To use SAIA Http Proxy, it should be invoked as:
 
     ```
     "https://api.beta.saia.ai/proxy/openai/v1/chat/completions"
@@ -51,7 +51,7 @@ The request and response received from the call will be the same as if directly 
     "https://api.replicate.com/v1/predictions"
     ```
 
-    Using Saia Http Proxy, it should be:
+    Using SAIA Http Proxy, it should be:
 
     ```
     "https://api.beta.saia.ai/proxy/replicate/v1/predictions"
@@ -69,7 +69,7 @@ The request and response received from the call will be the same as if directly 
       }'
     ```
 
-   **Using Saia Proxy AI:**
+   **Using SAIA Proxy AI:**
 
     ```shell
     curl https://api.beta.saia.ai/proxy/openai/v1/chat/completions \
@@ -81,10 +81,10 @@ The request and response received from the call will be the same as if directly 
       }'
     ``` 
 
-By following the above steps, you can easily integrate Saia Http Proxy into your application and manage your AI models with ease.
+By following the above steps, you can easily integrate SAIA Http Proxy into your application and manage your AI models with ease.
 
 
-### How to integrate Saia with Third Party SDKs
+### How to integrate SAIA with Third Party SDKs
 
 #### cURL
 ```curl

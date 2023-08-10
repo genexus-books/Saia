@@ -3,7 +3,7 @@ sidebar_label: 'Api Overview'
 sidebar_position: 1
 ---
 
-# Saia API Reference
+# SAIA API Reference
 
 Table of contents
 =================
@@ -31,7 +31,7 @@ Follow these links to see more details about each API layer:
 * [Search and Chat API](SearchAndChatAPI.md)
 
 ## Authentication
-In order to use our API, you need to authenticate each request using API Tokens. These tokens are managed in Saia [backoffice](Backoffice.md) and uniquely identify the sender of the request.
+In order to use our API, you need to authenticate each request using API Tokens. These tokens are managed in SAIA [backoffice](Backoffice.md) and uniquely identify the sender of the request.
 
 To authenticate your requests, you need to provide your token via HTTP Basic Auth. This means that your token is encoded in the username field, and the password field should be left empty. Once authenticated, you will be able to access all endpoints within your API scope.
 
