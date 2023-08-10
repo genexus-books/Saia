@@ -25,7 +25,7 @@ Below is a summary of the available endpoints for this API:
 | GET    | /assistants            | Get the list of assistants       |
 | GET    | /projects              | Get the list of projects         |
 | GET    | /project/{id}          | Get project details              |
-| POST   | /project/{id}          | Create a project                 |
+| POST   | /project          | Create a project                 |
 | PUT    | /project/{id}          | Update a project                 |
 | DELETE | /project/{id}          | Delete a project                 |
 | GET    | /request/export        | Export request data              |
@@ -231,8 +231,8 @@ When the creation is no successful, status code `400*` will be detailed with a c
 {
   "errors": [
     {
-      "Id": "integer",
-      "Description": "string"
+      "id": "integer",
+      "description": "string"
     },
     ...
   ]
