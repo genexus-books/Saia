@@ -22,6 +22,8 @@ Follow these criteria:
 
 Using the gpt-3.5-turbo-16K model from OpenAI you must set the previous prompt for the System rol and the for the User rol give the command "Create the documentation for this OpenAPI description:" followed by all the yaml file content that describe your API.
 
+Make sure to configure the `Maximum Length` property to the longest possible to generate more content, sample values would be around 12k but it depends on the API pasted on the prompt.
+
 The settings used with this prompt for this model were the following
 
-![image](assets/images/APIDocGenerator-Settings.png)
+![image](../saia-docs/assets/images/APIDocGenerator-Settings.png)
