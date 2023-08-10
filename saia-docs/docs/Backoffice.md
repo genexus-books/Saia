@@ -31,7 +31,8 @@ At the right top of the header, you can select the project you want to view. Aft
 
 On the left side of the screen, you can find the backoffice menu, which grants access to different options based on your credentials. This menu enables you to navigate through the several features and functionalities offered by the SAIA backoffice.
 
-![image](https://github.com/genexus-books/Saia/assets/33163715/4063ebe0-aeac-44cb-9b61-be750cb13f07)
+![image](https://github.com/genexus-books/Saia/assets/33163715/99a5fdfb-c2b8-471d-9854-e01492fb2760)
+
 
 
 
