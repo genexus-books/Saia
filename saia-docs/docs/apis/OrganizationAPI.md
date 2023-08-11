@@ -161,9 +161,8 @@ Get project `{id}` details.
   "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
   "searchProfiles": [
       {
-          "description": "Default",
-          "id": "Default",
-          "name": "Default"
+        "name": "Default",
+        "description": "Default"
       },
       ...
   ]
@@ -204,9 +203,8 @@ Creates a new project.
   "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
   "searchProfiles": [
       {
-          "description": "string",
-          "id": "string",
-          "name": "string"
+        "name": "Default",
+        "description": "Default"
       },
       ...
   ]
@@ -269,9 +267,8 @@ Update a project.
   "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
   "searchProfiles": [
       {
-          "description": "string",
-          "id": "string",
-          "name": "string"
+        "name": "Default",
+        "description": "Default"
       },
       ...
   ]
