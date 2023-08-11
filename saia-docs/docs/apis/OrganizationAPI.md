@@ -97,7 +97,7 @@ curl -X GET "$BASE_URL/v1/organization/assistants" \
 $BASE_URL/v1/organization/assistants?detail=full
 ```
 
-Keep an eye on the returned `assistantId` element  which is needed for other related APIs.
+Keep an eye on the returned `assistantId` element which is needed for other related APIs.
 
 ## GET /projects
 
