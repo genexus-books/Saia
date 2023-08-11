@@ -46,49 +46,44 @@ Using the default `summary` option will only show the first level. The `full` op
 
 ```json
 {
-  "data": {
-      "apiTokenName": "string",
-      "assistants": [
-          {
-              "assistantId": "string",
-              "assistantName": "string",
-              "intents": [ /* full option */
-                  {
-                      "assistantIntentDefaultRevision": "number",
-                      "assistantIntentDescription": "string",
-                      "assistantIntentId": "string",
-                      "assistantIntentName": "string",
-                      "revisions": [
-                          {
-                              "metadata": [
-                                  {
-                                      "key": "string",
-                                      "type": "string",
-                                      "value": "string"
-                                  },
-                                  ...
-                              ],
-                              "modelId": "string",
-                              "modelName": "string",
-                              "prompt": "string",
-                              "providerName": "string",
-                              "revisionDescription": "string",
-                              "revisionId": "string",
-                              "revisionName": "string",
-                              "timestamp": "timestamp"
-                          },
-                          ...
-                      ]
-                  }
-              ]
-          },
-          ...
-      ],
-      "organizationId": "string",
-      "organizationName": "string",
-      "projectId": "string",
-      "projectName": "string"
-  }
+  "assistants": [
+      {
+          "assistantId": "string",
+          "assistantName": "string",
+          "intents": [ /* full option */
+              {
+                  "assistantIntentDefaultRevision": "number",
+                  "assistantIntentDescription": "string",
+                  "assistantIntentId": "string",
+                  "assistantIntentName": "string",
+                  "revisions": [
+                      {
+                          "metadata": [
+                              {
+                                  "key": "string",
+                                  "type": "string",
+                                  "value": "string"
+                              },
+                              ...
+                          ],
+                          "modelId": "string",
+                          "modelName": "string",
+                          "prompt": "string",
+                          "providerName": "string",
+                          "revisionDescription": "string",
+                          "revisionId": "string",
+                          "revisionName": "string",
+                          "timestamp": "timestamp"
+                      },
+                      ...
+                  ]
+              }
+          ]
+      },
+      ...
+  ],
+  "projectId": "string",
+  "projectName": "string"
 }
 ```
 
@@ -98,6 +93,8 @@ Using the default `summary` option will only show the first level. The `full` op
 curl -X GET "$BASE_URL/v1/organization/assistants" \
   -H "Authorization: Bearer $SAIA_APITOKEN" \
   -H "Accept: application/json"
+# using the full detail option change the URL to
+$BASE_URL/v1/organization/assistants?detail=full
 ```
 
 Keep an eye on the returned `assistantId` element  which is needed for other related APIs.
@@ -106,32 +103,28 @@ Keep an eye on the returned `assistantId` element  which is needed for other rel
 
 Get a list of projects.
 
+### Parameters
+
+| Name   | Type   | Description |
+|--------|--------|-------------|
+| detail | string | Defines the level of detail required, options are `summary` (default) or `full` (optional). |
+
+By default active projects will be listed, use the `full` detail option to list all projects.
+
 ### Response
 
 ```json
 {
-  "projects": {
-      "organizationId": "string",
-      "organizationName": "string",
-      "projects": [
-          {
-              "projectActive": "boolean",
-              "projectDescription": "string",
-              "projectId": "string",
-              "projectName": "string",
-              "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
-              "searchProfiles": [
-                  {
-                      "description": "string",
-                      "id": "string",
-                      "name": "string"
-                  },
-                  ...
-              ]
-          },
-          ...
-      ]
-  }
+  "projects": [
+      {
+          "projectActive": "boolean",
+          "projectDescription": "string",
+          "projectId": "string",
+          "projectName": "string",
+          "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+      },
+      ...
+  ]
 }
 ```
 
@@ -141,6 +134,8 @@ Get a list of projects.
 curl -X GET "$BASE_URL/v1/organization/projects" \
   -H "Authorization: Bearer $SAIA_APITOKEN" \
   -H "Accept: application/json"
+# using the full detail option change the URL to
+$BASE_URL/v1/organization/projects?detail=full
 ```
 
 Keep an eye on the returned `projectId` item value which is needed for other related APIs.
@@ -159,23 +154,19 @@ Get project `{id}` details.
 
 ```json
 {
-  "project": {
-      "organizationId": "string",
-      "organizationName": "string",
-      "projectActive": "boolean",
-      "projectDescription": "string",
-      "projectId": "string",
-      "projectName": "string",
-      "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
-      "searchProfiles": [
-          {
-              "description": "Default",
-              "id": "Default",
-              "name": "Default"
-          },
-          ...
-      ]
-  }
+  "projectActive": "boolean",
+  "projectDescription": "string",
+  "projectId": "string",
+  "projectName": "string",
+  "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "searchProfiles": [
+      {
+          "description": "Default",
+          "id": "Default",
+          "name": "Default"
+      },
+      ...
+  ]
 }
 ```
 
@@ -206,23 +197,19 @@ Creates a new project.
 
 ```json
 {
-  "project": {
-      "organizationId": "string",
-      "organizationName": "string",
-      "projectActive": "boolean",
-      "projectDescription": "string",
-      "projectId": "string",
-      "projectName": "string",
-      "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
-      "searchProfiles": [
-          {
-              "description": "string",
-              "id": "string",
-              "name": "string"
-          },
-          ...
-      ]
-  }
+  "projectActive": "boolean",
+  "projectDescription": "string",
+  "projectId": "string",
+  "projectName": "string",
+  "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "searchProfiles": [
+      {
+          "description": "string",
+          "id": "string",
+          "name": "string"
+      },
+      ...
+  ]
 }
 ```
 When the creation is no successful, status code `400*` will be detailed with a collection of errors:
@@ -265,9 +252,9 @@ Update a project.
 
 ```json
 {
-  "Name": "string",
-  "Description": "string",
-  "Active": "boolean"
+  "name": "string", /* Required */
+  "description": "string",
+  "active": "boolean"
 }
 ```
 
@@ -275,23 +262,19 @@ Update a project.
 
 ```json
 {
-  "project": {
-      "organizationId": "string",
-      "organizationName": "string",
-      "projectActive": "boolean",
-      "projectDescription": "string",
-      "projectId": "string",
-      "projectName": "string",
-      "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
-      "searchProfiles": [
-          {
-              "description": "string",
-              "id": "string",
-              "name": "string"
-          },
-          ...
-      ]
-  }
+  "projectActive": "boolean",
+  "projectDescription": "string",
+  "projectId": "string",
+  "projectName": "string",
+  "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "searchProfiles": [
+      {
+          "description": "string",
+          "id": "string",
+          "name": "string"
+      },
+      ...
+  ]
 }
 ```
 
