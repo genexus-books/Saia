@@ -27,6 +27,8 @@ Below is a summary of the available endpoints for this API:
 | PUT    | /v1/search/profile/{name}           | Update a profile         |
 | DELETE | /v1/search/profile/{name}           | Delete a profile         |
 | GET    | /v1/search/profile/{name}/documents | Get documents for a profile |
+| GET    | /v1/search/profile/{name}/document/{id} | Retrieve Document information |
+| DELETE | /v1/search/profile/{name}/document/{id} | Delete a Document |
 | POST   | /v1/search/execute                  | Execute a search query   |
 
 ## GET /profiles
@@ -296,6 +298,70 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/documents" \
  -H "accept: application/json"
 # Use the optional skip and count parameters
 $BASE_URL/v1/search/profile/{name}/documents?skip={skip}&count={count}
+```
+
+## GET /v1/search/profile/{name}/document/{id}
+
+Using the `{name}` Search Profile, it gets detail about the `{id}` document.
+
+### Parameters
+
+| Name   | Type   | Description |
+|--------|--------|-------------|
+| name | string | Search Profile name (required) |
+| id | string | Document Id (required) |
+
+### Response
+
+```json
+{
+  "extension": "string",
+  "id": "string",
+  "indexStatus": "string", /* Unknown, Starting, Failed, Pending, Success */
+  "indexDetail": "string",
+  "keyName": "string",
+  "metadata": [
+    {
+      "key": "string",
+      "value": "string"
+    },
+    ...
+  ],
+  "name": "string",
+  "timestamp": "timestamp",
+  "url": "string"
+}
+```
+
+### CURL Example
+
+```shell
+curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
+ -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "accept: application/json"
+```
+
+## DELETE /v1/search/profile/{name}/document/{id}
+
+Delete a Document.
+
+### Parameters
+
+| Name | Type   | Description |
+|------|--------|-------------|
+| name | string | Search Profile name (required) |
+| id | string | Document Id (required) |
+
+### Response
+
+StatusCode `200` is detailed when successfully deleted, otherwise `400*` error and a collection of errors.
+
+### CURL Example
+
+```shell
+curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
+ -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "accept: application/json"
 ```
 
 ## POST /v1/search/execute
