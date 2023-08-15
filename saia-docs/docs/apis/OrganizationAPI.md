@@ -28,6 +28,7 @@ Below is a summary of the available endpoints for this API:
 | POST   | /project          | Create a project                 |
 | PUT    | /project/{id}          | Update a project                 |
 | DELETE | /project/{id}          | Delete a project                 |
+| GET    | /project/{id}/tokens   | Get the list of Tokens for the project |
 | GET    | /request/export        | Export request data              |
 
 ## GET /assistants
@@ -308,6 +309,41 @@ StatusCode `200` is detailed when successfully deleted, otherwise `400*` error a
 
 ```shell
 curl -X DELETE "$BASE_URL/v1/organization/project/{id}" \
+ -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "accept: application/json"
+```
+
+## GET /project/{id}/tokens
+
+Get the list of API tokens for the `{id}` project.
+
+### Parameters
+
+| Name | Type   | Description |
+|------|--------|-------------|
+| id   | string | Project GUID (required) |
+
+### Response
+
+```json
+{
+    "tokens": [
+      {
+        "description": "string",
+        "id": "string",
+        "name": "string",
+        "status": "Active", /* Active, Blocked */
+        "timestamp": "timestamp"
+      },
+      ...
+    ]
+}
+```
+
+### CURL Example
+
+```shell
+curl -X GET "$BASE_URL/v1/organization/project/{id}/tokens"
  -H "Authorization: Bearer $SAIA_APITOKEN" \
  -H "accept: application/json"
 ```
