@@ -31,8 +31,8 @@ Executes a search query based on a specific profile and question.
 
   ```json
   {
-    "profile": "example_profile",
-    "question": "example_question"
+    "profile": "string",
+    "question": "string"
   }
   ```
 
@@ -93,7 +93,7 @@ curl -X POST
   -H "Content-Type: application/json"
   -H "Authorization: Bearer {YOUR_API_TOKEN}"
   -d '{
-  "profile": "example_profile",
-  "question": "example_question"
-}' https://api.beta.saia.ai/v1/search/execute
+  "profile": "Default",
+  "question": "Explain to me what is SAIA?"
+}' $BASE_URL/v1/search/execute
 ```

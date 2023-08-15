@@ -16,6 +16,7 @@ Table of contents
 * [Assistants API](AssistantsAPI.md)
 * [Search and Chat API](SearchAndChatAPI.md)
 * [Organization API](OrganizationAPI.md)
+* [Search Profile API](SearchProfileAPI.md)
 
 
 # Introduction

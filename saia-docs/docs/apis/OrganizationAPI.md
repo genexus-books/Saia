@@ -9,12 +9,32 @@ This API allows you to interact with SAIA organization data.
 
 ## Introduction
 
-The SAIA Organization API provides endpoints to retrieve organization data, such as projects and requests. It allows you to fetch project details and export request data. Notice the following properties needed when using the API.
+The SAIA Organization API provides endpoints to retrieve organization data, such as projects and requests. It allows you to fetch project details and export request data.
+
+### Generic Variables
+Notice the following properties needed when using the API.
 
 | Variable | Description |
 | ------ | ---------------------- |
-| `$BASE_URL` | The base URL for your SAIA installation, for example `https://api.beta.saia.ai` |
+| `$BASE_URL` | The base URL for your SAIA installation, for example `https://api.beta.saia.ai` or the value provided to you. |
 | `$SAIA_APITOKEN` | An API token generated for each organization |
+
+
+### Error Messages
+
+It there is an error during the execution, all APIs return a list of errors and a status code `400*`:
+
+```json
+{
+  "errors": [
+    {
+      "id": "integer",
+      "description": "string"
+    },
+    ...
+  ]
+}
+```
 
 ## Endpoints
 
