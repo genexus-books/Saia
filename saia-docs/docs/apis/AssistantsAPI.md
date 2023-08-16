@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-sidebar_label: 'Assistant Api'
+sidebar_label: 'Assistant API'
 ---
 
-# SAIA Assistant Api
+# SAIA Assistant API
 
 This is the documentation for the SAIA Assistant API and related operations.
 

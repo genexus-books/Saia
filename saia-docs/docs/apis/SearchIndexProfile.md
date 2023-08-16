@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Search Profiles Api'
+sidebar_label: 'Search Profiles API'
 sidebar_position: 5
 ---
 

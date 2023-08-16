@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Administration Api'
+sidebar_label: 'Administration API'
 sidebar_position: 4
 ---
 

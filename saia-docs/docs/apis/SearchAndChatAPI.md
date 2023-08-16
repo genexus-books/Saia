@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Search Chat Api'
+sidebar_label: 'Search Chat API'
 sidebar_position: 3
 ---
 
