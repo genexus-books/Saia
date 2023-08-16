@@ -15,6 +15,8 @@ The supported files are `txt`, `pdf`, `docx`, `epub`, `json`, `jsonl`, `csv`; an
 
 It refers to ways to structure documents (unstructured data) so that LLMs can best interact with them. The most common way that indexes are used is in a `retrieval` step before interacting with a LLM.
 
+Index configuration can be checked on the `Search Documents` console section. There is a list of `Search Profiles` and each one with the possibility to use a specific index. You can also check and modify this information with the associated [API](./SearchIndexProfile.md).
+
 ## Chunks
 
 LLMs are often limited by the amount of text that you can pass to them. Therefore, it is necessary to split them up into smaller chunks. The default chunking configuration is as follows:
@@ -66,4 +68,4 @@ type: 'legal'
 year: 2003
 ```
 
-Later on, during the retrieval process, it is possible to filter against specific metadata.
+Later on, during the [retrieval process](./SearchAndChatAPI.md#1-searchchat---execute-search-query), it is possible to filter against specific metadata.
