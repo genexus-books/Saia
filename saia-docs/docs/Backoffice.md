@@ -85,7 +85,7 @@ To invite a new member, follow the steps below:
 6. Enter the email address of the user you want to invite as a new member.
 7. Click on the "Invite Member" to send the invitation.
 
-An invitation email to the specified user will be sent to join the project. Once the invited user accepts the invitation, they will gain access to the project.
+Once the invited user enters the back office, they will gain access to the project. Keep in mind that the invitation is valid for 24 hours, after which it expires and a new one must be generated.
 
 Note: Make sure to provide the correct email address of the user you want to invite.
 
@@ -148,7 +148,6 @@ To create a Chat assistant, follow these steps:
 
 Note: When creating prompt or chat assistants, ensure that the instructions, prompts, or initial context provided are clear and concise to obtain accurate and meaningful responses from the AI models.
 
-## Search domains
 
 ## Observability
 SAIA stores and tracks every request made through its API layers, providing organizations with complete visibility into the usage of assistants, AI models, and the associated cost for each request. This allows organizations to monitor and analyze resource usage, make informed decisions about resource allocation and optimize usage for cost-efficiency. 
