@@ -68,40 +68,40 @@ Using the default `summary` option will only show the first level. The `full` op
 ```json
 {
   "assistants": [
-      {
-          "assistantId": "string",
-          "assistantName": "string",
-          "intents": [ /* full option */
-              {
-                  "assistantIntentDefaultRevision": "number",
-                  "assistantIntentDescription": "string",
-                  "assistantIntentId": "string",
-                  "assistantIntentName": "string",
-                  "revisions": [
-                      {
-                          "metadata": [
-                              {
-                                  "key": "string",
-                                  "type": "string",
-                                  "value": "string"
-                              },
-                              ...
-                          ],
-                          "modelId": "string",
-                          "modelName": "string",
-                          "prompt": "string",
-                          "providerName": "string",
-                          "revisionDescription": "string",
-                          "revisionId": "string",
-                          "revisionName": "string",
-                          "timestamp": "timestamp"
-                      },
-                      ...
-                  ]
-              }
+    {
+      "assistantId": "string",
+      "assistantName": "string",
+      "intents": [ /* full option */
+        {
+          "assistantIntentDefaultRevision": "number",
+          "assistantIntentDescription": "string",
+          "assistantIntentId": "string",
+          "assistantIntentName": "string",
+          "revisions": [
+            {
+              "metadata": [
+                {
+                  "key": "string",
+                  "type": "string",
+                  "value": "string"
+                },
+                ...
+              ],
+              "modelId": "string",
+              "modelName": "string",
+              "prompt": "string",
+              "providerName": "string",
+              "revisionDescription": "string",
+              "revisionId": "string",
+              "revisionName": "string",
+              "timestamp": "timestamp"
+            },
+            ...
           ]
-      },
-      ...
+        }
+      ]
+    },
+    ...
   ],
   "projectId": "string",
   "projectName": "string"
@@ -137,14 +137,14 @@ By default active projects will be listed, use the `full` detail option to list 
 ```json
 {
   "projects": [
-      {
-          "projectActive": "boolean",
-          "projectDescription": "string",
-          "projectId": "string",
-          "projectName": "string",
-          "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
-      },
-      ...
+    {
+      "projectActive": "boolean",
+      "projectDescription": "string",
+      "projectId": "string",
+      "projectName": "string",
+      "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+    },
+    ...
   ]
 }
 ```
@@ -181,10 +181,10 @@ Get project `{id}` details.
   "projectName": "string",
   "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
   "searchProfiles": [
-      {
-        "name": "Default",
-        "description": "Default"
-      },
+    {
+      "name": "string",
+      "description": "string"
+    },
       ...
   ]
 }
@@ -223,11 +223,11 @@ Creates a new project.
   "projectName": "string",
   "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
   "searchProfiles": [
-      {
-        "name": "Default",
-        "description": "Default"
-      },
-      ...
+    {
+      "name": "string",
+      "description": "string"
+    },
+    ...
   ]
 }
 ```
@@ -241,9 +241,21 @@ When the creation is no successful, status code `400*` will be detailed with a c
       "description": "string"
     },
     ...
+  ],
+  "tokens": [
+    {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "status": "string", /* Active, Blocked */
+      "timestamp": "timestamp"
+    },
+    ...
   ]
 }
 ```
+
+Notice the `tokens` element (default API Tokens) are only returned at Project creation time. You can retrieve them using the [GET Tokens](#get-projectidtokens) endpoint.
 
 ### CURL Example
 
@@ -287,11 +299,11 @@ Update a project.
   "projectName": "string",
   "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
   "searchProfiles": [
-      {
-        "name": "Default",
-        "description": "Default"
-      },
-      ...
+    {
+      "name": "string",
+      "description": "string"
+    },
+    ...
   ]
 }
 ```
@@ -347,16 +359,16 @@ Get the list of API tokens for the `{id}` project.
 
 ```json
 {
-    "tokens": [
-      {
-        "description": "string",
-        "id": "string",
-        "name": "string",
-        "status": "Active", /* Active, Blocked */
-        "timestamp": "timestamp"
-      },
-      ...
-    ]
+  "tokens": [
+    {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "status": "string", /* Active, Blocked */
+      "timestamp": "timestamp"
+    },
+    ...
+  ]
 }
 ```
 
