@@ -28,6 +28,7 @@ Below is a summary of the available endpoints for this API:
 | DELETE | /v1/search/profile/{name}           | Delete a profile         |
 | GET    | /v1/search/profile/{name}/documents | Get documents for a profile |
 | GET    | /v1/search/profile/{name}/document/{id} | Retrieve Document information |
+| POST   | /v1/search/profile/{name}/document  | Uploads a Document |
 | DELETE | /v1/search/profile/{name}/document/{id} | Delete a Document |
 | POST   | /v1/search/execute                  | Execute a search query   |
 
@@ -340,6 +341,52 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
  -H "Authorization: Bearer $SAIA_APITOKEN" \
  -H "accept: application/json"
 ```
+
+## POST /v1/search/profile/{name}/document
+
+Uploads a Document to the associated `{name}` Search Profile. Notice that the file extension must be a [supported one](./Documents.md).
+
+### Request Body
+
+The supported options are `binary` or `multipart/form-data` including a `File` type.
+
+#### Binary
+
+Useful for its simplicity, encode the binary data directly in the request body. Set the request with the associated `Content-Type` header to indicate the type of data being sent (e.g., `application/pdf`, `text/plain`).
+
+It is mandatory to set a `filename` header value with the document name and extension, to be assigned when uploading the data, for example:
+
+```
+filename: SampleFile.pdf
+```
+
+#### form-data
+
+This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for a large file.
+
+### Response
+
+Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that once the document is uploaded the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) method to check the document status, the expected result is `Success`.
+
+### CURL Example
+
+```shell
+# binary
+curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
+ -H "Authorization: Bearer $SAIA_APITOKEN" \
+--header 'filename: SampleFile.pdf' \
+--header 'Content-Type: application/pdf' \
+--data '@/C:/temp/SampleFile.pdf'
+# multi-part
+curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
+ -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Content-Type: application/pdf" \
+ --form 'file=@"/C:/temp/SampleFile.pdf"'
+```
+
+### Restriction
+
+It is not possible to bind [Metadata](./Documents.md#metadata) to the file.
 
 ## DELETE /v1/search/profile/{name}/document/{id}
 
