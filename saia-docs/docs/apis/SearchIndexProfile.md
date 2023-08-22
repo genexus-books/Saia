@@ -50,22 +50,29 @@ Standalone question:
 
 The LLM configuration parameters can be changed using the following pseudo-json structure:
 
-```
+```json
 {
-  "modelName":"gpt-3.5-turbo",
-  "temperature":0,
-  "maxTokens":1000,
-  "topP":1,
-  "n":1,
-  "stream":false,
-  "verbose":false,
-  "cache":true,
-  "frequencyPenalty":0,
-  "presencePenalty":0
+  "provider": "string",
+  "apiKey": "string",
+  "modelName": "string",
+  "temperature": "decimal",
+  "maxTokens": "integer",
+  "topP": "decimal",
+  "n": "integer",
+  "stream": "boolean",
+  "verbose": "boolean",
+  "cache": "boolean",
+  "frequencyPenalty": "decimal",
+  "presencePenalty": "decimal"
 }
 ```
 
 Currently the text/chat [OpenAI models](https://platform.openai.com/docs/models/) can be used with the following [parameters](https://platform.openai.com/docs/api-reference/chat).
+
+The provider element can be configured with the following:
+
+ * `openai`
+ * `azureopenai`
 
 The embeddings section must match the `Provider` used, for `OpenAI` the following configuration applies:
 
@@ -77,6 +84,20 @@ The embeddings section must match the `Provider` used, for `OpenAI` the followin
 ```
 
 [More Information](https://platform.openai.com/docs/api-reference/embeddings)
+
+### Azure OpenAI 
+
+When using the `azureopenai` provider the following properties are mandatory for the LLM configuration: `apiKey` and `endpoint`. The `endpoint` is configured in the associated [Search Profile](#history-document-count-scores).
+
+```json
+// LLM Settings
+{
+  "provider": "azureopenai",
+  "apiKey": "somevalue"
+}
+// Endpoint Sample
+https://{name}.openai.azure.com/openai/deployments/{deployment}/chat/completions?api-version={version}
+```
 
 ## History, Document Count, Scores
 
