@@ -228,19 +228,6 @@ Creates a new project.
       "description": "string"
     },
     ...
-  ]
-}
-```
-When the creation is no successful, status code `400*` will be detailed with a collection of errors:
-
-```json
-{
-  "errors": [
-    {
-      "id": "integer",
-      "description": "string"
-    },
-    ...
   ],
   "tokens": [
     {
@@ -256,6 +243,20 @@ When the creation is no successful, status code `400*` will be detailed with a c
 ```
 
 Notice the `tokens` element (default API Tokens) are only returned at Project creation time. You can retrieve them using the [GET Tokens](#get-projectidtokens) endpoint.
+
+When the creation is no successful, status code `400*` will be detailed with a collection of errors:
+
+```json
+{
+  "errors": [
+    {
+      "id": "integer",
+      "description": "string"
+    },
+    ...
+  ]
+}
+```
 
 ### CURL Example
 
