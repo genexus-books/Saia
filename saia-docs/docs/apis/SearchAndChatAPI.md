@@ -31,6 +31,7 @@ Executes a search query based on a specific profile and question.
 
   ```json
   {
+    "id": "string", /* optional */
     "profile": "string",
     "question": "string"
   }
@@ -38,8 +39,11 @@ Executes a search query based on a specific profile and question.
 
   | Parameter | Type   | Description                     |
   | --------- | ------ | ------------------------------- |
+  | id | string | Identifier for the conversation |
   | profile   | string | The profile to search           |
   | question  | string | The question to ask             |
+
+To keep track of the conversation use a unique value for the `id` optional element. Notice that the last n items (`History Count` parameter from the [Search Profile](./SearchIndexProfile.md#history-document-count-scores)) will be considered to help answer the query. When no value is set; the chat will not consider the latest questions and answers.
 
 #### Response
 
@@ -63,6 +67,7 @@ Executes a search query based on a specific profile and question.
         }
       }
     ],
+    "id": "someId",
     "text": "Example reply",
     "result": {
       "success": true,
