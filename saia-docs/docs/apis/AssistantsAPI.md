@@ -354,10 +354,9 @@ Sends a text prompt to the SAIA Assistant.
 curl -X POST $BASE_URL/v1/assistant/text \
   -H "Content-Type: application/json" \
   -d '{
-    "assistant": "string",
-    "prompt": "string",
-    "revision": 0,
-    "revisionName": "string"
+    "assistant": "AssistantName",
+    "prompt": "Your Input here",
+    "revision": 1
   }'
 ```
 
