@@ -14,10 +14,23 @@ Table of contents
 
 # SAIA: the Spine of AI  Applications
 
-Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
+Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. Serving as a secure bridge, SAIA connects businesses directly to LLMs. With SAIA, not only do you get a smooth, cost-effective connection to Gen-AI technologies, but you also gain the tools to drive productivity and fast-track innovation within your enterprise.
+
+To facilitate the integration of generative AI into your workflow, SAIA offers features that enable you to:
+* Monitor access to LLMs through customized authentication and authorization protocols.
+* Provide a Web interface with a look and feel that is familiar to Generative AI users branded and managed by your organization. 
+* Supervise the costs and interactions associated with each Gen-AI Solution for streamlined analysis and control.
+* Manage quotas per solution to keep your spending in check.
+
+Further, for those looking to integrate AI capabilities into their custom corporate software, SAIA provides the ability to:
+* Automatically generate APIs and version the assistants and prompts you create using our Prompt Editor. 
+* Optimize your AI exploration by effortlessly switching between different LLMs.
+* Reduce dependency between the AI applications you develop and their underlying LLMs.
+* Leverage pre-built AI functions, like 'Chat with your Documents' and 'Chat with your Data,' to accelerate your AI adoption journey.
 
 
-![image](../assets/images/GBrain-Architecture.png)
+These AI applications, designed to be integrated into production environments, require a set of essential non-functional and functional characteristics for business applications. 
+
 
 ## Non-functional Characteristics 
 - Observability 
@@ -74,10 +87,11 @@ Performance should not degrade with business success. Having infrastructure desi
 
 SAIA provides all the services and abstractions necessary for implementing emerging UX patterns. It offers the following services: 
 
-- Search & Chat creation for any document set, essentially building a private ChatGPT for unstructured company documents 
+- Chat with any document set, essentially building a private ChatGPT for unstructured company documents 
 - Assistant creation and chaining for various business objectives 
 - Autocomplete assistants 
-- Summarization assistants 
+- Summarization assistants
+- Offer a private instance to chat with LLMs 
 
 ## Testing your assistants
 
