@@ -12,7 +12,7 @@ Table of contents
 * [Authentication ](#authentication)
 * [Errors ](#errors)
 * [Versioning ](#versioning)
-* [Proxy AI API](../SAIA Proxy AI.md)
+* [Proxy AI API](../SAIA%20Proxy%20AI.md)
 * [Assistants API](AssistantsAPI.md)
 * [Search and Chat API](SearchAndChatAPI.md)
 * [Organization API](OrganizationAPI.md)
@@ -20,16 +20,8 @@ Table of contents
 
 
 # Introduction
-The API has three main layers, each with its specific functions and features. The first layer handles all communication and manages all calls made to different AI providers. The second layer is responsible for defining and configuring assistants according to your specific needs. Finally, the third layer includes an accelerator that streamlines common functions such as chatting, searching or intent-based navigation. 
+SAIA provides various APIs that, on one hand, allow integration with Language Model (LLM) systems and performing actions that modify SAIA's metadata. On the other hand, a different set of APIs enables interaction with defined assistants.
 
-By understanding the functionality of each layer, you can better leverage the API's capabilities in your application and provide a more seamless experience to your users.
-
-![image](../../assets/images/APIReference.png)
-
-Follow these links to see more details about each API layer:
-* [Proxy AI API](../SAIA Proxy AI.md)
-* [Assistants API](AssistantsAPI.md)
-* [Search and Chat API](SearchAndChatAPI.md)
 
 ## Authentication
 In order to use our API, you need to authenticate each request using API Tokens. These tokens are managed in SAIA [backoffice](Backoffice.md) and uniquely identify the sender of the request.
