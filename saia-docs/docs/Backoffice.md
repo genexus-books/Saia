@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Console'
+sidebar_label: 'Backoffice'
 sidebar_position: 10
 ---
 
