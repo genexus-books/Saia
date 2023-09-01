@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Administration API'
+sidebar_label: 'Organization API'
 sidebar_position: 4
 ---
 
@@ -16,7 +16,7 @@ Notice the following properties needed when using the API.
 
 | Variable | Description |
 | ------ | ---------------------- |
-| `$BASE_URL` | The base URL for your SAIA installation, for example `https://api.beta.saia.ai` or the value provided to you. |
+| `$BASE_URL` | The base URL for your SAIA installation, for example `https://api.saia.ai` or the value provided to you. |
 | `$SAIA_APITOKEN` | An API token generated for each organization |
 
 
@@ -415,7 +415,7 @@ Export request data.
 ### CURL Example
 
 ```shell
-curl -X GET "https://api.beta.saia.ai/v1/organization/request/export?Assistantname=example&Status=completed" \
+curl -X GET "https://api.saia.ai/v1/organization/request/export?Assistantname=example&Status=completed" \
   -H "Authorization: Bearer $SAIA_APITOKEN" \
   -H "Accept: application/json"
 ```
