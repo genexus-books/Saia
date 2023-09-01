@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'SAIA Overview'
+sidebar_label: 'Overview'
 sidebar_position: 1
 slug: /
 ---
@@ -9,6 +9,7 @@ Table of contents
 
 * [Overview](#Saia-the-ai-brain-for-your-enterprise-applications)
 * [API Reference](docs/apis/APIReference.md)
+* [Proxy AI](docs/SAIA%20Proxy%20AI.md)
 * [Backoffice](docs/Backoffice.md)
 
 
