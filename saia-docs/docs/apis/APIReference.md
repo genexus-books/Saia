@@ -12,7 +12,7 @@ Table of contents
 * [Authentication ](#authentication)
 * [Errors ](#errors)
 * [Versioning ](#versioning)
-* [Proxy AI API](../ProxyOverview.md)
+* [Proxy AI API](../SAIA Proxy AI.md)
 * [Assistants API](AssistantsAPI.md)
 * [Search and Chat API](SearchAndChatAPI.md)
 * [Organization API](OrganizationAPI.md)
@@ -27,7 +27,7 @@ By understanding the functionality of each layer, you can better leverage the AP
 ![image](../../assets/images/APIReference.png)
 
 Follow these links to see more details about each API layer:
-* [Proxy AI API](../ProxyOverview.md)
+* [Proxy AI API](../SAIA Proxy AI.md)
 * [Assistants API](AssistantsAPI.md)
 * [Search and Chat API](SearchAndChatAPI.md)
 
