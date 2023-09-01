@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'SAIA Proxy AI'
+sidebar_label: 'Proxy AI'
 sidebar_position: 2
 ---
 
