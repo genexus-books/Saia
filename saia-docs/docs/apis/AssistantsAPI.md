@@ -1,11 +1,13 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 sidebar_label: 'Assistant API'
 ---
 
 # SAIA Assistant API
 
-This is the documentation for the SAIA Assistant API and related operations.
+This API enables the creation of new assistants, the modification of their definitions, and the retrieval of information about them. Furthermore, it allows the execution of previously defined assistants.
+
+Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
 ## Endpoints
 

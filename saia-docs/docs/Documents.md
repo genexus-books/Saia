@@ -1,15 +1,31 @@
 ---
-sidebar_label: 'Document Indexing'
-sidebar_position: 5
+sidebar_label: 'Chat with documents'
+sidebar_position: 15
 ---
 
-# Document Management
+# Chat with documents
 
 ## Introduction
 
-Before using the Search and Chat option, you need to upload documents to be ingested in a vectorstore database. Internally this process called `Ingestion` will create an index over the data.
+To enable the possibility of chatting or searching for information stored in documents, we first need to create search indexes. These indexes essentially allow us to group content within a context or area of knowledge. For example, we could have an index for legal matters, another for support, helpdesk, etc.
 
+Once we have these indexes created, we need to perform the content indexing process.
+
+This will allow us to start conducting searches and answering questions through a conversational interface with the indexed content.
+
+## Document Upload
+
+### Metadata
+
+When uploading documents, you can add extra metadata to be added to the chunks of documents. The format is `key/value` configuration for each value. For example:
+
+```
+type: 'legal'
+year: 2003
+```
 The supported files are `txt`, `pdf`, `docx`, `epub`, `json`, `jsonl`, `csv`; any other extension will be treated as a text file.
+
+Later on, during the [retrieval process](./apis/ChatWithDocumentsAPI.md#1-execute---execute-search-query), it is possible to filter against specific metadata.
 
 ## Indexes
 
@@ -55,17 +71,4 @@ You can change the default for your index and also create several index strategi
 }
 ```
 
-In this case, each document will be chunked three times and ingested separately. Later on, when querying you can change the default namespace appending the extra `chunkSize` value. You can use the `Playground` to change this configuration and evaluate the best fit.
-
-## Document Upload
-
-### Metadata
-
-When uploading documents, you can add extra metadata to be added to the chunks of documents. The format is `key/value` configuration for each value. For example:
-
-```
-type: 'legal'
-year: 2003
-```
-
-Later on, during the [retrieval process](./SearchAndChatAPI.md#1-searchchat---execute-search-query), it is possible to filter against specific metadata.
+In this case, each document will be chunked three times and ingested separately. Later on, when querying you can change the default namespace appending the extra `chunkSize` value. 

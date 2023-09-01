@@ -3,15 +3,6 @@ sidebar_label: 'Overview'
 sidebar_position: 1
 slug: /
 ---
-
-Table of contents
-=================
-
-* [API Reference](docs/apis/APIReference.md)
-* [Proxy AI](docs/SAIA%20Proxy%20AI.md)
-* [Backoffice](docs/Backoffice.md)
-
-
 # SAIA: the Spine of AI  Applications
 
 Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. Serving as a secure bridge, SAIA connects businesses directly to LLMs. With SAIA, not only do you get a smooth, cost-effective connection to Gen-AI technologies, but you also gain the tools to drive productivity and fast-track innovation within your enterprise.

@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Search Index Profiles'
-sidebar_position: 5
+sidebar_position: 16
 ---
 
 # Search Index Profiles

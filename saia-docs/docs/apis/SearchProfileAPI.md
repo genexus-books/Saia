@@ -1,19 +1,15 @@
 ---
-sidebar_label: 'SearchProfile API'
-sidebar_position: 6
+sidebar_label: 'Search Profile API'
+sidebar_position: 3
 ---
 
 # SAIA SearchProfile API
 
-This API allows you to define different search profiles.
+This API allows you to define different search profiles to implement the [Chat with Documents](../Documents.md) scenario.
 
-## Introduction
+Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
-The SAIA SearchProfile API provides endpoints to manage Search Profiles, meaning the associated elements needed to create and handle Search and Chat interactions.
-
-Check the [variables definition](./OrganizationAPI.md#generic-variables) to correctly use `$BASE_URL` and `$SAIA_APITOKEN`.
-
-Check parameters explanation [here](./SearchIndexProfile.md).
+Check parameters explanation [here](../SearchIndexProfile.md).
 
 ## Endpoints
 
@@ -55,7 +51,7 @@ Retrieve all the search profiles for a Project.
 }
 ```
 
-The `description` parameter is mandatory to be used with the [chat](./SearchAndChatAPI.md#saia-searchchat-api) option.
+The `description` parameter is mandatory to be used with the [chat](ChatWithDocumentsAPI.md) option.
 
 ### CURL Example
 
@@ -110,7 +106,7 @@ Get Search Profile `{name}` details.
 }
 ```
 
-The `type` parameter is explained [here](./SearchIndexProfile.md#retrievers).
+The `type` parameter is explained [here](../SearchIndexProfile.md#retrievers).
 
 ### CURL Example
 
@@ -344,7 +340,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-Uploads a Document to the associated `{name}` Search Profile. Notice that the file extension must be a [supported one](./Documents.md).
+Uploads a Document to the associated `{name}` Search Profile. Notice that the file extension must be a [supported one](../Documents.md).
 
 ### Request Body
 
@@ -386,7 +382,7 @@ curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
 
 ### Restriction
 
-It is not possible to bind [Metadata](./Documents.md#metadata) to the file.
+It is not possible to bind [Metadata](../Documents.md#metadata) to the file.
 
 ## DELETE /v1/search/profile/{name}/document/{id}
 
@@ -413,4 +409,4 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/execute
 
-Execute a search query, more detail [here](./SearchAndChatAPI.md#saia-searchchat-api).
+Execute a search query, more detail [here](ChatWithDocumentsAPI.md).

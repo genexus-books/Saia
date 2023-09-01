@@ -1,23 +1,27 @@
 ---
-sidebar_label: 'Search Chat API'
-sidebar_position: 3
+sidebar_label: 'Chat with Documents API'
+sidebar_position: 4
 ---
 
-# SAIA SearchChat API
+# SAIA Chat with Documents API
 
-## Introduction
+This API enables searches or queries on the indexed content. 
 
-The SAIA SearchChat API is a RESTful API that provides search functionality for chat conversations. It allows you to execute searches based on specific profiles and questions, and retrieves search results along with relevant metadata. This documentation provides detailed information on the available endpoints and how to interact with them. If you want to change parameters configuration use the [Search Index Profile](SearchIndexProfile.md) section.
+This documentation provides detailed information on the available endpoints and how to interact with them. 
+
+If you want to change parameters configuration use the [Search Index Profile](../SearchIndexProfile.md) section.
+
+Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
 ## Endpoints
 
-The SAIA SearchChat API provides the following endpoint:
+The SAIA Chat with documents API provides the following endpoint:
 
 | Method | Path                  |
 | ------ | --------------------- |
 | POST   | /execute              |
 
-### 1. `/SearchChat` - Execute Search Query
+### 1. `/execute` - Execute Search Query
 
 Executes a search query based on a specific profile and question.
 
@@ -43,7 +47,7 @@ Executes a search query based on a specific profile and question.
   | profile   | string | The profile to search           |
   | question  | string | The question to ask             |
 
-To keep track of the conversation use a unique value for the `id` optional element. Notice that the last n items (`History Count` parameter from the [Search Profile](./SearchIndexProfile.md#history-document-count-scores)) will be considered to help answer the query. When no value is set; the chat will not consider the latest questions and answers.
+To keep track of the conversation use a unique value for the `id` optional element. Notice that the last n items (`History Count` parameter from the [Search Profile](../SearchIndexProfile.md#history-document-count-scores)) will be considered to help answer the query. When no value is set; the chat will not consider the latest questions and answers.
 
 #### Response
 
