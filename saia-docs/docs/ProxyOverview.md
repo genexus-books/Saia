@@ -1,9 +1,8 @@
 ---
-sidebar_label: 'Proxy Overview'
+sidebar_label: 'SAIA Proxy AI'
 sidebar_position: 2
 ---
 
-## SAIA Proxy AI API
 
 SAIA Proxy AI API stands as a transparent proxy that allows businesses to easily connect to various AI models across different providers, all through a single point of access. With the robust capabilities of SAIA Proxy AI, you don't need to juggle multiple SDKs or APIs; you can access any supported LLM with a single SDK.
 
