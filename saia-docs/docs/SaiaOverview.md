@@ -5,7 +5,17 @@ slug: /
 ---
 # SAIA: the Spine of AI  Applications
 
-Enterprise applications utilizing Large Language Models (LLMs) as a foundation are now a reality. Serving as a secure bridge, SAIA connects businesses directly to LLMs. With SAIA, not only do you get a smooth, cost-effective connection to Gen-AI technologies, but you also gain the tools to drive productivity and fast-track innovation within your enterprise.
+## What is SAIA?
+
+SAIA is an enterprise platform designed to facilitate the implementation of AI-Assistants tailored to your specific needs and areas of expertise.
+
+You can create robust AI-Assistants that can integrate and interact with your current operations, processes, systems and documents, creating new paths of innovation and productivity to explore.
+
+It empowers users to solve their needs with natural language.
+
+SAIA provides the integration and management of Large Language Models (LLMs), such as Generative AI technologies, within businesses.
+
+SAIA serves as a secure bridge, allowing organizations to connect directly to LLMs while offering several tools and features to enhance productivity and innovation. 
 
 To facilitate the integration of generative AI into your workflow, SAIA offers features that enable you to:
 * Monitor access to LLMs through customized authentication and authorization protocols.
