@@ -9,7 +9,7 @@ slug: /
 
 SAIA is an enterprise platform designed to facilitate the implementation of AI-Assistants tailored to your specific needs and areas of expertise.
 
-You can create robust AI-Assistants that can integrate and interact with your current operations, processes, systems and documents, creating new paths of innovation and productivity to explore.
+You can create AI-Assistants that can integrate and interact with your current operations, processes, systems and documents, creating new paths of innovation and productivity to explore.
 
 It empowers users to solve their needs with natural language.
 
