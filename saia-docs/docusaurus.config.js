@@ -76,8 +76,8 @@ const config = {
           },*/
         ],
       },
-      /*footer: {
-        style: 'dark',
+      footer: {
+        /*style: 'dark',
         links: [
           {
             title: 'Docs',
@@ -118,9 +118,9 @@ const config = {
               },
             ],
           },
-        ],
-        //copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },*/
+        ],*/
+        copyright: `© ${new Date().getFullYear()} GeneXus. All rights reserved. <a href="https://www.genexus.com/">GeneXus</a> Powered by <a href="https://www.globant.com/">Globant</a>`,
+      },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false
