@@ -11,11 +11,9 @@ SAIA is an enterprise platform designed to facilitate the implementation of AI-A
 
 You can create AI-Assistants that can integrate and interact with your current operations, processes, systems and documents, creating new paths of innovation and productivity to explore.
 
-It empowers users to solve their needs with natural language.
+One of the great benefits of using SAIA is the ability to select a Large Language Model (LLM) and later switch to another without changing your definitions. Thus, SAIA acts as a secure bridge, connecting enterprises to LLMs while providing a variety of tools and features to boost productivity and innovation.
 
-SAIA provides the integration and management of Large Language Models (LLMs), such as Generative AI technologies, within businesses.
-
-SAIA serves as a secure bridge, allowing organizations to connect directly to LLMs while offering several tools and features to enhance productivity and innovation. 
+Since SAIA is an intermediate layer, anyone who works with it (rather than directly with an LLM API) is protected because the data will not be made public or used by the LLMs. 
 
 To facilitate the integration of generative AI into your workflow, SAIA offers features that enable you to:
 * Monitor access to LLMs through customized authentication and authorization protocols.
