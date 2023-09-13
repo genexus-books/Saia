@@ -13,7 +13,7 @@ You can create AI-Assistants that can integrate and interact with your current o
 
 One of the great benefits of using SAIA is the ability to select a Large Language Model (LLM) and later switch to another without changing your definitions. Thus, SAIA acts as a secure bridge, connecting enterprises to LLMs while providing a variety of tools and features to boost productivity and innovation.
 
-Since SAIA is an intermediate layer, anyone who works with it (rather than directly with an LLM API) is protected because the data will not be made public or used by the LLMs. 
+Since SAIA is an intermediate layer, anyone who works with it is protected because the data will not be made public or used by the LLMs. 
 
 To facilitate the integration of generative AI into your workflow, SAIA offers features that enable you to:
 * Monitor access to LLMs through customized authentication and authorization protocols.
