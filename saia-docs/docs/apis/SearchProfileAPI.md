@@ -330,6 +330,11 @@ Using the `{name}` Search Profile, it gets detail about the `{id}` document.
 }
 ```
 
+Possible return errors:
+
+ * [2027](./ErrorCodes.md#2027)
+ * [2028](./ErrorCodes.md#2028)
+
 ### CURL Example
 
 ```shell
