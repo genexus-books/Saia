@@ -15,6 +15,8 @@ You can create AI-Assistants that can integrate and interact with your current o
 
 One of the great benefits of using SAIA is the ability to select a Large Language Model (LLM) and later switch to another without changing your definitions. Thus, SAIA acts as a secure bridge, connecting enterprise applications to LLMs while providing a variety of tools and features to boost productivity and innovation.
 
+Whant to contact us about Saia? Go to [genexus.com/Saia](https://www.genexus.com/en/products/saia)
+
 # About this repository 
 
 The objective of this repository is to document all the components and features offered by Saia. 
@@ -28,7 +30,7 @@ This documentation is intended to be used by developers who need to configure an
 
 # Guide to write the documentation
 
-- The files with the documentation contents are inside the folder [/docs](/docs).
+- The files with the documentation contents are inside the folder [/saia-docs/docs](/saia-docs/docs). Documentation home is [Saia Overview](/saia-docs/docs/SaiaOverview.md).
 - Use Markdown for basic writing and formatting (look at ['Basic Writing and Formatting Syntax' by GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)).
 - Look at Docusaurus [Docs Guide](https://docusaurus.io/docs/docs-introduction) to define new docs and its workflow. 
 
