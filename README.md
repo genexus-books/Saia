@@ -15,7 +15,7 @@ You can create AI-Assistants that can integrate and interact with your current o
 
 One of the great benefits of using SAIA is the ability to select a Large Language Model (LLM) and later switch to another without changing your definitions. Thus, SAIA acts as a secure bridge, connecting enterprise applications to LLMs while providing a variety of tools and features to boost productivity and innovation.
 
-Whant to contact us about Saia? Go to [genexus.com/Saia](https://www.genexus.com/en/products/saia)
+Want to contact us about Saia? Go to [genexus.com/Saia](https://www.genexus.com/en/products/saia)
 
 # About this repository 
 
