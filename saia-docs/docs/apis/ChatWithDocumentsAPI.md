@@ -50,7 +50,7 @@ Executes a search query based on a specific profile and question.
   | id | string | Identifier for the conversation |
   | profile   | string | The profile to search           |
   | question  | string | The question to ask             |
-  | variables | collection | A list of key/value properties (optional)|
+  | [variables](../Prompt.md#design) | collection | A list of key/value properties (optional)|
 
 To keep track of the conversation use a unique value for the `id` optional element. Notice that the last n items (`History Count` parameter from the [Search Profile](../SearchIndexProfile.md#history-document-count-scores)) will be considered to help answer the query. When no value is set; the chat will not consider the latest questions and answers.
 

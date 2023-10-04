@@ -330,6 +330,7 @@ Sends a text prompt to the SAIA Assistant.
 | prompt | string | The text prompt for the assistant. |
 | revision | integer | The revision number. |
 | revisionName | string | The name of the revision. |
+| [variables](../Prompt.md#design) | collection | A list of key/value properties (optional)|
 
 ### Response
 
@@ -374,6 +375,7 @@ Sends a chat request to the SAIA Assistant.
 | messages | array | The chat request data. |
 | revision | integer | The revision number. |
 | revisionName | string | The name of the revision. |
+| [variables](../Prompt.md#design) | collection | A list of key/value properties (optional)|
 
 ### Response
 
