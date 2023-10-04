@@ -15,7 +15,7 @@ As use cases it is very common to add `context`, `user`, `metadata` and other in
 
 ## Design
 
-Use the `{variableName}` pattern as placeholder for variable substitution in any place a Prompt is used.
+Use the `{variableName}` pattern as placeholder for variable substitution in any place a Prompt is used, alphanumeric characters including underscore and hyphens are supported.
 
 From the API caller, the developer will not only need to define the prompt strategy on where to place the variables definition but to fill-in with the associated data at runtime.
 
@@ -26,7 +26,7 @@ The supported endpoints are:
 * [/v1/assistant/chat](./apis/AssistantsAPI.md#post-chat)
 * [/v1/search/execute](./apis/ChatWithDocumentsAPI.md#saia-chat-with-documents-api)
 
-The following variable names are reserved: `{context}`, `{chat_history}`, `{question}`.
+The following variable names are reserved: `{inputText}`, `{context}`, `{chat_history}`, `{question}`.
 
 ## Use case
 
