@@ -168,8 +168,16 @@ The ability to access and review the complete details of each request empowers y
 ## API Tokens
 API Tokens play a crucial role in executing SAIA APIs. These tokens are required to access and use the functionality provided by the APIs. 
 
-For each project, you can define multiple API Tokens. This allows for granular control and tracking of usage, as well as the management of access permissions for specific assistants or models available through the SAIA API.
+Two types of API Tokens exist: Organization API Tokens and Project API Tokens.
+
+## Project API Tokens
+For each project, you can define multiple Project API Tokens. This allows for granular control and tracking of usage, as well as the management of access permissions for specific assistants or models available through the SAIA API.
 
 By defining API Tokens for each assistant, you can conveniently monitor the usage of assistants individually and gain insights into their performance and resource usage. Moreover, the ability to assign API Tokens to specific projects and assistants allows for fine-grained access control, ensuring that only authorized individuals or systems can execute requests on behalf of the defined assistants or models.
 
 With this level of granularity, organizations can effectively manage access permissions, track usage patterns, and maintain control over their assistants and models within the SAIA API.
+
+## Organization API Tokens
+Certain operations require API Tokens with a higher scope, such as access to Project creation, updating and deletion.
+
+Users with the necessary privileges can manage this type of API Tokens in order to only work with OrganizationAPI endpoints. These API Tokens are not intended to work at the project level and cannot be used to reference assistants or AI models.
