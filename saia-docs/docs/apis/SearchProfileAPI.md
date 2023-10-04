@@ -283,7 +283,8 @@ List the documents for a Profile.
       "indexDetail": "string"
     },
     ...
-  ]
+  ],
+  "count": "integer" /* Total number of documents */
 }
 ```
 
