@@ -71,7 +71,13 @@ Using the default `summary` option will show detail up to the current revision. 
                   "revisionDescription": "string",
                   "revisionId": "string",
                   "revisionName": "string",
-                  "timestamp": "timestamp"
+                  "timestamp": "timestamp",
+                  "variables": [ /* Optional */
+                    {
+                      "key": "string"
+                    },
+                    ...
+                  ]
               }
           ]
       }
@@ -139,6 +145,12 @@ Create a new assistant.
               "key": "string",
               "value": "string",
               "type": "string"
+            },
+            ...
+          ],
+          "variables": [ /* Optional */
+            {
+              "key": "string"
             },
             ...
           ]
@@ -223,6 +235,12 @@ The current updated revision will be returned.
               "key": "string",
               "value": "string",
               "type": "string"
+            },
+            ...
+          ],
+          "variables": [ /* Optional */
+            {
+              "key": "string"
             },
             ...
           ]
@@ -409,10 +427,16 @@ curl -X POST $BASE_URL/v1/assistant/chat \
         "content": "string"
       }
     ],
+    "variables": [
+        {"key": "string", "value": "string"},
+        {"key": "string", "value": "string"}
+    ],
     "revision": 0,
     "revisionName": "string"
   }'
 ```
+
+Notice the [variables](../Prompt.md#design) section is optional and depends on your Prompt configuration.
 
 ## POST /text2img
 
