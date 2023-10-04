@@ -26,6 +26,7 @@ Error descriptions will substitute `%1` to `%n` references accordingly.
 | 404       | Bad Endpoint                                   |
 | 1001      | Provider Configuration Error                   |
 | 1010      | Search Profile Not Found                       |
+| 1101      | Search Index Profile Name not found            |
 | 2000      | Invalid ProjectName                            |
 | 2001      | Invalid OrganizationId                         |
 | 2002      | ProjectName %1 already exists in the Organization |
