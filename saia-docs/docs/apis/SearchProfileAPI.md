@@ -362,9 +362,16 @@ This format allows you to include both binary data and other form fields in a si
 
 ### Response
 
-Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that once the document is uploaded the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) method to check the document status, the expected result is `Success`.
+Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that once the document is uploaded the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status, the expected result is `Success`.
+
+Possible return errors:
+
+ * [2027](./ErrorCodes.md#2027)
+ * [2028](./ErrorCodes.md#2028)
 
 ### CURL Example
+
+To upload a `SampleFile.pdf` file, you can follow these steps:
 
 ```shell
 # binary
