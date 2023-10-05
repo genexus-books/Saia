@@ -227,7 +227,7 @@ curl -X PUT "$BASE_URL/v1/search/profile/{name}" \
         "search": {
           "k": 2,
           "prompt": "You are an Assistant, only reply using the following context:\n{context}\n Question is: {question}\n",
-          "scoreThreshold": 0.85
+          "scoreThreshold": 0.2
         }
       }
 }'
@@ -283,7 +283,8 @@ List the documents for a Profile.
       "indexDetail": "string"
     },
     ...
-  ]
+  ],
+  "count": "integer" /* Total number of documents */
 }
 ```
 
