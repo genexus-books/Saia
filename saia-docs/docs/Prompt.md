@@ -19,7 +19,27 @@ Use the `{variableName}` pattern as placeholder for variable substitution in any
 
 From the API caller, the developer will not only need to define the prompt strategy on where to place the variables definition but to fill-in with the associated data at runtime.
 
-The Assistants API supports the usage of an optional `variables` collection definition using the `key`/`value` pattern by element to substitute the variables definition in a Prompt.
+The Assistants API supports the usage of an optional `variables` collection definition using the `key`(string)/`value`(string) pattern for each element. This allows for dynamic substitution of variable definitions within a Prompt.
+
+When sending JSON values in the `value` element, it's important to use the correct notation, which involves using an extra set of delimiters. For JSON objects, use curly brackets, and for JSON arrays, use square brackets. Below are examples of valid values:
+
+### String case
+
+```json
+{"key": "type", "value": "AI assistant"}
+```
+
+### Array case
+
+```json
+{"key": "properties", "value": "[{\"name\": \"something\", \"value\": \"something else\"}]"}
+```
+
+### Object case
+
+```json
+{"key": "item", "value": "{\"name\": \"something\"}"}
+```
 
 The supported endpoints are:
 
