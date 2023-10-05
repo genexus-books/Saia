@@ -24,6 +24,7 @@ Error descriptions will substitute `%1` to `%n` references accordingly.
 | 154       | Quota Exceeded                                 |
 | 401       | Unauthorized                                   |
 | 404       | Bad Endpoint                                   |
+| 500       | Internal Server Error                          |
 | 1001      | Provider Configuration Error                   |
 | 1010      | Search Profile Not Found                       |
 | 1101      | Search Index Profile Name not found            |
