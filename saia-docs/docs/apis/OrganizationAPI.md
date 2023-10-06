@@ -104,7 +104,7 @@ Get a list of projects.
 | Name   | Type   | Description |
 |--------|--------|-------------|
 | detail | string | Defines the level of detail required, options are `summary` (default) or `full` (optional). |
-| name | string | Allows searching by project name (equals) (optional) |
+| name | string | Searches by project name (equals) (optional) |
 
 By default active projects will be listed, use the `full` detail option to list all projects.
 
