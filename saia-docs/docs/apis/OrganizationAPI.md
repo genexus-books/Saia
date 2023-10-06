@@ -27,7 +27,7 @@ Below is a summary of the available endpoints for this API:
 ## GET /assistants
 
 Get a list of assistants.
-> This endpoint requires a Saia API token relative to **project** scope.
+> This endpoint requires a Saia API token related to **project** scope.
 
 ### Parameters
 
