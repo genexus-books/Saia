@@ -97,7 +97,7 @@ Keep an eye on the returned `assistantId` element which is needed for other rela
 ## GET /projects
 
 Get a list of projects.
-> This endpoint requires a Saia API token relative to **organization** scope.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -142,7 +142,7 @@ Keep an eye on the returned `projectId` item value which is needed for other rel
 ## GET /project/{id}
 
 Get project `{id}` details.
-> This endpoint can be used whether the Saia API token is relative to the organization scope and project scope as well.
+> This endpoint can be used whether the Saia API token is related to the organization scope and project scope as well.
 
 ### Parameters
 
@@ -182,7 +182,7 @@ curl -X GET "$BASE_URL/v1/organization/project/{id}" \
 ## POST /project
 
 Creates a new project.
-> This endpoint requires a Saia API token relative to **organization** scope.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Request Body
 
@@ -253,7 +253,7 @@ curl -X POST "$BASE_URL/v1/organization/project" \
 ## PUT /project/{id}
 
 Update a project.
-> This endpoint requires a Saia API token relative to **organization** scope.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -306,7 +306,7 @@ curl -X PUT "$BASE_URL/v1/organization/project/{id}" \
 ## DELETE /project/{id}
 
 Delete a project.
-> This endpoint requires a Saia API token relative to **organization** scope.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -329,7 +329,7 @@ curl -X DELETE "$BASE_URL/v1/organization/project/{id}" \
 ## GET /project/{id}/tokens
 
 Get the list of API tokens for the `{id}` project.
-> This endpoint requires a Saia API token relative to **organization** scope.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -365,7 +365,7 @@ curl -X GET "$BASE_URL/v1/organization/project/{id}/tokens"
 ## GET /request/export
 
 Export request data.
-> This endpoint requires a Saia API token relative to **project** scope.
+> This endpoint requires a Saia API token related to **project** scope.
 
 ### Parameters
 
