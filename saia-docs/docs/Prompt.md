@@ -21,7 +21,9 @@ From the API caller, the developer will not only need to define the prompt strat
 
 The Assistants API supports the usage of an optional `variables` collection definition using the `key`(string)/`value`(string) pattern for each element. This allows for dynamic substitution of variable definitions within a Prompt.
 
-When sending JSON values in the `value` element, it's important to use the correct notation, which involves using an extra set of delimiters. For JSON objects, use curly brackets, and for JSON arrays, use square brackets. Below are examples of valid values:
+When sending JSON values in the `value` element, it's important to use the correct notation, which involves using an extra set of delimiters. For JSON objects, use curly brackets, and for JSON arrays, use square brackets. Notice there is a slight difference when using [Assistant](./apis/AssistantsAPI.md#post-chat) vs [Search Profiles](./apis/ChatWithDocumentsAPI.md#saia-chat-with-documents-api), where the later needs to use double curly brackets.
+
+Below are examples of valid values:
 
 ### String case
 
@@ -32,13 +34,19 @@ When sending JSON values in the `value` element, it's important to use the corre
 ### Array case
 
 ```json
+# Assistant sample
 {"key": "properties", "value": "[{\"name\": \"something\", \"value\": \"something else\"}]"}
+# Search Profile sample
+{"key": "properties", "value": "[{{\"name\": \"something\", \"value\": \"something else\"}}]"} 
 ```
 
 ### Object case
 
 ```json
+# Assistant samplecase
 {"key": "item", "value": "{\"name\": \"something\"}"}
+# Search Profile sample
+{"key": "item", "value": "{{\"name\": \"something\"}}"}
 ```
 
 The supported endpoints are:
