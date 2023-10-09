@@ -209,3 +209,6 @@ It automates the process of prompt tuning by using an LLM to generate multiple q
 For each query, it retrieves a set of relevant documents and takes the unique union across all queries to get a larger set of potentially relevant documents.
 By generating multiple perspectives on the same question, the MultiQueryRetriever might be able to overcome some of the limitations of the distance-based retrieval and get a richer set of results.
 
+### Score Threshold
+
+It uses what is called `Recursive Similarity Search`. With it, you can do a similarity search without having to rely solely on the `k` value. The system will return all similar question matches based on the minimum `score threshold` configured.
