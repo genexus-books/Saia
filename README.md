@@ -21,7 +21,7 @@ Want to contact us about Saia? Go to [genexus.com/Saia](https://www.genexus.com/
 
 The objective of this repository is to document all the components and features offered by Saia. 
 
-This documentation is intended to be used by developers who need to configure and integrate de Saia API in their applications.
+This documentation is intended to be used by developers who need to configure and integrate the Saia API in their applications.
 
 # Publishing process
 
@@ -37,7 +37,7 @@ This documentation is intended to be used by developers who need to configure an
 # Collaboration guide
 
 Some basic rules:
-- Use english to write the documentation.
+- Use English to write the documentation.
 - We accept collaboration using Pull Requests.
 - The changes are audited by a documentation team.
 
