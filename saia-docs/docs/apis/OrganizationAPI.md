@@ -27,6 +27,7 @@ Below is a summary of the available endpoints for this API:
 ## GET /assistants
 
 Get a list of assistants.
+> This endpoint requires a Saia API token related to **project** scope.
 
 ### Parameters
 
@@ -85,7 +86,7 @@ Using the default `summary` option will only show the first level. The `full` op
 
 ```shell
 curl -X GET "$BASE_URL/v1/organization/assistants" \
-  -H "Authorization: Bearer $SAIA_APITOKEN" \
+  -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
   -H "Accept: application/json"
 # using the full detail option change the URL to
 $BASE_URL/v1/organization/assistants?detail=full
@@ -96,12 +97,14 @@ Keep an eye on the returned `assistantId` element which is needed for other rela
 ## GET /projects
 
 Get a list of projects.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
 | Name   | Type   | Description |
 |--------|--------|-------------|
 | detail | string | Defines the level of detail required, options are `summary` (default) or `full` (optional). |
+| name | string | Searches by project name (equals) (optional) |
 
 By default active projects will be listed, use the `full` detail option to list all projects.
 
@@ -126,10 +129,12 @@ By default active projects will be listed, use the `full` detail option to list 
 
 ```shell
 curl -X GET "$BASE_URL/v1/organization/projects" \
-  -H "Authorization: Bearer $SAIA_APITOKEN" \
+  -H "Authorization: Bearer $SAIA_ORGANIZATION_APITOKEN" \
   -H "Accept: application/json"
 # using the full detail option change the URL to
 $BASE_URL/v1/organization/projects?detail=full
+# using the name option filter change the URL to
+$BASE_URL/v1/organization/projects?name=projectName
 ```
 
 Keep an eye on the returned `projectId` item value which is needed for other related APIs.
@@ -137,6 +142,7 @@ Keep an eye on the returned `projectId` item value which is needed for other rel
 ## GET /project/{id}
 
 Get project `{id}` details.
+> This endpoint can be used whether the Saia API token is related to the organization scope and project scope as well.
 
 ### Parameters
 
@@ -176,6 +182,7 @@ curl -X GET "$BASE_URL/v1/organization/project/{id}" \
 ## POST /project
 
 Creates a new project.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Request Body
 
@@ -235,7 +242,7 @@ When the creation is no successful, status code `400*` will be detailed with a c
 
 ```shell
 curl -X POST "$BASE_URL/v1/organization/project" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_ORGANIZATION_APITOKEN" \
  -H "accept: application/json" \
  -d '{
       "name": "my Project",
@@ -246,6 +253,7 @@ curl -X POST "$BASE_URL/v1/organization/project" \
 ## PUT /project/{id}
 
 Update a project.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -258,8 +266,7 @@ Update a project.
 ```json
 {
   "name": "string", /* Required */
-  "description": "string",
-  "active": "boolean"
+  "description": "string"
 }
 ```
 
@@ -288,18 +295,18 @@ When the creation is no successful, status code `400*` will be detailed with a c
 
 ```shell
 curl -X PUT "$BASE_URL/v1/organization/project/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_ORGANIZATION_APITOKEN" \
  -H "accept: application/json" \
  -d '{
   "name":"Sample Project",
-  "description":"sample project description updated",
-  "active":true
+  "description":"sample project description updated"
 }'
 ```
 
 ## DELETE /project/{id}
 
 Delete a project.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -315,13 +322,14 @@ StatusCode `200` is detailed when successfully deleted, otherwise `400*` error a
 
 ```shell
 curl -X DELETE "$BASE_URL/v1/organization/project/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_ORGANIZATION_APITOKEN" \
  -H "accept: application/json"
 ```
 
 ## GET /project/{id}/tokens
 
 Get the list of API tokens for the `{id}` project.
+> This endpoint requires a Saia API token related to **organization** scope.
 
 ### Parameters
 
@@ -350,13 +358,14 @@ Get the list of API tokens for the `{id}` project.
 
 ```shell
 curl -X GET "$BASE_URL/v1/organization/project/{id}/tokens"
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_ORGANIZATION_APITOKEN" \
  -H "accept: application/json"
 ```
 
 ## GET /request/export
 
 Export request data.
+> This endpoint requires a Saia API token related to **project** scope.
 
 ### Parameters
 
@@ -370,9 +379,9 @@ Export request data.
 ### Response
 
 ```json
-[
-  {
-    "item": {
+{
+  "items": [
+    {
       "assistant": "string",
       "intent": "string",
       "timestamp": "string",
@@ -380,15 +389,16 @@ Export request data.
       "output": "string",
       "inputText": "string",
       "status": "string"
-    }
-  }
-]
+    },
+    ...
+  ]
+}
 ```
 
 ### CURL Example
 
 ```shell
-curl -X GET "https://api.saia.ai/v1/organization/request/export?Assistantname=example&Status=completed" \
-  -H "Authorization: Bearer $SAIA_APITOKEN" \
+curl -X GET "https://api.saia.ai/v1/organization/request/export?assistantname=example&status=completed" \
+  -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
   -H "Accept: application/json"
 ```
