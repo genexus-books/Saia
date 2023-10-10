@@ -180,7 +180,7 @@ curl -X POST "$BASE_URL/v1/assistant" \
 
 ### PUT /v1/assistant/{id}
 
-Updates an existing assistant. The assistant `name` and `type` properties cannot be changed.
+Updates an existing assistant. The assistant `type` property cannot be changed.
 
 #### Parameters
 
@@ -192,6 +192,8 @@ Updates an existing assistant. The assistant `name` and `type` properties cannot
 
 ```json
 {
+  "name": "string", /* Optional */
+  "description": "string", /* Optional */
   "action": "string", /* save (default), saveNewRevision, savePublishNewRevision */
   "revisionId": "integer", /* Required when action = save */
   "prompt": "string", /* Required */
