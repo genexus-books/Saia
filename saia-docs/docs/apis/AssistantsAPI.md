@@ -7,6 +7,8 @@ sidebar_label: 'Assistant API'
 
 This API enables the creation of new assistants, the modification of their definitions, and the retrieval of information about them. Furthermore, it allows the execution of previously defined assistants.
 
+> This endpoints requires a Saia API token related to **project** scope.
+
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
 ## Endpoints
@@ -91,7 +93,7 @@ Using the default `summary` option will show detail up to the current revision. 
 
 ```shell
 curl -X GET "$BASE_URL/v1/assistant/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 # using the full detail option change the URL to
 $BASE_URL/v1/assistant/{id}?detail=full
@@ -169,7 +171,7 @@ Keep an eye on the returned `assistantId` element which is needed for other rela
 
 ```shell
 curl -X POST "$BASE_URL/v1/assistant" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json" \
  -d '{
       "type": "chat",
@@ -178,7 +180,7 @@ curl -X POST "$BASE_URL/v1/assistant" \
  }'
 ```
 
-### PUT /v1/assistant/{id}
+## PUT /v1/assistant/{id}
 
 Updates an existing assistant. The assistant `type` property cannot be changed.
 
@@ -194,9 +196,9 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
 {
   "name": "string", /* Optional */
   "description": "string", /* Optional */
-  "action": "string", /* save (default), saveNewRevision, savePublishNewRevision */
-  "revisionId": "integer", /* Required when action = save */
-  "prompt": "string", /* Required */
+  "action": "string", /* save, saveNewRevision (default), savePublishNewRevision */
+  "revisionId": "integer", /* Required if user needs update an existant revision when action = save */
+  "prompt": "string", /* Required if revisionId is specified or in case of actions saveNewRevision and savePublishNewRevision*/
   "llmSettings": {
     "providerName": "string",
     "modelName": "string",
@@ -206,7 +208,16 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
 }
 ```
 
-The `action` parameter by default (`save`option value) will update the current assistant `revisionId`. When using `saveNewRevision`, it will create a new revision based on the provided data but will not be active. Use the `savePublishNewRevision` option to create a new revision and set it as active.
+The `action` parameter by default (`saveNewRevision`option value) create a new revision based on the provided data but will not be active. When using `save` action, it will update the current assistant `revisionId`. Use the `savePublishNewRevision` option to create a new revision and set it as active.
+
+If only an update of name or description (one of them must be provided at least) is needed without any changes in the revision, it can be specified as:
+```json
+{
+  "name": "string", /* Required if "description" is not specified */
+  "description": "string", /* Required if "name" is not specified */
+  "action": "string" /* use "save" action */
+}
+```
 
 #### Response
 
@@ -259,7 +270,7 @@ The current updated revision will be returned.
 
 ```shell
 curl -X PUT "$BASE_URL/v1/assistant/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json" \
  -d '{
       "action": "savePublishNewRevision",
@@ -289,7 +300,7 @@ StatusCode `200` is detailed when successfully deleted, otherwise `400*` error a
 
 ```shell
 curl -X DELETE "$BASE_URL/v1/assistant/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 ```
 
