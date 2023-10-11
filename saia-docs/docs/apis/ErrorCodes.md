@@ -14,6 +14,7 @@ Error descriptions will substitute `%1` to `%n` references accordingly.
 | 3         | Request Not Found                              |
 | 5         | Api Key Not Found                              |
 | 6         | Api Token Not Found                            |
+| 7         | ApiToken out of scope                          |
 | 10        | Query Text Empty                               |
 | 20        | Bad Input Text                                 |
 | 100       | Provider Request Timeout                       |
@@ -58,3 +59,5 @@ Error descriptions will substitute `%1` to `%n` references accordingly.
 | 2026      | Verb Not Supported                             |
 | 2027      | Document Extension Invalid                     |
 | 2028      | Invalid File Size                              |
+| 2029      | Project name already exists                    |
+| 2030      | Assistant name already exists                  |
