@@ -7,7 +7,7 @@ sidebar_label: 'Assistant API'
 
 This API enables the creation of new assistants, the modification of their definitions, and the retrieval of information about them. Furthermore, it allows the execution of previously defined assistants.
 
-> This endpoints requires a Saia API token related to **project** scope.
+> The following endpoints require a Saia API token related to **project** scope.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
@@ -38,7 +38,7 @@ Get assistant data.
 | id     | string | The assistant ID. |
 | detail | string | Defines the level of detail required, options are `summary` (default) or `full` (optional). |
 
-Using the default `summary` option will show detail up to the current revision. The `full` option will detail all revision information and composition.
+Using the default `summary` option the active revision details will be shown. The `full` option will display information about all revisions.
 
 ### Response
 
@@ -184,7 +184,7 @@ curl -X POST "$BASE_URL/v1/assistant" \
 
 Updates an existing assistant. The assistant `type` property cannot be changed.
 
-#### Parameters
+### Parameters
 
 | Name   | Type   | Description |
 | ------ | ------ | ----------- |
@@ -208,7 +208,7 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
 }
 ```
 
-The `action` parameter by default (`saveNewRevision`option value) create a new revision based on the provided data but will not be active. When using `save` action, it will update the current assistant `revisionId`. Use the `savePublishNewRevision` option to create a new revision and set it as active.
+The `action` parameter (`saveNewRevision`option value) creates a new revision based on the provided data but it will not be active. When using `save` action, it will update the current assistant `revisionId`. Use the `savePublishNewRevision` option to create a new revision and set it as active.
 
 If only an update of name or description (one of them must be provided at least) is needed without any changes in the revision, it can be specified as:
 ```json
