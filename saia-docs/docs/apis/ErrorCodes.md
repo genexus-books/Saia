@@ -61,3 +61,5 @@ Error descriptions will substitute `%1` to `%n` references accordingly.
 | 2028      | Invalid File Size                              |
 | 2029      | Project name already exists                    |
 | 2030      | Assistant name already exists                  |
+| 2031      | Assistant not in Project                       |
+| 2032      | The status value is unexpected                 |

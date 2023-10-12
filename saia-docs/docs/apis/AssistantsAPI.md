@@ -46,7 +46,7 @@ Using the default `summary` option the active revision details will be shown. Th
 {
   "assistantId": "string",
   "assistantName": "string",
-  "assistantStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "assistantStatus": "integer", /* 1:Enabled, 2:Disabled */
   "intents": [ /* One element when summary, everything when using full detail*/
       {
           "assistantIntentDefaultRevision": "string",
@@ -126,7 +126,7 @@ Create a new assistant.
 {
   "assistantId": "string",
   "assistantName": "string",
-  "assistantStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "assistantStatus": "integer", /* 1:Enabled, 2:Disabled */
   "intents": [
     {
       "assistantIntentDefaultRevision": "integer",
@@ -196,6 +196,7 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
 {
   "name": "string", /* Optional */
   "description": "string", /* Optional */
+  "status": "integer", /* Optional      1:Enabled, 2:Disabled */
   "action": "string", /* save, saveNewRevision (default), savePublishNewRevision */
   "revisionId": "integer", /* Required if user needs update an existant revision when action = save */
   "prompt": "string", /* Required if revisionId is specified or in case of actions saveNewRevision and savePublishNewRevision*/
@@ -210,11 +211,12 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
 
 The `action` parameter (`saveNewRevision`option value) creates a new revision based on the provided data but it will not be active. When using `save` action, it will update the current assistant `revisionId`. Use the `savePublishNewRevision` option to create a new revision and set it as active.
 
-If only an update of name or description is needed (one of them must be provided at least) without any changes in the revision, it can be specified as:
+If only an update of `name`, `description` or `status` is needed **(one of them must be provided at least)** without any changes in the revision, it can be specified as:
 ```json
 {
-  "name": "string", /* Required if "description" is not specified */
-  "description": "string", /* Required if "name" is not specified */
+  "name": "string",
+  "description": "string",
+  "status": "integer", /* 1:Enabled, 2:Disabled */
   "action": "string" /* use "save" action */
 }
 ```
@@ -227,7 +229,7 @@ The current updated revision will be returned.
 {
   "assistantId": "string",
   "assistantName": "string",
-  "assistantStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "assistantStatus": "integer", /* 1:Enabled, 2:Disabled */
   "intents": [
     {
       "assistantIntentDefaultRevision": "integer",
