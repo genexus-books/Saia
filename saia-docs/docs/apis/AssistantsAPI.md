@@ -15,21 +15,21 @@ Check the [generic variables](./APIReference.md#generic-variables) needed to use
 
 | Method | Path                           | Description                  |
 | ------ | ------------------------------ | ---------------------------- |
-| GET    | /v1/assistant/{id}             | Get assistant data |
-| POST   | /v1/assistant                  | Create a new assistant |
-| PUT    | /v1/assistant/{id}             | Update an assistant |
-| DELETE | /v1/assistant/{id}             | Delete an assistant |
-| POST   | /v1/assistant/text/begin       | Begin a text conversation with the SAIA Assistant |
-| POST   | /v1/assistant/text             | Send a text prompt to the SAIA Assistant |
-| POST   | /v1/assistant/chat             | Send a chat request to the SAIA Assistant |
-| POST   | /v1/assistant/text2img         | Generate an image based on the given text |
-| GET    | /v1/assistant/request/{id}/status | Retrieve the status of a request |
-| POST   | /v1/assistant/request/{id}/cancel | Cancel a request |
+| GET    | /v1/assistant/{id}             | Gets assistant data |
+| POST   | /v1/assistant                  | Creates a new assistant |
+| PUT    | /v1/assistant/{id}             | Updates an assistant |
+| DELETE | /v1/assistant/{id}             | Deletes an assistant |
+| POST   | /v1/assistant/text/begin       | Begins a text conversation with the SAIA Assistant |
+| POST   | /v1/assistant/text             | Sends a text prompt to the SAIA Assistant |
+| POST   | /v1/assistant/chat             | Sends a chat request to the SAIA Assistant |
+| POST   | /v1/assistant/text2img         | Generates an image based on the given text |
+| GET    | /v1/assistant/request/{id}/status | Retrieves the status of a request |
+| POST   | /v1/assistant/request/{id}/cancel | Cancels a request |
 
 
 ## GET /v1/assistant/{id}
 
-Get assistant data.
+Gets assistant data.
 
 ### Parameters
 
@@ -101,7 +101,7 @@ $BASE_URL/v1/assistant/{id}?detail=full
 
 ## POST /v1/assistant
 
-Create a new assistant.
+Creates a new assistant.
 
 #### Request Body
 
@@ -182,7 +182,7 @@ curl -X POST "$BASE_URL/v1/assistant" \
 
 ## PUT /v1/assistant/{id}
 
-Update an existing assistant. The assistant `type` property cannot be changed.
+Updates an existing assistant. The assistant `type` property cannot be changed.
 
 ### Parameters
 
@@ -283,7 +283,7 @@ curl -X PUT "$BASE_URL/v1/assistant/{id}" \
 
 ## DELETE /assistant/{id}
 
-Delete an assistant.
+Deletes an assistant.
 
 ### Parameters
 
@@ -305,7 +305,7 @@ curl -X DELETE "$BASE_URL/v1/assistant/{id}" \
 
 ## POST /text/begin
 
-Begin a text conversation with the SAIA Assistant.
+Begins a text conversation with the SAIA Assistant.
 
 ### Parameters
 
@@ -350,7 +350,7 @@ curl -X POST $BASE_URL/v1/assistant/text/begin \
 
 ## POST /text
 
-Send a text prompt to the SAIA Assistant.
+Sends a text prompt to the SAIA Assistant.
 
 ### Parameters
 
@@ -395,7 +395,7 @@ curl -X POST $BASE_URL/v1/assistant/text \
 
 ## POST /chat
 
-Send a chat request to the SAIA Assistant.
+Sends a chat request to the SAIA Assistant.
 
 ### Parameters
 
@@ -452,7 +452,7 @@ Notice the [variables](../Prompt.md#design) section is optional and depends on y
 
 ## POST /text2img
 
-Generate an image based on the given text.
+Generates an image based on the given text.
 
 ### Parameters
 
@@ -495,7 +495,7 @@ curl -X POST $BASE_URL/v1/assistant/text2img \
 
 ## GET /request/{requestId}/status
 
-Retrieve the status of a request.
+Retrieves the status of a request.
 
 ### Parameters
 
@@ -528,7 +528,7 @@ curl -X GET $BASE_URL/v1/assistant/request/{requestId}/status
 
 ## POST /request/{requestId}/cancel
 
-Cancel a request.
+Cancels a request.
 
 ### Parameters
 
