@@ -223,7 +223,7 @@ If only an update of `name`, `description` or `status` is needed **(one of them 
 
 #### Response
 
-The current updated revision will be returned.
+The current revision will be returned.
 
 ```json
 {
