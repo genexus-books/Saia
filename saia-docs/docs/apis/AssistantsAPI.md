@@ -5,7 +5,7 @@ sidebar_label: 'Assistant API'
 
 # SAIA Assistant API
 
-This API enables the creation of new assistants, the modification of their definitions, and the retrieval of information about them. Furthermore, it allows the execution of previously defined assistants.
+This API enables the creation of new assistants, the modification of their definitions, and the retrieval of information about them. Furthermore, it allows the execution of prompts associated with previously defined assistants.
 
 > The following endpoints require a Saia API token related to **project** scope.
 
@@ -15,10 +15,10 @@ Check the [generic variables](./APIReference.md#generic-variables) needed to use
 
 | Method | Path                           | Description                  |
 | ------ | ------------------------------ | ---------------------------- |
-| GET    | /v1/assistant/{id}             | Get assistant data |
-| POST   | /v1/assistant                  | Create a new assistant |
-| PUT    | /v1/assistant/{id}             | Update an assistant |
-| DELETE | /v1/assistant/{id}             | Delete an assistant |
+| GET    | /v1/assistant/{id}             | Gets assistant data |
+| POST   | /v1/assistant                  | Creates a new assistant |
+| PUT    | /v1/assistant/{id}             | Updates an assistant |
+| DELETE | /v1/assistant/{id}             | Deletes an assistant |
 | POST   | /v1/assistant/text/begin       | Begins a text conversation with the SAIA Assistant |
 | POST   | /v1/assistant/text             | Sends a text prompt to the SAIA Assistant |
 | POST   | /v1/assistant/chat             | Sends a chat request to the SAIA Assistant |
@@ -29,16 +29,16 @@ Check the [generic variables](./APIReference.md#generic-variables) needed to use
 
 ## GET /v1/assistant/{id}
 
-Get assistant data.
+Gets assistant data.
 
 ### Parameters
 
 | Name   | Type   | Description |
 | ------ | ------ | ----------- |
 | id     | string | The assistant ID. |
-| detail | string | Defines the level of detail required, options are `summary` (default) or `full` (optional). |
+| detail | string | Defines the level of detail required, options are `summary` (default) or `full`. |
 
-Using the default `summary` option the active revision details will be shown. The `full` option will display information about all revisions.
+If you use the default `summary` option, the active revision details will be shown. The `full` option will display information about all revisions.
 
 ### Response
 
@@ -101,7 +101,7 @@ $BASE_URL/v1/assistant/{id}?detail=full
 
 ## POST /v1/assistant
 
-Create a new assistant.
+Creates a new assistant.
 
 #### Request Body
 
@@ -165,7 +165,7 @@ Create a new assistant.
 }
 ```
 
-Keep an eye on the returned `assistantId` element which is needed for other related APIs.
+The returned `assistantId` is needed for other related APIs.
 
 ### CURL Example
 
@@ -208,8 +208,7 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
   }
 }
 ```
-
-The `action` parameter (`saveNewRevision`option value) creates a new revision based on the provided data but it will not be active. When using `save` action, it will update the current assistant `revisionId`. Use the `savePublishNewRevision` option to create a new revision and set it as active.
+The default value of the `action` parameter, `saveNewRevision`, will create a new revision but will not set it as active. The `save` option will update the active revision. And the `savePublishNewRevision` option will create a new revision and set it as active. 
 
 If only an update of `name`, `description` or `status` is needed **(one of them must be provided at least)** without any changes in the revision, it can be specified as:
 ```json
@@ -286,7 +285,7 @@ curl -X PUT "$BASE_URL/v1/assistant/{id}" \
 
 ## DELETE /assistant/{id}
 
-Delete an assistant.
+Deletes an assistant.
 
 ### Parameters
 
@@ -296,7 +295,7 @@ Delete an assistant.
 
 ### Response
 
-StatusCode `200` is detailed when successfully deleted, otherwise `400*` error and a collection of errors.
+StatusCode `200` indicates a successful deletion, otherwise StatusCode `400*` and a collection of errors.
 
 ### CURL Example
 

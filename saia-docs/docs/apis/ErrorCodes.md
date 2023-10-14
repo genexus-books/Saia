@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Error Codes
 
-Error descriptions will substitute `%1` to `%n` references accordingly.
+Certain error descriptions can contain up to `%n` references specific to that error. These references are described with `%1`, `%2`... `%n`.  
 
 | ErrorCode | Description                                    |
 |-----------|------------------------------------------------|
@@ -14,39 +14,39 @@ Error descriptions will substitute `%1` to `%n` references accordingly.
 | 3         | Request Not Found                              |
 | 5         | Api Key Not Found                              |
 | 6         | Api Token Not Found                            |
-| 7         | ApiToken out of scope                          |
+| 7         | ApiToken Out Of Scope                          |
 | 10        | Query Text Empty                               |
 | 20        | Bad Input Text                                 |
 | 100       | Provider Request Timeout                       |
 | 150       | Provider Unknown Error                         |
 | 151       | Provider Rate Limit                            |
 | 152       | Provider Quota Exceeded                        |
-| 153       | Provider Overcapacity                          |
+| 153       | Provider Over Capacity                         |
 | 154       | Quota Exceeded                                 |
 | 401       | Unauthorized                                   |
 | 404       | Bad Endpoint                                   |
 | 500       | Internal Server Error                          |
 | 1001      | Provider Configuration Error                   |
 | 1010      | Search Profile Not Found                       |
-| 1101      | Search Index Profile Name not found            |
-| 1102      | Request failed                                 |
+| 1101      | Search Index Profile Name Not Found            |
+| 1102      | Request Failed                                 |
 | 2000      | Invalid ProjectName                            |
 | 2001      | Invalid OrganizationId                         |
-| 2002      | ProjectName %1 already exists in the Organization |
+| 2002      | ProjectName %1 Already Exists In The Organization |
 | 2003      | OrganizationName Already Exists                |
 | 2004      | Organization Not Found                         |
 | 2005      | Project Not Found                              |
-| 2006      | Project not in Organization                    |
+| 2006      | Project Not In Organization                    |
 | 2007      | Name is Empty                                  |
 | 2008      | Prompt is Empty                                |
 | 2009      | Invalid Type                                   |
 | 2010      | Not Implemented                                |
 | 2011      | Assistant General Error                        |
 | 2012      | Assistant Not Implemented                      |
-| 2013      | Revision is Empty                              |
+| 2013      | Revision Is Empty                              |
 | 2014      | Assistant Revision Not Found                   |
 | 2015      | Assistant Revision Update Error                |
-| 2016      | AIModel Id for %1 %2                           |
+| 2016      | AIModel Id For %1 %2                           |
 | 2017      | Search Profile General Error                   |
 | 2018      | Vector Store Not Found                         |
 | 2019      | Index Profile General Error                    |
