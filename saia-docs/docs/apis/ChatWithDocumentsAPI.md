@@ -13,6 +13,8 @@ If you want to change parameters configuration use the [Search Index Profile](..
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
+> The following endpoints require a Saia API token related to **project** scope.
+
 ## Endpoints
 
 The SAIA Chat with documents API provides the following endpoint:
@@ -92,17 +94,20 @@ The `variables` optional elements details a list of variables to be substituted 
 
 You can use the `requestId` element to review the Request detail in the console.
 
-- Status Code: 404
+Example of request using Search Profile that not exists or is disabled:
+- Status Code: 200
 - Content-Type: application/json
 
   ```json
   {
     "error": {
-      "code": 404,
-      "message": "Not found"
+        "code": 1101,
+        "message": "Search Index Profile Name not found"
     },
-    "success": false
-  }
+    "status": "failed",
+    "success": false,
+    "text": ""
+}
   ```
 
 #### Sample CURL Request
@@ -110,7 +115,7 @@ You can use the `requestId` element to review the Request detail in the console.
 ```bash
 curl -X POST
   -H "Content-Type: application/json"
-  -H "Authorization: Bearer {YOUR_API_TOKEN}"
+  -H "Authorization: $SAIA_PROJECT_APITOKEN"
   -d '{
   "profile": "Default",
   "question": "Explain to me what is SAIA?"
