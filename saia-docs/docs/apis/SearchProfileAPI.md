@@ -53,7 +53,7 @@ Retrieve all the search profiles for a Project.
 }
 ```
 
-The `description` parameter is mandatory to be used with the [chat](ChatWithDocumentsAPI.md) option.
+The `description` parameter is required for the [chat](ChatWithDocumentsAPI.md) option.
 
 ### CURL Example
 
@@ -357,7 +357,7 @@ The supported options are `binary` or `multipart/form-data` including a `File` t
 
 Useful for its simplicity, encode the binary data directly in the request body. Set the request with the associated `Content-Type` header to indicate the type of data being sent (e.g., `application/pdf`, `text/plain`).
 
-It is mandatory to set a `filename` header value with the document name and extension, to be assigned when uploading the data, for example:
+It is mandatory to set a `filename` header value with the document name and extension. For example:
 
 ```
 filename: SampleFile.pdf
@@ -365,11 +365,11 @@ filename: SampleFile.pdf
 
 #### form-data
 
-This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for a large file.
+This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
 
 ### Response
 
-Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that once the document is uploaded the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status, the expected result is `Success`.
+Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that, once the document is uploaded, the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status, the expected result is `Success`.
 
 Possible return errors:
 
