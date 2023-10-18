@@ -210,7 +210,7 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
 ```
 The default value of the `action` parameter, `saveNewRevision`, will create a new revision but will not set it as active. The `save` option will update the active revision. And the `savePublishNewRevision` option will create a new revision and set it as active. 
 
-If only an update of `name`, `description` or `status` is needed **(one of them must be provided at least)** without any changes in the revision, it can be specified as:
+If only an update of `name`, `description` or `status` is needed, **one of them must be provided at least**, without any changes in the revision, it can be specified as:
 ```json
 {
   "name": "string",
