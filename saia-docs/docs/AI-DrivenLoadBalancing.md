@@ -4,7 +4,7 @@ sidebar_position: 17
 ---
 # AI-Driven Load Balancing
 
-Learn how SAI automatically manages the Load Balancing process when you work with generative AI providers, efficiently 
+Learn how SAIA automatically manages the Load Balancing process when you work with generative AI providers, efficiently 
 addressing the limits imposed by LLM platforms. This ensures optimal performance, distributes the workload evenly, avoids 
 overloading individual servers, and provides continuous availability. In this way, your application or service will run 
 smoothly and efficiently, with no need for you to worry about the limits imposed by LLM providers.
