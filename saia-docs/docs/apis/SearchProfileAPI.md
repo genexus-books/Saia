@@ -11,6 +11,8 @@ Check the [generic variables](./APIReference.md#generic-variables) needed to use
 
 Check parameters explanation [here](../SearchIndexProfile.md).
 
+> The following endpoints require a Saia API token related to **project** scope.
+
 ## Endpoints
 
 Below is a summary of the available endpoints for this API:
@@ -51,13 +53,13 @@ Retrieve all the search profiles for a Project.
 }
 ```
 
-The `description` parameter is mandatory to be used with the [chat](ChatWithDocumentsAPI.md) option.
+The `description` parameter is required for the [chat](ChatWithDocumentsAPI.md) option.
 
 ### CURL Example
 
 ```shell
 curl -X GET "$BASE_URL/v1/search/profiles" \
-  -H "Authorization: Bearer $SAIA_APITOKEN" \
+  -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
   -H "Accept: application/json"
 ```
 
@@ -102,7 +104,8 @@ Get Search Profile `{name}` details.
       "scoreThreshold": "decimal",
       "template": "string"
     }
-  }
+  },
+  "status": "integer" /* 1:Enabled, 2:Disabled */
 }
 ```
 
@@ -112,7 +115,7 @@ The `type` parameter is explained [here](../SearchIndexProfile.md#retrievers).
 
 ```shell
 curl -X GET "$BASE_URL/v1/search/profile/{name}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 ```
 
@@ -169,8 +172,8 @@ Equivalent to the [Get Response](#get-v1searchprofilename).
 ### CURL Example
 
 ```shell
-curl -X POST "$BASE_URL/v1/search/profile/{name}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+curl -X POST "$BASE_URL/v1/search/profile" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json" \
  -d '{
       "name": "my Search Profile",
@@ -206,6 +209,8 @@ Equivalent to the [Post Request](#post-v1searchprofile), but the following eleme
  * `name` element
  * `indexOptions` section
 
+In addition, `status` element can be specified taking values 1:Enabled, 2:Disabled.
+
 ### Response
 
 Equivalent to the [Get Response](#get-v1searchprofilename).
@@ -214,10 +219,11 @@ Equivalent to the [Get Response](#get-v1searchprofilename).
 
 ```shell
 curl -X PUT "$BASE_URL/v1/search/profile/{name}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json" \
  -d '{
       "description": "Updated Search Profile",
+      "status": 1,
       "searchOptions": {
         "historyCount": 4,
         "llm": {
@@ -251,7 +257,7 @@ StatusCode `200` is detailed when successfully deleted, otherwise `400*` error a
 
 ```shell
 curl -X DELETE "$BASE_URL/v1/search/profile/{name}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 ```
 
@@ -292,7 +298,7 @@ List the documents for a Profile.
 
 ```shell
 curl -X GET "$BASE_URL/v1/search/profile/{name}/documents" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 # Use the optional skip and count parameters
 $BASE_URL/v1/search/profile/{name}/documents?skip={skip}&count={count}
@@ -335,7 +341,7 @@ Using the `{name}` Search Profile, it gets detail about the `{id}` document.
 
 ```shell
 curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 ```
 
@@ -351,7 +357,7 @@ The supported options are `binary` or `multipart/form-data` including a `File` t
 
 Useful for its simplicity, encode the binary data directly in the request body. Set the request with the associated `Content-Type` header to indicate the type of data being sent (e.g., `application/pdf`, `text/plain`).
 
-It is mandatory to set a `filename` header value with the document name and extension, to be assigned when uploading the data, for example:
+It is mandatory to set a `filename` header value with the document name and extension. For example:
 
 ```
 filename: SampleFile.pdf
@@ -359,11 +365,11 @@ filename: SampleFile.pdf
 
 #### form-data
 
-This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for a large file.
+This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
 
 ### Response
 
-Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that once the document is uploaded the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status, the expected result is `Success`.
+Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that, once the document is uploaded, the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status, the expected result is `Success`.
 
 Possible return errors:
 
@@ -377,13 +383,13 @@ To upload a `SampleFile.pdf` file, you can follow these steps:
 ```shell
 # binary
 curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
 --header 'filename: SampleFile.pdf' \
 --header 'Content-Type: application/pdf' \
 --data '@/C:/temp/SampleFile.pdf'
 # multi-part
 curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "Content-Type: application/pdf" \
  --form 'file=@"/C:/temp/SampleFile.pdf"'
 ```
@@ -411,7 +417,7 @@ StatusCode `200` is detailed when successfully deleted, otherwise `400*` error a
 
 ```shell
 curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
- -H "Authorization: Bearer $SAIA_APITOKEN" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "accept: application/json"
 ```
 

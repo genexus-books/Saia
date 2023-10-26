@@ -9,13 +9,15 @@ This API enables searches or queries on the indexed content.
 
 This documentation provides detailed information on the available endpoints and how to interact with them. 
 
-If you want to change parameters configuration use the [Search Index Profile](../SearchIndexProfile.md) section.
+If you want to manage settings associated with your search profile (ex. k, model, historyCount), use the [Search Index Profile](../SearchIndexProfile.md) section.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
+> The following endpoints require a Saia API token related to **project** scope.
+
 ## Endpoints
 
-The SAIA Chat with documents API provides the following endpoint:
+The SAIA Chat with documents API provides the following endpoints:
 
 | Method | Path                  |
 | ------ | --------------------- |
@@ -52,9 +54,9 @@ Executes a search query based on a specific profile and question.
   | question  | string | The question to ask             |
   | [variables](../Prompt.md#design) | collection | A list of key/value properties (optional)|
 
-To keep track of the conversation use a unique value for the `id` optional element. Notice that the last n items (`History Count` parameter from the [Search Profile](../SearchIndexProfile.md#history-document-count-scores)) will be considered to help answer the query. When no value is set; the chat will not consider the latest questions and answers.
+For conversations with history, use the `id` optional element to refer to a particular conversation. These conversations will respect the `History Count` parameter from your [Search Profile](../SearchIndexProfile.md#history-document-count-scores). If no `id` value is set, no history will be considered and your query will be treated as a one-off. 
 
-The `variables` optional elements details a list of variables to be substituted on the associated prompts during execution.
+The `variables` parameter is used to fill in an associated prompt with values. 
 
 #### Response
 
@@ -92,17 +94,20 @@ The `variables` optional elements details a list of variables to be substituted 
 
 You can use the `requestId` element to review the Request detail in the console.
 
-- Status Code: 404
+Example of request using Search Profile that does not exist or is disabled:
+- Status Code: 200
 - Content-Type: application/json
 
   ```json
   {
     "error": {
-      "code": 404,
-      "message": "Not found"
+        "code": 1101,
+        "message": "Search Index Profile Name not found"
     },
-    "success": false
-  }
+    "status": "failed",
+    "success": false,
+    "text": ""
+}
   ```
 
 #### Sample CURL Request
@@ -110,7 +115,7 @@ You can use the `requestId` element to review the Request detail in the console.
 ```bash
 curl -X POST
   -H "Content-Type: application/json"
-  -H "Authorization: Bearer {YOUR_API_TOKEN}"
+  -H "Authorization: $SAIA_PROJECT_APITOKEN"
   -d '{
   "profile": "Default",
   "question": "Explain to me what is SAIA?"

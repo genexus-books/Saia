@@ -59,5 +59,7 @@ Certain error descriptions can contain up to `%n` references specific to that er
 | 2026      | Verb Not Supported                             |
 | 2027      | Document Extension Invalid                     |
 | 2028      | Invalid File Size                              |
-| 2029      | Project Name Already Exists                    |
-| 2030      | Assistant Name Already Exists                  |
+| 2029      | Project name already exists                    |
+| 2030      | Assistant name already exists                  |
+| 2031      | Assistant not in Project                       |
+| 2032      | The status value is unexpected                 |
