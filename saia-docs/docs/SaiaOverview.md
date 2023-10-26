@@ -15,10 +15,10 @@ One of the great benefits of using SAIA is the ability to select a Large Languag
 
 Since SAIA is an intermediate layer, anyone who works with it is protected because the data will not be made public or used by the LLMs. 
 
-To facilitate the integration of generative AI into your workflow, SAIA offers features that enable you to:
+To facilitate the integration of LLMs into your workflow, SAIA offers features that enable you to:
 * Monitor access to LLMs through customized authentication and authorization protocols.
-* Provide a Web interface with a look and feel that is familiar to Generative AI users branded and managed by your organization. 
-* Supervise the costs and interactions associated with each Gen-AI Solution for streamlined analysis and control.
+* Provide a Web interface with a look and feel that is familiar to LLM users branded and managed by your organization. 
+* Supervise the costs and interactions associated with each LLM for streamlined analysis and control.
 * Manage quotas per solution to keep your spending in check.
 
 Further, for those looking to integrate AI capabilities into their custom corporate software, SAIA provides the ability to:
