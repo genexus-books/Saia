@@ -16,7 +16,7 @@ This is achieved in an intelligent and automated way, ensuring that no server is
 
 ## The MaxTokens and RPM Challenge
 
-Language model service providers, such as GPT, set limits on processing speed (RPM) based on the MaxTokens parameter. 
+Language model service providers, such as GPT, set limits on Requests Per Minute (RPM) based on the MaxTokens parameter. 
 To understand how they are related, consider the following scenario:
 
 **MaxTokens and their Meaning:** MaxTokens indicates the maximum number of text tokens that a language model can generate 
