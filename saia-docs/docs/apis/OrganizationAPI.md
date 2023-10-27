@@ -118,7 +118,7 @@ By default active projects will be listed, use the `full` detail option to list 
       "projectDescription": "string",
       "projectId": "string",
       "projectName": "string",
-      "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+      "projectStatus": "integer", /* 0:Active, 2:Hidden */
     },
     ...
   ]
@@ -158,7 +158,7 @@ Get project `{id}` details.
   "projectDescription": "string",
   "projectId": "string",
   "projectName": "string",
-  "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "projectStatus": "integer", /* 0:Active, 2:Hidden */
   "searchProfiles": [
     {
       "name": "string",
@@ -201,7 +201,7 @@ Creates a new project.
   "projectDescription": "string",
   "projectId": "string",
   "projectName": "string",
-  "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "projectStatus": "integer", /* 0:Active, 2:Hidden */
   "searchProfiles": [
     {
       "name": "string",
@@ -278,7 +278,7 @@ Update a project.
   "projectDescription": "string",
   "projectId": "string",
   "projectName": "string",
-  "projectStatus": "integer", /* 0:Active, 1:Deleted, 2:Hidden */
+  "projectStatus": "integer", /* 0:Active, 2:Hidden */
   "searchProfiles": [
     {
       "name": "string",
