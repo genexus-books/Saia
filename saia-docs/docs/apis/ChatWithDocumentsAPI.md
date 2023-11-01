@@ -61,7 +61,7 @@ Executes a search query based on a specific profile and question.
 | profile   | string | The profile to search |
 | question  | string | The question to ask |
 | [variables](../Prompt.md#design) | collection | A list of key/value properties (optional) |
-| filters | collection | list of filters to apply |
+| filters | collection | list of filters to apply (optional) |
 
 For conversations with history, use the `id` optional element to refer to a particular conversation. These conversations will respect the `History Count` parameter from your [Search Profile](../SearchIndexProfile.md#history-document-count-scores). If no `id` value is set, no history will be considered and your query will be treated as a one-off. 
 
