@@ -41,22 +41,73 @@ Executes a search query based on a specific profile and question.
     "profile": "string",
     "question": "string",
     "variables": [
-        {"key": "string","value": "string"},
+        {"key": "string", "value": "string"},
+        ...
+    ],
+    "filters": [
+        {
+          "key": "string",
+          "operator": "string", /* Optional */
+          "value": "string or number"
+        },
         ...
     ]
   }
   ```
 
-  | Parameter | Type   | Description                     |
-  | --------- | ------ | ------------------------------- |
-  | id | string | Identifier for the conversation |
-  | profile   | string | The profile to search           |
-  | question  | string | The question to ask             |
-  | [variables](../Prompt.md#design) | collection | A list of key/value properties (optional)|
+| Parameter | Type   | Description                     |
+| --------- | ------ | ------------------------------- |
+| id | string | Identifier for the conversation |
+| profile   | string | The profile to search |
+| question  | string | The question to ask |
+| [variables](../Prompt.md#design) | collection | A list of key/value properties (optional) |
+| filters | collection | list of filters to apply |
 
 For conversations with history, use the `id` optional element to refer to a particular conversation. These conversations will respect the `History Count` parameter from your [Search Profile](../SearchIndexProfile.md#history-document-count-scores). If no `id` value is set, no history will be considered and your query will be treated as a one-off. 
 
 The `variables` parameter is used to fill in an associated prompt with values. 
+
+The `filters` parameter is used as a logical condition statement for filtering documents (using the `AND` operator). Each filter item has the following format:
+
+```json
+{
+  "key": string,
+  "operator": string, /* optional defaults to $eq */
+  "value": string,
+}
+```
+
+Possible values for the `operator`:
+
+| Parameter | Description |
+| --------- | ----------- |
+| `$eq` | Equal (default) |
+| `$ne` | Not Equal |
+| `$gt` | Greater than |
+| `$gte` | Greater than or equal|
+| `$lt` | Less than |
+| `$lte` | Less than or equal|
+
+These are predefined filters you can use.
+
+| Filter | Description |
+| --------- | ----------- |
+| `id` | Document GUID returned during [insertion](./SearchProfileAPI.md#post-v1searchprofilenamedocument) |
+| `name` | Original document name |
+| `extension` | Original document extension |
+| `source` | Document source, in general an Url |
+
+To use specific ones remember to ingest documents with the correct [metadata](../Documents.md#metadata). A valid filters section is:
+
+```json
+  ...
+  "filters": [
+      {"key": "extension", "operator": "$ne", "value": "pdf"},
+      {"key": "name", "operator": "$eq", "value": "sample"},
+      {"key": "year", "operator": "$gte", "value": 2000} /* year added during ingestion */
+  ]
+  ...
+```
 
 #### Response
 
@@ -113,6 +164,7 @@ Example of request using Search Profile that does not exist or is disabled:
 #### Sample CURL Request
 
 ```bash
+# Simple case
 curl -X POST
   -H "Content-Type: application/json"
   -H "Authorization: $SAIA_PROJECT_APITOKEN"
@@ -120,4 +172,20 @@ curl -X POST
   "profile": "Default",
   "question": "Explain to me what is SAIA?"
 }' $BASE_URL/v1/search/execute
+# Using variables and filters
+curl -X POST
+  -H "Content-Type: application/json"
+  -H "Authorization: $SAIA_PROJECT_APITOKEN"
+  -d '{
+  "profile": "Default",
+  "question": "Again, explain to me what is SAIA?",
+  "variables": [
+    {"key": "type","value": "Doc"}
+  ],
+  "filters": [
+    {"key": "extension", "operator": "$ne", "value": "pdf"},
+    {"key": "name", "operator": "$eq", "value": "sample"},
+    {"key": "year", "operator": "$gte", "value": 2000}
+  ]
+}' $BASE_URL/v1/search/execute    
 ```
