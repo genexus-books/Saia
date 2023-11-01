@@ -363,9 +363,24 @@ It is mandatory to set a `filename` header value with the document name and exte
 filename: SampleFile.pdf
 ```
 
+Notice that this option does not enable to upload [metadata](../Documents.md#metadata).
+
 #### form-data
 
 This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
+
+If you want to attach [metadata](../Documents.md#metadata) to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:
+
+```json
+{
+  "type": "test",
+  "domain": "Knowledge",
+  "year": 2023,
+  "quarter": "q3"
+}
+```
+
+The metadata can be uploaded as `Text` or directly from a `File`.
 
 ### Response
 
@@ -392,11 +407,20 @@ curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
  -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
  -H "Content-Type: application/pdf" \
  --form 'file=@"/C:/temp/SampleFile.pdf"'
+# multi-part with metadata as text
+curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
+ -H "Content-Type: application/pdf" \
+ --form 'metadata="{\"type\":\"test\",\"domain\":\"Knowledge\",\"year\":2023,\"quarter\":\"q3\"}"' \
+ --form 'file=@"/C:/temp/SampleFile.pdf"'
+# multi-part with metadata as a File
+curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
+ -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
+ -H "Content-Type: application/pdf" \
+ -F "Content-Type: application/pdf" \
+ --form 'metadata=@"/C:/temp/upload_file_metadata.json" \
+ --form 'file=@"/C:/temp/SampleFile.pdf"'
 ```
-
-### Restriction
-
-It is not possible to bind [Metadata](../Documents.md#metadata) to the file.
 
 ## DELETE /v1/search/profile/{name}/document/{id}
 
