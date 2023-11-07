@@ -1,8 +1,8 @@
 ---
-sidebar_label: 'What's Coming'
+sidebar_label: 'Coming Next'
 sidebar_position: 20
 ---
-# What's Coming
+# Coming Next
 
 Explore the key innovation points in this roadmap, which reveal the improvements and breakthroughs that are on the way.
 
