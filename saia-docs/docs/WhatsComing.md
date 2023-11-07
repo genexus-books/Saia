@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Whats Coming'
+sidebar_label: 'What is Coming'
 sidebar_position: 20
 ---
 # What's Coming
