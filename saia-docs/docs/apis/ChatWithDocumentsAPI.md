@@ -119,6 +119,7 @@ To use specific ones remember to ingest documents with the correct [metadata](..
     "documents": [
       {
         "pageContent": "Example page content",
+        "score": 0.9,
         "metadata": {
           "source": "Example source",
           "description": "Example description",
@@ -142,6 +143,8 @@ To use specific ones remember to ingest documents with the correct [metadata](..
     }
   }
   ```
+
+The returned `score` element (when available) measures the semantic similarity between the `question` and the associated `pageContent`; a value between 0 and 1 where 1 is closest.
 
 You can use the `requestId` element to review the Request detail in the console.
 
