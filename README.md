@@ -19,7 +19,7 @@ Want to contact us about GeneXus Enterprise AI? Go to [genexus.com/genexus-enter
 
 # About this repository 
 
-The objective of this repository is to document all the components and features offered. 
+The objective of this repository is to document all the components and features offered by GeneXus Enterprise AI . 
 
 This documentation is intended to be used by developers who need to configure and integrate the GeneXus Enterprise AI API in their applications.
 
