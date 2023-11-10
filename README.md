@@ -9,7 +9,7 @@ Table of contents
 
 # What is GeneXus Enterprise AI
 
-GeneXus Enterprise AI is an business platform designed to facilitate the implementation of AI-Assistants tailored to your specific needs and areas of expertise.
+GeneXus Enterprise AI is a business platform designed to facilitate the implementation of AI-Assistants tailored to your specific needs and areas of expertise.
 
 You can create AI-Assistants that can integrate and interact with your current operations, processes, systems and documents, creating new paths of innovation and productivity to explore.
 
