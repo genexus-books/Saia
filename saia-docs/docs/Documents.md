@@ -7,11 +7,11 @@ sidebar_position: 15
 
 ## Introduction
 
-To enable the possibility of chatting or searching for information stored in documents, we first need to create search indexes. These indexes essentially allow us to group content within a context or area of knowledge. For example, we could have an index for legal matters, another for support, helpdesk, etc.
+To enable the possibility of chatting or searching for information stored in documents, you first need to create search indexes. These indexes essentially allow you to group content within a context or area of knowledge. For example, you could have an index for legal matters, another for support, helpdesk, etc.
 
-Once we have these indexes created, we need to perform the content indexing process.
+Once these indexes are created, you need to perform the content indexing process.
 
-This will allow us to start conducting searches and answering questions through a conversational interface with the indexed content.
+This will allow you to start conducting searches and answering questions through a conversational interface with the indexed content.
 
 ## Document Upload
 
