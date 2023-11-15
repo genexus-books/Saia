@@ -3,34 +3,35 @@ sidebar_label: 'Proxy AI'
 sidebar_position: 2
 ---
 
+# GeneXus Enterprise AI Proxy
 
-SAIA Proxy AI API stands as a transparent proxy that allows businesses to easily connect to various AI models across different providers, all through a single point of access. With the robust capabilities of SAIA Proxy AI, you don't need to juggle multiple SDKs or APIs; you can access any supported LLM with a single SDK.
+GeneXus Enterprise AI Proxy API stands as a transparent proxy that allows businesses to easily connect to various AI models across different providers, all through a single point of access. With the robust capabilities of  GeneXus Enterprise AI Proxy, you don't need to juggle multiple SDKs or APIs; you can access any supported LLM with a single SDK.
 
 **Seamless Access to LLMs**
 - One SDK, Multiple Models: With the OpenAI SDK as your single interface, gain immediate access to a myriad of supported LLMs, including those from OpenAI, Azure, Amazon, and Google.
 - Transparent Proxy: Operates seamlessly in the background, automatically routing your requests to the designated AI models without requiring any code changes on your end.
 
 **Simplified API Requests**
-- Streamlined Authentication: SAIA Proxy AI employs SAIA-specific APITokens, negating the need for individual API keys for each AI provider.
+- Streamlined Authentication: GeneXus Enterprise AI Proxy employs SAIA-specific APITokens, negating the need for individual API keys for each AI provider.
 - Universal Request Formatting: Keep your API request format consistent, irrespective of the underlying AI model being accessed.
 
 **Key Advantages**
 - Cost and Performance Monitoring: Get insights into each model's performance and cost-efficiency without having to integrate multiple monitoring solutions.
 - Future-Proof: As we continually add support for more LLMs, your integration remains intact, saving you future development time.
 
-By leveraging the SAIA Proxy AI API, organizations can substantially simplify their AI model management and focus more on driving business outcomes. Our transparent proxy capabilities ensure that you can continue to scale and innovate without the complexities often associated with managing multiple AI providers.
+By leveraging the GeneXus Enterprise AI Proxy API, organizations can substantially simplify their AI model management and focus more on driving business outcomes. Our transparent proxy capabilities ensure that you can continue to scale and innovate without the complexities often associated with managing multiple AI providers.
 
 ### How to use it?
 
-Incorporating the use of SAIA Http Proxy does not require programming-level changes. The modifications simply involve altering two elements present in each request:
+Incorporating the use of GeneXus Enterprise AI Http Proxy does not require programming-level changes. The modifications simply involve altering two elements present in each request:
 
-1. The `BaseURL` used to invoke AI providers should now reference the SAIA component. The URL format to be used will be: 
+1. The `BaseURL` used to invoke AI providers should now reference the GeneXus Enterprise AI component. The URL format to be used will be: 
 
     ```
     "https://api.saia.ai/proxy/{AIProviderName}/{hostRelativeProviderURL}"
     ```
 
-2. The `Authorization` header present in each request should be replaced with the SAIA `APIToken` provided beforehand (without the need to specify the provider being invoked).
+2. The `Authorization` header present in each request should be replaced with the GeneXus Enterprise AI `APIToken` provided beforehand (without the need to specify the provider being invoked).
 
 The request and response received from the call will be the same as if directly invoking the provider.
 
@@ -42,7 +43,7 @@ The request and response received from the call will be the same as if directly 
     "https://api.openai.com/v1/chat/completions"
     ```
 
-    To use SAIA Http Proxy, it should be invoked as:
+    To use GeneXus Enterprise AI Http Proxy, it should be invoked as:
 
     ```
     "https://api.saia.ai/proxy/openai/v1/chat/completions"
@@ -54,7 +55,7 @@ The request and response received from the call will be the same as if directly 
     "https://api.replicate.com/v1/predictions"
     ```
 
-    Using SAIA Http Proxy, it should be:
+    Using GeneXus Enterprise AI Http Proxy, it should be:
 
     ```
     "https://api.saia.ai/proxy/replicate/v1/predictions"
@@ -72,7 +73,7 @@ The request and response received from the call will be the same as if directly 
       }'
     ```
 
-   **Using SAIA Proxy AI:**
+   **Using GeneXus Enterprise AI Proxy:**
 
     ```shell
     curl https://api.saia.ai/proxy/openai/v1/chat/completions \
@@ -84,10 +85,10 @@ The request and response received from the call will be the same as if directly 
       }'
     ``` 
 
-By following the above steps, you can easily integrate SAIA Http Proxy into your application and manage your AI models with ease.
+By following the above steps, you can easily integrate GeneXus Enterprise AI Http Proxy into your application and manage your AI models with ease.
 
 
-### How to integrate SAIA with Third Party SDKs
+### How to integrate GeneXus Enterprise AI with Third Party SDKs
 
 #### cURL
 ```curl
