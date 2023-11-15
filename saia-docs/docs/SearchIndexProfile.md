@@ -117,7 +117,7 @@ It specifies how is obtained the augmented information sent to the context. Prev
 
 ### VectorStore
 
-This is the default value, directly uses the defined `VectorStore` without any further pre-processing.
+This is the default value, that directly uses the defined `VectorStore` without any further pre-processing.
 
 ### Hypothetical Document Embeddings (HyDE)
 
@@ -133,7 +133,7 @@ Passage:
 
 Tries to improve the answers returned from vector store document similarity searches by better taking into account the context from the query.
 
-It wraps another retriever, and uses a Document Compressor as an intermediate step after the initial similarity search that removes information irrelevant to the initial query from the retrieved documents. It aims to reduce the amount of distraction a subsequent chain has to deal with when parsing the retrieved documents and making its final judgments.
+It wraps another retriever and uses a Document Compressor as an intermediate step after the initial similarity search that removes information irrelevant to the initial query from the retrieved documents. It aims to reduce the amount of distraction a subsequent chain has to deal with when parsing the retrieved documents and making its final judgments.
 
 The initial prompt is as follows:
 
