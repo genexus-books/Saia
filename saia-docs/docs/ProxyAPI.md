@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Proxy AI'
+sidebar_label: 'Proxy API'
 sidebar_position: 2
 ---
 
