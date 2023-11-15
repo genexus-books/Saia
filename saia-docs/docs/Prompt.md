@@ -58,7 +58,7 @@ The following variable names are reserved: `{inputText}`, `{context}`, `{chat_hi
 
 ## Use case
 
-Let's start with the following prompt definition that could be used from any Assistant:
+The following prompt definition could be used from any Assistant:
 
 ```
 You are a {type}. Use the following pieces of context to answer the question at the end.
