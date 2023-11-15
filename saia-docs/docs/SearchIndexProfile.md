@@ -67,7 +67,7 @@ The LLM configuration parameters can be changed using the following pseudo-json 
 }
 ```
 
-Currently the text/chat [OpenAI models](https://platform.openai.com/docs/models/) can be used with the following [parameters](https://platform.openai.com/docs/api-reference/chat).
+Currently, the text/chat [OpenAI models](https://platform.openai.com/docs/models/) can be used with the following [parameters](https://platform.openai.com/docs/api-reference/chat).
 
 The provider element can be configured with the following:
 
@@ -103,9 +103,9 @@ https://{name}.openai.azure.com/openai/deployments/{deployment}/chat/completions
 
 The `History Count` enables the usage of chat mode keeping in-context the latest interactions. It is used in conjunction with the `Profile Template`.
 
-The `Document Count` defines how many documents are retrieved from the vectorestore to augment the context.
+The `Document Count` defines how many documents are retrieved from the VectorStore to augment the context.
 
-The `Score Threshold` (defaults to 0.0) defines the minimal valid value to consider the information as valid when retrieved from the vectorstore, otherwise is discarded. In case there are no valid `Documents`, no interaction is done with the LLM. The following return value is expected:
+The `Score Threshold` (defaults to 0.0) defines the minimal valid value to consider the information as valid when retrieved from the VectorStore, otherwise is discarded. In case there are no valid `Documents`, no interaction is done with the LLM. The following return value is expected:
 
 ```json
 {"result":{"messages":["Score threshold not met"],"success":false},"text":""}
@@ -121,7 +121,7 @@ This is the default value, directly uses the defined `VectorStore` without any f
 
 ### Hypothetical Document Embeddings (HyDE)
 
-Implements Hypothetical Document Embeddings as detailed [here](https://arxiv.org/abs/2212.10496). It is an embedding technique that takes queries, generates a hypothetical answer, and then embeds that generated document and uses that as the final example. the default prompt is:
+Implements Hypothetical Document Embeddings as detailed [here](https://arxiv.org/abs/2212.10496). It is an embedding technique that takes queries, generates a hypothetical answer, and then embeds that generated document and uses that as the final example. The default prompt is:
 
 ```
 Please write a minimal passage to answer the question only 
