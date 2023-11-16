@@ -13,7 +13,7 @@ Table of contents
 * [Authentication ](#authentication)
 * [Errors ](#errors)
 * [Versioning ](#versioning)
-* [Proxy AI API](../SAIA%20Proxy%20AI.md)
+* [Proxy AI API](../ProxyAPI.md)
 * [Organization API](OrganizationAPI.md)
 * [Assistants API](AssistantsAPI.md)
 * [Search Profile API](SearchProfileAPI.md)
