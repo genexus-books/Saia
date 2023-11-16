@@ -3,7 +3,7 @@ sidebar_label: 'Organization API'
 sidebar_position: 2
 ---
 
-# SAIA Organization API
+# GeneXus Enterprise AI Organization API
 
 This API provides endpoints to retrieve organization data, such as projects and requests. It allows you to fetch project details and export request data.
 
@@ -27,7 +27,7 @@ Below is a summary of the available endpoints for this API:
 ## GET /assistants
 
 Get a list of assistants.
-> This endpoint requires a Saia API token related to **project** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **project** scope.
 
 ### Parameters
 
@@ -97,7 +97,7 @@ Keep an eye on the returned `assistantId` element which is needed for other rela
 ## GET /projects
 
 Get a list of projects.
-> This endpoint requires a Saia API token related to **organization** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **organization** scope.
 
 ### Parameters
 
@@ -142,7 +142,7 @@ Keep an eye on the returned `projectId` item value which is needed for other rel
 ## GET /project/{id}
 
 Get project `{id}` details.
-> This endpoint can be used whether the Saia API token is related to the organization scope and project scope as well.
+> This endpoint can be used whether the GeneXus Enterprise AI API token is related to the organization scope and project scope as well.
 
 ### Parameters
 
@@ -177,12 +177,10 @@ curl -X GET "$BASE_URL/v1/organization/project/{id}" \
  -H "accept: application/json"
 ```
 
-##
-
 ## POST /project
 
 Creates a new project.
-> This endpoint requires a Saia API token related to **organization** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **organization** scope.
 
 ### Request Body
 
@@ -224,7 +222,7 @@ Creates a new project.
 
 Notice the `tokens` element (default API Tokens) are only returned at Project creation time. You can retrieve them using the [GET Tokens](#get-projectidtokens) endpoint.
 
-When the creation is no successful, status code `400*` will be detailed with a collection of errors:
+When the creation is not successful, StatusCode `400*` will be detailed with a collection of errors:
 
 ```json
 {
@@ -253,7 +251,7 @@ curl -X POST "$BASE_URL/v1/organization/project" \
 ## PUT /project/{id}
 
 Update a project.
-> This endpoint requires a Saia API token related to **organization** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **organization** scope.
 
 ### Parameters
 
@@ -289,7 +287,7 @@ Update a project.
 }
 ```
 
-When the creation is no successful, status code `400*` will be detailed with a collection of errors.
+When the creation is not successful, StatusCode `400*` will be detailed with a collection of errors.
 
 ### CURL Example
 
@@ -306,7 +304,7 @@ curl -X PUT "$BASE_URL/v1/organization/project/{id}" \
 ## DELETE /project/{id}
 
 Delete a project.
-> This endpoint requires a Saia API token related to **organization** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **organization** scope.
 
 ### Parameters
 
@@ -316,7 +314,7 @@ Delete a project.
 
 ### Response
 
-StatusCode `200` is detailed when successfully deleted, otherwise `400*` error and a collection of errors.
+StatusCode `200` is detailed when successfully deleted, otherwise `400*` is displayed with a collection of errors.
 
 ### CURL Example
 
@@ -329,7 +327,7 @@ curl -X DELETE "$BASE_URL/v1/organization/project/{id}" \
 ## GET /project/{id}/tokens
 
 Get the list of API tokens for the `{id}` project.
-> This endpoint requires a Saia API token related to **organization** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **organization** scope.
 
 ### Parameters
 
@@ -365,7 +363,7 @@ curl -X GET "$BASE_URL/v1/organization/project/{id}/tokens"
 ## GET /request/export
 
 Export request data.
-> This endpoint requires a Saia API token related to **project** scope.
+> This endpoint requires a GeneXus Enterprise AI API token related to **project** scope.
 
 ### Parameters
 
