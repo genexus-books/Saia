@@ -3,15 +3,15 @@ sidebar_label: 'Search Profile API'
 sidebar_position: 3
 ---
 
-# SAIA SearchProfile API
+# GeneXus Enterprise AI SearchProfile API
 
 This API allows you to define different search profiles to implement the [Chat with Documents](../Documents.md) scenario.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
-Check parameters explanation [here](../SearchIndexProfile.md).
+Check the parameters explanation [here](../SearchIndexProfile.md).
 
-> The following endpoints require a Saia API token related to **project** scope.
+> The following endpoints require a GeneXus Enterprise AI API token related to **project** scope.
 
 ## Endpoints
 
@@ -251,7 +251,7 @@ Delete a Search Profile.
 
 ### Response
 
-StatusCode `200` is detailed when successfully deleted, otherwise `400*` error and a collection of errors.
+StatusCode `200` is detailed when successfully deleted, otherwise StatusCode `400*` with a collection of errors.
 
 ### CURL Example
 
@@ -306,7 +306,7 @@ $BASE_URL/v1/search/profile/{name}/documents?skip={skip}&count={count}
 
 ## GET /v1/search/profile/{name}/document/{id}
 
-Using the `{name}` Search Profile, it gets detail about the `{id}` document.
+Using the `{name}` Search Profile, it gets details about the `{id}` document.
 
 ### Parameters
 
@@ -355,7 +355,7 @@ The supported options are `binary` or `multipart/form-data` including a `File` t
 
 #### Binary
 
-Useful for its simplicity, encode the binary data directly in the request body. Set the request with the associated `Content-Type` header to indicate the type of data being sent (e.g., `application/pdf`, `text/plain`).
+Useful for its simplicity, encodes the binary data directly in the request body. Set the request with the associated `Content-Type` header to indicate the type of data being sent (e.g., `application/pdf`, `text/plain`).
 
 It is mandatory to set a `filename` header value with the document name and extension. For example:
 
@@ -435,7 +435,7 @@ Delete a Document.
 
 ### Response
 
-StatusCode `200` is detailed when successfully deleted, otherwise `400*` error and a collection of errors.
+StatusCode `200` is detailed when successfully deleted, otherwise `400*` is displayed with a collection of errors.
 
 ### CURL Example
 
@@ -447,4 +447,4 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/execute
 
-Execute a search query, more detail [here](ChatWithDocumentsAPI.md).
+Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
