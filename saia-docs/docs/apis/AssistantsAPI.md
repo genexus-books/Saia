@@ -3,11 +3,11 @@ sidebar_position: 5
 sidebar_label: 'Assistant API'
 ---
 
-# SAIA Assistant API
+# GeneXus Enterprise AI Assistant API
 
 This API enables the creation of new assistants, the modification of their definitions, and the retrieval of information about them. Furthermore, it allows the execution of prompts associated with previously defined assistants.
 
-> The following endpoints require a Saia API token related to **project** scope.
+> The following endpoints require a GeneXus Enterprise AI API token related to **project** scope.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
@@ -19,9 +19,9 @@ Check the [generic variables](./APIReference.md#generic-variables) needed to use
 | POST   | /v1/assistant                  | Creates a new assistant |
 | PUT    | /v1/assistant/{id}             | Updates an assistant |
 | DELETE | /v1/assistant/{id}             | Deletes an assistant |
-| POST   | /v1/assistant/text/begin       | Begins a text conversation with the SAIA Assistant |
-| POST   | /v1/assistant/text             | Sends a text prompt to the SAIA Assistant |
-| POST   | /v1/assistant/chat             | Sends a chat request to the SAIA Assistant |
+| POST   | /v1/assistant/text/begin       | Begins a text conversation with the GeneXus Enterprise AI Assistant |
+| POST   | /v1/assistant/text             | Sends a text prompt to the GeneXus Enterprise AI Assistant |
+| POST   | /v1/assistant/chat             | Sends a chat request to the GeneXus Enterprise AI Assistant |
 | POST   | /v1/assistant/text2img         | Generates an image based on the given text |
 | GET    | /v1/assistant/request/{id}/status | Retrieves the status of a request |
 | POST   | /v1/assistant/request/{id}/cancel | Cancels a request |
@@ -208,9 +208,9 @@ Updates an existing assistant. The assistant `type` property cannot be changed.
   }
 }
 ```
-The default value of the `action` parameter, `saveNewRevision`, will create a new revision but will not set it as active. The `save` option will update the active revision. And the `savePublishNewRevision` option will create a new revision and set it as active. 
+The default value of the `action` parameter, `saveNewRevision`, will create a new revision but will not set it as active. The `save` option will update the active revision. The `savePublishNewRevision` option will create a new revision and set it as active. 
 
-If only an update of `name`, `description` or `status` is needed, **one of them must be provided at least**, without any changes in the revision, it can be specified as:
+If only an update of `name`, `description`, or `status` is needed, **one of them must be provided at least**, without any changes in the revision, it can be specified as:
 ```json
 {
   "name": "string",
@@ -295,7 +295,7 @@ Deletes an assistant.
 
 ### Response
 
-StatusCode `200` indicates a successful deletion, otherwise StatusCode `400*` and a collection of errors.
+StatusCode `200` indicates a successful deletion, otherwise StatusCode `400*` with a collection of errors.
 
 ### CURL Example
 
@@ -307,7 +307,7 @@ curl -X DELETE "$BASE_URL/v1/assistant/{id}" \
 
 ## POST /text/begin
 
-Begins a text conversation with the SAIA Assistant.
+Begins a text conversation with the GeneXus Enterprise AI Assistant.
 
 ### Parameters
 
@@ -352,7 +352,7 @@ curl -X POST $BASE_URL/v1/assistant/text/begin \
 
 ## POST /text
 
-Sends a text prompt to the SAIA Assistant.
+Sends a text prompt to the GeneXus Enterprise AI Assistant.
 
 ### Parameters
 
@@ -397,7 +397,7 @@ curl -X POST $BASE_URL/v1/assistant/text \
 
 ## POST /chat
 
-Sends a chat request to the SAIA Assistant.
+Sends a chat request to the GeneXus Enterprise AI Assistant.
 
 ### Parameters
 
