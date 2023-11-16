@@ -64,6 +64,6 @@ The API versioning strategy is designed to minimize disruptions to your applicat
 
 Whenever changes are made to the API, a new version is released. This approach allows you to continue using the previous version of the API until you are ready to upgrade to the latest version.
 
-It is strongly recommended that you always specify the version number when making API requests to ensure the correct behavior of your application. You can find the latest version number in the documentation r by contacting the support team.
+It is strongly recommended that you always specify the version number when making API requests to ensure the correct behavior of your application. You can find the latest version number in the documentation or by contacting the support team.
 
 By using versioning, you ensure that your application remains stable and functional, while still providing access to the latest API features and functionality.
