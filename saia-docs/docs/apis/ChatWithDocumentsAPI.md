@@ -3,7 +3,7 @@ sidebar_label: 'Chat with Documents API'
 sidebar_position: 4
 ---
 
-# SAIA Chat with Documents API
+# GeneXus Enterprise AI Chat with Documents API
 
 This API enables searches or queries on the indexed content. 
 
@@ -13,11 +13,11 @@ If you want to manage settings associated with your search profile (ex. k, model
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
-> The following endpoints require a Saia API token related to **project** scope.
+> The following endpoints require a GeneXus Enterprise AI API token related to **project** scope.
 
 ## Endpoints
 
-The SAIA Chat with documents API provides the following endpoints:
+The GeneXus Enterprise AI Chat with documents API provides the following endpoints:
 
 | Method | Path                  |
 | ------ | --------------------- |
@@ -95,7 +95,7 @@ These are predefined filters you can use.
 | `id` | Document GUID returned during [insertion](./SearchProfileAPI.md#post-v1searchprofilenamedocument) |
 | `name` | Original document name |
 | `extension` | Original document extension |
-| `source` | Document source, in general an Url |
+| `source` | Document source, in general, an Url |
 
 To use specific ones remember to ingest documents with the correct [metadata](../Documents.md#metadata). A valid filters section is:
 
@@ -148,7 +148,7 @@ The returned `score` element (when available) measures the semantic similarity b
 
 You can use the `requestId` element to review the Request detail in the console.
 
-Example of request using Search Profile that does not exist or is disabled:
+Example of a request using a Search Profile that does not exist or is disabled:
 - Status Code: 200
 - Content-Type: application/json
 
