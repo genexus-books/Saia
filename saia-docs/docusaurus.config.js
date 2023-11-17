@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'SAIA',
+  title: 'GeneXus Enterprise AI',
   tagline: 'Your Enterprise AI Applications Mastermind',
   favicon: 'img/favicon.ico',
 
@@ -56,10 +56,9 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
 
       navbar: {
-        title: 'Saia Docs',
         logo: {
-          alt: 'Saia Logo',
-          src: 'img/saia-alpha.svg',
+          alt: 'GeneXus Enterprise AI Logo',
+          src: 'img/gx-eai-logo-green-900.svg',
         },
         items: [
           /*{
