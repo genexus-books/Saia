@@ -59,6 +59,7 @@ const config = {
         logo: {
           alt: 'GeneXus Enterprise AI Logo',
           src: 'img/gx-eai-logo-green-900.svg',
+          srcDark: 'img/gx-eai-logo-white.svg',
         },
         items: [
           /*{
