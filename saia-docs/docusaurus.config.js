@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'GeneXus Enterprise AI',
   tagline: 'Your Enterprise AI Applications Mastermind',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/gx-ai-favicon.svg',
 
   // Set the production url of your site here
   url: 'https://console.beta.saia.ai',
