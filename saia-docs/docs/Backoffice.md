@@ -31,7 +31,7 @@ At the right top of the header, you can select the project you want to view. Aft
 
 On the left side of the screen, you can find the backoffice menu, which grants access to different options based on your credentials. This menu enables you to navigate through the several features and functionalities offered by the GeneXus Enterprise AI backoffice.
 
-![image](https://github.com/genexus-books/Saia/assets/33163715/99a5fdfb-c2b8-471d-9854-e01492fb2760)
+![image](https://github.com/genexus-books/Saia/blob/209a33f6176b4594f201887077fa7b52c57b73c6/saia-docs/assets/images/gx-eai-BackOffice.png?raw=true)
 
 ## Projects
 Projects are the core entities where several configurations and settings are defined. Within each project, you can define assistants, generate API tokens for API access, and carry out document management functionalities. You can also add, update, or delete projects within the organization.
@@ -105,7 +105,7 @@ To create a Prompt assistant, follow these steps:
 
 4. Complete the required details:
 
-![image](https://github.com/genexus-books/Saia/assets/33163715/51a4bfdf-0492-4cff-b217-383389621994)
+![image](https://github.com/genexus-books/Saia/blob/209a33f6176b4594f201887077fa7b52c57b73c6/saia-docs/assets/images/gx-eai-AssistantEditor.png?raw=true)
 
    - Name: Give a unique name to your Prompt assistant.
    - Prompt: Specify the initial prompt or context for the assistant to generate text completion.
