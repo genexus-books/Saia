@@ -25,8 +25,6 @@ It is possible to define quota limits based on:
 
 ![image](https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-MembershipUnit.png?raw=true)
 
-https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-SoftHardLimit.png?raw=true
-
 When a Membership is assigned a Freemium value, it means that the membership allows a one-time use, a free trial or a specific
 limit of requests or costs, without an expiration date.
 
