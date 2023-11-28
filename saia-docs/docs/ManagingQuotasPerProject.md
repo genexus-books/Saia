@@ -14,7 +14,7 @@ limits for each project.
 
 To do this, select the desired project and click on the USAGE LIMITS link:
 
-![image](https://github.com/genexus-books/Saia/blob/4f821949d53e8c80233ea10e125cb6745ae14c57/saia-docs/assets/images/Usage_limits_1.png?raw=true)
+![image](https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-UsageLimits.png?raw=true)
 
 ## Limit definition
 
@@ -23,14 +23,16 @@ It is possible to define quota limits based on:
 *	Membership: Freemium(), daily, weekly, or monthly.
 * Unit: Cost(USD) or request.
 
-![image](https://github.com/genexus-books/Saia/blob/4f821949d53e8c80233ea10e125cb6745ae14c57/saia-docs/assets/images/Membership_Unit_2.png?raw=true)
+![image](https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-MembershipUnit.png?raw=true)
+
+https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-SoftHardLimit.png?raw=true
 
 When a Membership is assigned a Freemium value, it means that the membership allows a one-time use, a free trial or a specific
 limit of requests or costs, without an expiration date.
 
 Furthermore, you can define a **Soft limit alert** and a **Hard limit** for each quota limit.  
 
-![image](https://github.com/genexus-books/Saia/blob/4f821949d53e8c80233ea10e125cb6745ae14c57/saia-docs/assets/images/SoftLimit_HardLimit_3.png?raw=true)
+![image](https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-SoftHardLimit.png?raw=true)
 
 An e-mail alert will be sent to the project manager when the defined value in **Soft limit alert** is reached.
 
@@ -50,4 +52,4 @@ active quota and change its status to Expired.
 
 In addition, you will be able to see the amount of available quota and the amount used:
 
-![image](https://github.com/genexus-books/Saia/blob/4f821949d53e8c80233ea10e125cb6745ae14c57/saia-docs/assets/images/Used_Remaining_4.png?raw=true)
+![image](https://github.com/genexus-books/Saia/blob/b6bf1de2bdc955b955a602b7b21d292c127e3adc/saia-docs/assets/images/gx-eai-UsedRemaining.png?raw=true)
