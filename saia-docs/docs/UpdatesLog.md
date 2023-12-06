@@ -9,6 +9,14 @@ This log shows the most important fixes or features being added to the platform.
 
 ## Log
 
+### December 6th
+
+* New back office design.
+* Access to the Playground from the back office to chat with the assistants defined in the project.
+* Upload images for analysis with GPT-4 Vision.
+* Google Analytics support at the front end.
+* Keep a thread of conversation when chatting with documents.
+
 ### November 6th
 
 * The following OpenAI models are supported: GTP-4 Turbo (gpt-4-1106-preview), GPT-3.5 Turbo (gpt-3.5-turbo-1106), and GPT-4 Vision (gpt-4-vision-preview).
