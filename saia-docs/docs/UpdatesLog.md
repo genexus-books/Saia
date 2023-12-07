@@ -16,6 +16,7 @@ This log shows the most important fixes or features being added to the platform.
 * Upload images for analysis with GPT-4 Vision.
 * Google Analytics support at the front end.
 * Keep a thread of conversation when chatting with documents.
+* An email notification is sent automatically when a new member is invited to join the organization or project.
 
 ### November 6th
 
