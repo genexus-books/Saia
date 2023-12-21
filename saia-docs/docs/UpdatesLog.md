@@ -12,7 +12,7 @@ This log shows the most important fixes or features being added to the platform.
 ## 2023
 ### December 19th
 
-* Fix Too Many Redirects accessing Playground using a browser in the Spanish language.
+* Fixed: Too Many Redirects when accessing Playground using a browser in the Spanish language.
   
 ### December 6th
 
