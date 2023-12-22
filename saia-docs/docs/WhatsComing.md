@@ -7,7 +7,7 @@ sidebar_position: 20
 Explore the key innovation points in this roadmap, which reveal the improvements and breakthroughs that are on the way.
 
 * New Dashboard with user metrics.
-* New metric Average Request Time in Project Dashboard.
+* New metric Average Request Time added in the Project Dashboard.
 * Support for Google Gemini Pro model.
 * Renaming Search Documents for RAG Assistants.
 * Improvements in RAG Assistant's configuration.
