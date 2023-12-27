@@ -154,6 +154,8 @@ Get project `{id}` details.
 
 ```json
 {
+  "organizationId": "string",
+  "organizationName": "string",
   "projectActive": "boolean",
   "projectDescription": "string",
   "projectId": "string",
