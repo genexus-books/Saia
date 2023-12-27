@@ -31,7 +31,7 @@ Later on, during the [retrieval process](./apis/ChatWithDocumentsAPI.md#1-execut
 
 It refers to ways to structure documents (unstructured data) so that LLMs can best interact with them. The most common way that indexes are used is in a `retrieval` step before interacting with a LLM.
 
-Index configuration can be checked on the `Search Documents` console section. There is a list of `Search Profiles` and each one with the possibility to use a specific index. You can also check and modify this information with the associated [API](./SearchIndexProfile.md).
+Index configuration can be checked on the `RAG Assistants` console section. There is a list of `RAG Assistants` and each one with the possibility to use a specific index. You can also check and modify this information with the associated [API](./SearchIndexProfile.md).
 
 ## Chunks
 
