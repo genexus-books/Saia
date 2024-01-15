@@ -1,0 +1,8 @@
+{
+  "label": "RAG Assistants",
+  "position": 15,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to use the RAG Assistants."
+  }
+}
