@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # RAG Assistants section
 
-All the interaction with the Search and Chat component is configured through the RAG Assistants section. A default is created during initialization and later it can be modified or new ones created to change the assistant behavior.
+All the interaction with the Search and Chat component is configured through the RAG Assistants section. A default RAG Assistant is created during initialization and later it can be modified or new ones created to change the assistant behavior.
 
 RAG Assistant is located in the Project Options section and provides you with the ability to customize options specific to each RAG Assistant by clicking on UPDATE.
 
