@@ -135,7 +135,7 @@ Original question: {question}
 ```
 Multi Query generates 5 additional queries from different perspectives. Each generated query is used to retrieve a set of relevant 
 documents from the configured vectorStore, and then the single join of all document sets is performed to obtain a larger set of potentially 
-relevant documents. The queryCount parameter can be modified in the Profile Metadata section.
+relevant documents. 
 
 ## Score Threshold
 
@@ -158,6 +158,8 @@ In the same way, depending on the configured retriever and prompt, another call 
 ```
 {"chat":{"retriever":{"llm":{"provider":"openai","modelName":"gpt-3.5-turbo-16k","maxTokens":1003,"cache":true},"queryCount":3}}}
 ```
+Where the "queryCount" parameter allows you to adjust the number of queries generated from different perspectives to obtain a wider set of potentially relevant documents.
+
 You can have it use both configurations. The resulting metadata is the union of the previous ones:
 ```
 {"chat":{"search":{"llm":{"provider":"openai","modelName":"gpt-3.5-turbo","maxTokens":1002,"cache":true}},"retriever":{"llm":{"provider":"openai","modelName":"gpt-3.5-turbo-16k","maxTokens":1003,"cache":true},"queryCount":3}}}
