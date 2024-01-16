@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Managing quotas per project'
-sidebar_position: 21
+sidebar_position: 25
 ---
 
 # Managing quotas per project
