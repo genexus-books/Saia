@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'AI-Driven Load Balancing'
-sidebar_position: 20
+sidebar_position: 24
 ---
 # AI-Driven Load Balancing
 
