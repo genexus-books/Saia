@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Updates Log'
-sidebar_position: 19
+sidebar_position: 26
 ---
 
 # Updates Log
