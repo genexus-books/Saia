@@ -2,9 +2,9 @@
 sidebar_label: 'General Information'
 sidebar_position: 2
 ---
-![image](https://github.com/genexus-books/Saia/blob/25b9adecc75e4453e71780bc32e6ff7f37151de1/saia-docs/assets/images/RAGAssistantsSection3.png?raw=true)
-
 # General Information
+
+![image](https://github.com/genexus-books/Saia/blob/25b9adecc75e4453e71780bc32e6ff7f37151de1/saia-docs/assets/images/RAGAssistantsSection3.png?raw=true)
 
 ## Name
 Identifying name of the assistant that can be customized according to your preferences.
