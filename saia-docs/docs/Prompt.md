@@ -109,7 +109,7 @@ and the Assistant execution process will continue as usual.
 
 ## Considerations
 
-The parameter substitution is applied to all the involved prompts; when using the Search&Chat assistant it depends on the [retriever](./SearchIndexProfile.md#retrievers) used.
+The parameter substitution is applied to all the involved prompts; when using the Search&Chat assistant it depends on the [retriever](./Retrieval.md) used.
 
 Parameter substitution is `Case Insensitive`.
 
