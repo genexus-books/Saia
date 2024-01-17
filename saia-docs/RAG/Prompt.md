@@ -55,7 +55,7 @@ Chat History:
 Follow-Up Input: {question}
 Standalone question:
 ```
-## LLM Settings
+## Llm Settings
 Configuration of the model used by the assistant to generate the answer, including the service provider, model name, temperature, maximum 
 token limit, and other important parameters that affect how answers are generated.
 
