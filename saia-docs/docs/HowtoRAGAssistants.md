@@ -34,7 +34,7 @@ Assistant to your needs.
 
 ![image](https://github.com/genexus-books/Saia/blob/fc9c844045233f79c3149780365a6100663c642b/saia-docs/assets/images/RAGAssistantsSection10.png?raw=true)
 
-For more information, see: RAG Assistants section
+For more information, see: [RAG Assistants section](https://docs.saia.ai/RAG/RAGAssistantsSection)
 
 ## Step 3: Upload documents
 
