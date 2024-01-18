@@ -21,7 +21,7 @@ From the API caller, the developer will not only need to define the prompt strat
 
 The Assistants API supports the usage of an optional `variables` collection definition using the `key`(string)/`value`(string) pattern for each element. This allows for dynamic substitution of variable definitions within a Prompt.
 
-When sending JSON values in the `value` element, it's important to use the correct notation, which involves using an extra set of delimiters. For JSON objects, use curly brackets, and for JSON arrays, use square brackets. Notice there is a slight difference when using [Assistant](./apis/AssistantsAPI.md#post-chat) vs [Search Profiles](./apis/ChatWithDocumentsAPI.md#saia-chat-with-documents-api), where the later needs to use double curly brackets.
+When sending JSON values in the `value` element, it's important to use the correct notation, which involves using an extra set of delimiters. For JSON objects, use curly brackets, and for JSON arrays, use square brackets. Notice there is a slight difference when using [Assistant](./apis/AssistantsAPI.md#post-chat) vs [RAG Assistants](./apis/ChatWithDocumentsAPI.md#saia-chat-with-documents-api), where the later needs to use double curly brackets.
 
 Below are examples of valid values:
 
@@ -109,7 +109,7 @@ and the Assistant execution process will continue as usual.
 
 ## Considerations
 
-The parameter substitution is applied to all the involved prompts; when using the Search&Chat assistant it depends on the [retriever](./SearchIndexProfile.md#retrievers) used.
+The parameter substitution is applied to all the involved prompts; when using the Search&Chat assistant it depends on the [retriever](./RAG/Retrieval.md) used.
 
 Parameter substitution is `Case Insensitive`.
 
