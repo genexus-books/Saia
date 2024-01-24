@@ -1,6 +1,6 @@
 ---
-sidebar_label: 'HowTo: Use RAG Assistants’ backoffice'
-sidebar_position: 23
+sidebar_label: 'How to create and test a RAG Assistant'
+sidebar_position: 6
 ---
 # HowTo: Use RAG Assistants’ backoffice 
 
