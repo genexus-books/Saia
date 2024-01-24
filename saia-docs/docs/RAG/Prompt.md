@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Prompt'
-sidebar_position: 3
+sidebar_position: 4
 ---
 # Prompt
 ![image](https://github.com/genexus-books/Saia/blob/268fcf5373b4eba0d57e58312151db64dcbb5a9a/saia-docs/assets/images/RAGAssistantsSection4.png?raw=true)
