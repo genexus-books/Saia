@@ -140,7 +140,7 @@ To create a Chat assistant, follow these steps:
 
 6. Once you are satisfied with the response, save the first version of your Chat assistant. Later on, you can come back to the [RAG Assistants section](./RAG/RAGAssistantsSection.md) to tweak the configuration.
 
-7. Go to the [Documents](./RAG/Documents.md) section to start uploading files.
+7. Go to the [Documents](/Documents.md) section to start uploading files.
 
 Note: When creating prompt or chat assistants, ensure that the instructions, prompts, or initial context provided are clear and concise to obtain accurate and meaningful responses from the AI models.
 
