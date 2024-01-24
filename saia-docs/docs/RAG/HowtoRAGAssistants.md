@@ -23,7 +23,7 @@ Create a New RAG Assistant by clicking on the CREATE NEW button.
 
 After you click on the CREATE NEW button, a window will appear to enter a Name and Description:
 
-![image](https://github.com/genexus-books/Saia/blob/fc9c844045233f79c3149780365a6100663c642b/saia-docs/assets/images/RAGAssistantsSection9.png?raw=true)
+![image](https://github.com/genexus-books/Saia/blob/37ab69ed86934b9056f4ec4c1c398fa1af28181f/saia-docs/assets/images/RAGAssistantsSection9.png?raw=true)
 
 Next, click on the CONFIRM button.
 
