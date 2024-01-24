@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # GeneXus Enterprise AI SearchProfile API
 
-This API allows you to define different search profiles to implement the [RAG Assistants](../RAG/Documents.md) scenario.
+This API allows you to define different search profiles to implement the [RAG Assistants](/Documents.md) scenario.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
@@ -347,7 +347,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a [supported one](../Documents.md).
+Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a [supported one](/Documents.md).
 
 ### Request Body
 
@@ -447,4 +447,4 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/execute
 
-Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
+Execute a search query, for more detail [here](ChatWithtsAPI.md).
