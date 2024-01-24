@@ -447,4 +447,4 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/execute
 
-Execute a search query, for more detail [here](ChatWithtsAPI.md).
+Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
