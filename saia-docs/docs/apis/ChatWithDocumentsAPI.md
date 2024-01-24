@@ -97,7 +97,7 @@ These are predefined filters you can use.
 | `extension` | Original document extension |
 | `source` | Document source, in general, an Url |
 
-To use specific ones remember to ingest documents with the correct [metadata](../Documents.md#metadata). A valid filters section is:
+To use specific ones remember to ingest documents with the correct metadata. A valid filters section is:
 
 ```json
   ...
