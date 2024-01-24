@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # GeneXus Enterprise AI SearchProfile API
 
-This API allows you to define different search profiles to implement the [RAG Assistants](../Documents.md) scenario.
+This API allows you to define different search profiles to implement the [RAG Assistants](../RAG/Documents.md) scenario.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
