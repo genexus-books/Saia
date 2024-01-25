@@ -392,7 +392,8 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a [supported one](../RAG/HowtoRAGAssistants.md#step-3-upload-documents).
+Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a 
+[supported one](../RAG/HowtoRAGAssistants.md#step-3-upload-documents).
 
 ### Request Body
 
@@ -523,4 +524,4 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/execute
 
-Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
+Execute a search query, for more detail [here](./ChatWithDocumentsAPI.md).
