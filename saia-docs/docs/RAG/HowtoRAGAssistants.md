@@ -2,13 +2,13 @@
 sidebar_label: 'How to create and test a RAG Assistant'
 sidebar_position: 6
 ---
-# HowTo: Use RAG Assistants’ backoffice 
+# How to create and test a RAG Assistant
 
 Here is a step-by-step guide on how to use RAG Assistants, upload a document, and start chatting with the assistant from the playground.
 
 ## Step 1: Create New
 
-First, enter the GeneXus Enterprise AI backoffice. On the left side of the screen, you can find the back office menu. In this menu, click 
+First, enter the GeneXus Enterprise AI backoffice. On the left side of the screen, you can find the backoffice menu. In this menu, click 
 on RAG Assistants.
 
 Next, in the Project Dynamic Combo Box, select the project you want to work with (in this case, the Default one is used).
@@ -129,7 +129,7 @@ Metadata Value: 2015
 
 ## Step 6: Playground
 
-Finally, you can test your RAG Assistant by clicking on Playground on the left side menu of the back-office window:
+Finally, you can test your RAG Assistant by clicking on Playground on the left side menu of the backoffice window:
 
 ![image](https://github.com/genexus-books/Saia/blob/fc9c844045233f79c3149780365a6100663c642b/saia-docs/assets/images/RAGAssistantsSection18.png?raw=true)
 
