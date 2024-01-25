@@ -29,7 +29,7 @@ This log shows the most important fixes or features being added to the platform.
   
 ### December 6th
 
-* New back office design.
+* New backoffice design.
 * Access to the Playground from the backoffice to chat with the assistants defined in the project.
 * Upload images for analysis with GPT-4 Vision.
 * Google Analytics support at the front end.
