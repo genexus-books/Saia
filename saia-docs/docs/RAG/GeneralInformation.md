@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Configuration - General Information'
-sidebar_position: 4
+sidebar_position: 5
 ---
 # Configuration - General Information
 
