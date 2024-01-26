@@ -14,7 +14,7 @@ Table of contents
 * [Assistants](#assistants)
    * [Creating a Prompt Assistant](#creating-a-prompt-assistant)
    * [Creating a Chat Assistant](#creating-a-chat-assistant)
-* [RAG Assistants](../RAG/HowtoRAGAssistants.md)
+* [RAG Assistants](./RAG/HowtoRAGAssistants.md)
 * [Observability](#observability)
   * [Requests](#requests)   
 * [API Tokens](#api-tokens)
