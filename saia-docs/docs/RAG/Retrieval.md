@@ -1,9 +1,9 @@
 ---
-sidebar_label: 'Retrieval'
-sidebar_position: 5
+sidebar_label: 'Configuration - Retrieval'
+sidebar_position: 6
 ---
 
-# Retrieval
+# Configuration - Retrieval
 
 The subsection that allows you to specify how to obtain the augmented information sent to the context.
 
