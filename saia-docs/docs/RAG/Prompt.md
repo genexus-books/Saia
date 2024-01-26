@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Configuration - Prompt'
-sidebar_position: 5
+sidebar_position: 6
 ---
 # Configuration - Prompt
 ![image](https://github.com/genexus-books/Saia/blob/268fcf5373b4eba0d57e58312151db64dcbb5a9a/saia-docs/assets/images/RAGAssistantsSection4.png?raw=true)
