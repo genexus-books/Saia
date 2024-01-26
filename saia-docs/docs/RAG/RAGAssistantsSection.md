@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Configuration'
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # RAG Assistants configuration
