@@ -395,6 +395,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a 
 [supported one](../RAG/HowtoRAGAssistants.md).
 
+
 ### Request Body
 
 The supported options are `binary` or `multipart/form-data` including a `File` type.
