@@ -9,7 +9,7 @@ This API enables searches or queries on the indexed content.
 
 This documentation provides detailed information on the available endpoints and how to interact with them. 
 
-If you want to manage settings associated with your search profile (ex. k, model, historyCount), use the [Search Index Profile](../SearchIndexProfile.md) section.
+If you want to manage settings associated with your RAG Assistants (ex. k, model, historyCount), use the [RAG Assistants Section](../RAG/RAGAssistantsSection.md).
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
@@ -63,7 +63,7 @@ Executes a search query based on a specific profile and question.
 | [variables](../Prompt.md#design) | collection | A list of key/value properties (optional) |
 | filters | collection | list of filters to apply (optional) |
 
-For conversations with history, use the `id` optional element to refer to a particular conversation. These conversations will respect the `History Count` parameter from your [Search Profile](../SearchIndexProfile.md#history-document-count-scores). If no `id` value is set, no history will be considered and your query will be treated as a one-off. 
+For conversations with history, use the `id` optional element to refer to a particular conversation. These conversations will respect the `History Count` parameter from your [RAG Assistants](../RAG/RAGAssistantsSection.md#History-Message-Count). If no `id` value is set, no history will be considered and your query will be treated as a one-off. 
 
 The `variables` parameter is used to fill in an associated prompt with values. 
 
@@ -97,7 +97,7 @@ These are predefined filters you can use.
 | `extension` | Original document extension |
 | `source` | Document source, in general, an Url |
 
-To use specific ones remember to ingest documents with the correct [metadata](../Documents.md#metadata). A valid filters section is:
+To use specific ones remember to ingest documents with the correct metadata. A valid filters section is:
 
 ```json
   ...

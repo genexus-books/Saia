@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Updates Log'
-sidebar_position: 19
+sidebar_position: 26
 ---
 
 # Updates Log
@@ -9,6 +9,19 @@ This log shows the most important fixes or features being added to the platform.
 
 ## Log
 
+## 2024
+
+### January 8th
+
+* The option formerly known as 'Search Documents' has been improved and renamed to RAG Assistant (Retrieval Augmented Generation), thus providing an optimized experience when searching and generating information.
+
+#### FrontEnd
+
+* Feedback is provided during conversations with RAG Assistants, indicating where you are in the process.
+* 'Response streaming' support for RAG Assistants.
+* Settings are hidden when selecting an assistant, except when 'Chat with LLMs' is selected.
+
+
 ## 2023
 ### December 19th
 
@@ -16,7 +29,7 @@ This log shows the most important fixes or features being added to the platform.
   
 ### December 6th
 
-* New back office design.
+* New backoffice design.
 * Access to the Playground from the backoffice to chat with the assistants defined in the project.
 * Upload images for analysis with GPT-4 Vision.
 * Google Analytics support at the front end.

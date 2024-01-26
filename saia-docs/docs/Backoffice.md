@@ -14,7 +14,7 @@ Table of contents
 * [Assistants](#assistants)
    * [Creating a Prompt Assistant](#creating-a-prompt-assistant)
    * [Creating a Chat Assistant](#creating-a-chat-assistant)
-* [Search documents](Documents.md)
+* Search documents
 * [Observability](#observability)
   * [Requests](#requests)   
 * [API Tokens](#api-tokens)
@@ -23,20 +23,20 @@ Table of contents
 
 Welcome to GeneXus Enterprise AI. This backoffice provides organization administrators with a range of essential options to configure projects and manage key settings. Through the GeneXus Enterprise AI backoffice, you can easily customize projects, define and test assistants, define search domains, generate API tokens, manage members, and adjust observability options. 
 
-This documentation will guide you through the several features and functionalities of the GeneXus Enterprise AI backoffice.
+This documentation will guide you through the various features and functionalities of the GeneXus Enterprise AI backoffice.
 
 When accessing the GeneXus Enterprise AI backoffice, a dashboard is shown on the home screen. This dashboard displays essential indicators related to usage and costs for the selected project. 
 
 At the right top of the header, you can select the project you want to view. After selecting a project, the information shown on the dashboard is filtered as well as all the options offered in the left menu. In addition, next to the project name you can find a user menu to access user-specific tasks and a configuration menu that allows you to customize settings such as dark mode or font size.
 
-On the left side of the screen, you can find the backoffice menu, which grants access to different options based on your credentials. This menu enables you to navigate through the several features and functionalities offered by the GeneXus Enterprise AI backoffice.
+On the left side of the screen, you can find the backoffice menu, which grants access to different options based on your credentials. This menu enables you to navigate the various features and functionalities offered by the GeneXus Enterprise AI backoffice.
 
 ![image](https://github.com/genexus-books/Saia/blob/209a33f6176b4594f201887077fa7b52c57b73c6/saia-docs/assets/images/gx-eai-BackOffice.png?raw=true)
 
 ## Projects
 Projects are the core entities where several configurations and settings are defined. Within each project, you can define assistants, generate API tokens for API access, and carry out document management functionalities. You can also add, update, or delete projects within the organization.
 
-The following sections will guide you on how to perform project-related operations within the GeneXus Enterprise AI backoffice, empowering you to efficiently manage projects and their associated settings.
+The following sections will guide you on how to perform project-related operations within the GeneXus Enterprise AI backoffice, enabling you to efficiently manage projects and their associated settings.
 
 ### Adding a project
 To define a new project, follow the steps below:
@@ -63,14 +63,15 @@ You have the option to set a certain project as the active project.
 
 The "Set as Active" function provides the same action as selecting a certain project in the header combo box.
 
-To set a project as active, select "Manage Projects" in the left menu, the projects will be displayed and for the desired project you only have to click on the "Set as Active" button.
+To set a project as active, select "Manage Projects" in the left menu; the projects will be displayed and you only have to click on the "Set as Active" button for the desired project.
+
  
 Upon setting a project as active, all subsequent actions and filters within the GeneXus Enterprise AI backoffice will be applied specifically to that project. 
 
 ## Members
 The Members option, available in the GeneXus Enterprise AI backoffice left menu, enables you to add new members to the selected project. 
 
-Adding members allows you to give access and involvement to a new user in the project's activities.
+Adding members allows you to give new users access to and involvement in the project's activities.
 
 To invite a new member, follow the steps below:
 
@@ -79,9 +80,9 @@ To invite a new member, follow the steps below:
 4. Select the "Members" option offered in the left menu.
 5. Press the "Insert" button.
 6. Enter the email address of the user you want to invite as a new member.
-7. Click on the "Invite Member" to send the invitation.
+7. Click on "Invite Member" to send the invitation.
 
-Once the invited user enters the back office, they will gain access to the project. Keep in mind that the invitation is valid for 24 hours, after which it expires and a new one must be generated.
+Once the invited user enters the backoffice, they will gain access to the project. Keep in mind that the invitation is valid for 24 hours, after which it expires and a new one must be generated.
 
 Note: Make sure to provide the correct email address of the user you want to invite.
 
@@ -109,13 +110,13 @@ To create a Prompt assistant, follow these steps:
 
    - Name: Give a unique name to your Prompt assistant.
    - Prompt: Specify the initial prompt or context for the assistant to generate text completion.
-   - Mode: in this case is Text
+   - Mode: In this case, it is Text.
    - Provider: Select the desired AI provider, such as OpenAI, Google VertexAI, etc.
    - Model: Choose the specific AI model to be used for text completion.
    - Temperature: This setting determines the level of randomness in the response. A value of zero results in a repetitive and predictable response.
    - Max Tokens: Configure the maximum number of tokens to return in the generated text completion, based on the chosen AI model.
 
-5. Optionally, test the assistant before saving it. This helps you evaluate the response generated by the assistant based on the provided initial context prompt and settings. You can use the User Input field and then press the Test button to get in the Response field your result. 
+5. Optionally, test the assistant before saving it. This helps you evaluate the response generated by the assistant based on the initial context prompt and settings provided. You can use the User Input field and press the Test button to get your result in the Response field.
 
 6. Once you are satisfied with the response, save the first version of your Prompt assistant.
 
@@ -127,7 +128,7 @@ To create a Chat assistant, follow these steps:
 
 2. Go to the "Assistants" section.
 
-3. Click on the option to Create Chat Assistant.
+3. Click on the option to "Create Chat Assistant".
 
 4. Fill in the required details:
 
@@ -138,12 +139,11 @@ To create a Chat assistant, follow these steps:
 
 5. Optionally, test the assistant before saving it. This allows you to verify the response generated by the assistant based on the initial system instruction and selected AI settings.
 
-6. Once you are satisfied with the response, save the first version of your Chat assistant. Later on, you can come back to the [Search Index Profile](SearchIndexProfile.md) to tweak the configuration.
+6. Once you are satisfied with the response, save the first version of your Chat assistant. Later on, you can come back to the [RAG Assistants section](./RAG/RAGAssistantsSection.md) to tweak the configuration.
 
-7. Go to the [Documents](Documents.md) section to start uploading files.
+7. Go to the [RAG Assistants](./RAG/HowtoRAGAssistants.md) to start uploading files.
 
-Note: When creating prompt or chat assistants, ensure that the instructions, prompts, or initial context provided are clear and concise to obtain accurate and meaningful responses from the AI models.
-
+Note: When creating prompt or chat assistants, make sure that the instructions, prompts, or initial context provided are clear and concise to obtain accurate and meaningful responses from the AI models.
 
 ## Observability
 GeneXus Enterprise AI stores and tracks every request made through its API layers, providing organizations with complete visibility into the usage of assistants, AI models, and the associated cost for each request. This allows organizations to monitor and analyze resource usage, make informed decisions about resource allocation and optimize usage for cost-efficiency. 
@@ -157,9 +157,9 @@ In the left menu of GeneXus Enterprise AI, the "Requests" option gives you acces
 
 The trace allows you to easily filter requests by model, assistant, API token, datetime range, and status, enabling you to quickly identify specific requests of interest. Furthermore, by clicking on the Module column for a particular request, you can access detailed information about that request.
 
-Within the request details, you can view the input and output data, the specific model used for the request, the associated cost, and the timestamp indicating when the request was executed. This level of detail enables you to gain insights into the specific details of each request, facilitating troubleshooting, analysis, and optimization of your AI workflows.
+Within the request details, you can view the input and output data, the specific model used for the request, the associated cost, and the timestamp indicating when the request was executed. This level of detail gives you insights into the specific details of each request, facilitating the troubleshooting, analysis, and optimization of your AI workflows.
 
-The ability to access and review the complete details of each request empowers you to understand the underlying data and processes, making it easier to identify and address any issues or areas for improvement. With this comprehensive observability feature, organizations can ensure the accuracy, efficiency, and cost-effectiveness of their AI-driven workflows in GeneXus Enterprise AI.
+The ability to access and review the complete details of each request enables you to understand the underlying data and processes, making it easier to identify and address any issues or areas for improvement. With this comprehensive observability feature, organizations can ensure the accuracy, efficiency, and cost-effectiveness of their AI-driven workflows in GeneXus Enterprise AI.
 
 ## API Tokens
 API Tokens play a crucial role in executing GeneXus Enterprise AI APIs. These tokens are required to access and use the functionality provided by the APIs. 
@@ -169,7 +169,7 @@ There are two types of API Tokens: Organization API Tokens and Project API Token
 ### Organization API Tokens
 Certain operations require API Tokens with a higher scope, such as access to Project creation, updating and deletion.
 
-Users with the necessary privileges can manage this type of API Tokens in order to only work with OrganizationAPI endpoints. These API Tokens are not intended to work at the project level and cannot be used to reference assistants or AI models.
+Users with the necessary privileges can manage this type of API Tokens in order to work only with OrganizationAPI endpoints. These API Tokens are not intended to work at the project level and cannot be used to reference assistants or AI models.
 
 ### Project API Tokens
 For each project, you can define multiple Project API Tokens. This allows for granular control and tracking of usage, as well as the management of access permissions for specific assistants or models available through the GeneXus Enterprise AI API.

@@ -5,11 +5,11 @@ sidebar_position: 3
 
 # GeneXus Enterprise AI SearchProfile API
 
-This API allows you to define different search profiles to implement the [RAG Assistants](../Documents.md) scenario.
+This API allows you to define different search profiles to implement the [RAG Assistants](/Documents.md) scenario.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
-Check the parameters explanation [here](../SearchIndexProfile.md).
+Check the parameters explanation [here](../RAG/RAGAssistantsSection.md).
 
 > The following endpoints require a GeneXus Enterprise AI API token related to **project** scope.
 
@@ -32,7 +32,7 @@ Below is a summary of the available endpoints for this API:
 
 ## GET /profiles
 
-Retrieve all the search profiles for a Project.
+Retrieve all the RAG Assistants for a Project.
 
 ### Response
 
@@ -65,7 +65,7 @@ curl -X GET "$BASE_URL/v1/search/profiles" \
 
 ## GET /v1/search/profile/{name}
 
-Get Search Profile `{name}` details.
+Get RAG Assistants `{name}` details.
 
 ### Response
 
@@ -109,7 +109,7 @@ Get Search Profile `{name}` details.
 }
 ```
 
-The `type` parameter is explained [here](../SearchIndexProfile.md#retrievers).
+The `type` parameter is explained [here](../RAG/Retrieval.md).
 
 ### CURL Example
 
@@ -121,7 +121,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}" \
 
 ## POST /v1/search/profile
 
-Creates a Search Profile.
+Creates a RAG Assistant.
 
 ### Request Body
 
@@ -194,7 +194,7 @@ curl -X POST "$BASE_URL/v1/search/profile" \
 
 ## PUT /v1/search/profile/{name}
 
-Update a Search Profile.
+Update a RAG Assistants.
 
 ### Parameters
 
@@ -241,7 +241,7 @@ curl -X PUT "$BASE_URL/v1/search/profile/{name}" \
 
 ## DELETE /v1/search/profile/{name}
 
-Delete a Search Profile.
+Delete a RAG Assistants.
 
 ### Parameters
 
@@ -263,7 +263,7 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}" \
 
 ## GET /profile/{name}/documents
 
-List the documents for a Profile.
+List the documents for a RAG Assistant.
 
 ### Parameters
 
@@ -306,7 +306,7 @@ $BASE_URL/v1/search/profile/{name}/documents?skip={skip}&count={count}
 
 ## GET /v1/search/profile/{name}/document/{id}
 
-Using the `{name}` Search Profile, it gets details about the `{id}` document.
+Using the `{name}` RAG Assistants, it gets details about the `{id}` document.
 
 ### Parameters
 
@@ -347,7 +347,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-Uploads a Document to the associated `{name}` Search Profile. Notice that the file extension must be a [supported one](../Documents.md).
+Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a [supported one](/Documents.md).
 
 ### Request Body
 
@@ -363,13 +363,13 @@ It is mandatory to set a `filename` header value with the document name and exte
 filename: SampleFile.pdf
 ```
 
-Notice that this option does not enable to upload [metadata](../Documents.md#metadata).
+Notice that this option does not enable to upload metadata.
 
 #### form-data
 
 This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
 
-If you want to attach [metadata](../Documents.md#metadata) to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:
+If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:
 
 ```json
 {
