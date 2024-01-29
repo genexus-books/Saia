@@ -63,7 +63,7 @@ curl -X GET "$BASE_URL/v1/search/profiles" \
   -H "Accept: application/json"
 ```
 
-## GET /v1/search/profile/{name}
+## GET/v1/search/profile/{name}
 
 Get RAG Assistants `{name}` details.
 
@@ -192,7 +192,7 @@ curl -X POST "$BASE_URL/v1/search/profile" \
     }'
 ```
 
-## PUT /v1/search/profile/{name}
+## PUT/v1/search/profile/{name}
 
 Update a RAG Assistants.
 
@@ -239,7 +239,7 @@ curl -X PUT "$BASE_URL/v1/search/profile/{name}" \
 }'
 ```
 
-## DELETE /v1/search/profile/{name}
+## DELETE/v1/search/profile/{name}
 
 Delete a RAG Assistants.
 
@@ -347,86 +347,10 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-```
-
-## GET /v1/search/profile/{name}/document/{id}
-
-Using the `{name}` RAG Assistants, it gets details about the `{id}` document.
-
-### Parameters
-
-| Name | Type | Description |
-|--------|--------|-------------|
-| name | string | Search Profile name (required) |
-| id | string | Document Id (required) |
-
-### Response
-
-```json
-{
-  "extension": "string",
-  "id": "string",
-  "indexStatus": "string", /* Unknown, Starting, Failed, Pending, Success */
-  "indexDetail": "string",
-  "keyName": "string",
-  "metadata": [
-    {
-      "key": "string",
-      "value": "string"
-    },
-    ...
-  ],
-  "name": "string",
-  "timestamp": "timestamp",
-  "url": "string"
-}
-```
-
-### CURL Example
-
-```shell
-curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
- -H "Authorization: Bearer $SAIA_PROJECT_APITOKEN" \
- -H "accept: application/json"
-```
-
-## POST /v1/search/profile/{name}/document
-
 Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a supported one.
 
 
 ### Request Body
-
-The supported options are `binary` or `multipart/form-data` including a `File` type.
-
-#### Binary
-
-Useful for its simplicity, encodes the binary data directly in the request body. Set the request with the associated `Content-Type` header to indicate the type of data being sent (e.g., `application/pdf`, `text/plain`).
-
-It is mandatory to set a `filename` header value with the document name and extension. For example:
-
-```
-filename: SampleFile.pdf
-```
-
-Notice that this option does not enable to upload metadata.
-
-#### form-data
-
-This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
-
-If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:
-
-
-#### form-data
-
-
-This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
-
-
-If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:nt to the associated `{name}` RAG Assistants. Notice that the file extension must be a supported one.
-
-### Request Bod
 
 The supported options are `binary` or `multipart/form-data` including a `File` type.
 
@@ -499,7 +423,7 @@ curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
  --form 'file=@"/C:/temp/SampleFile.pdf"'
 ```
 
-## DELETE /v1/search/profile/{name}/document/{id}
+## DELETE/v1/search/profile/{name}/document/{id}
 
 Delete a Document.
 
@@ -522,6 +446,6 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
  -H "accept: application/json"
 ```
 
-## POST /v1/search/execute
+## POST/v1/search/execute
 
 Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
