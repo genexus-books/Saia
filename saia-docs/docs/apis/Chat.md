@@ -41,14 +41,14 @@ The `model` needs to address the assistant `type` and `name`. Then, depending on
 
 | Type | Description |
 | --- | --- |
-| `assistant` | identifies a [standard assistant](./AssistantsAPI.md#genexus-enterprise-ai-assistant-api) |
-| `search` | identifies a [RAG Assistants](../RAG/RAGAssistantsSection.md) |
+| `assistant` | Identifies a [standard assistant](./AssistantsAPI.md#genexus-enterprise-ai-assistant-api) |
+| `search` | Identifies a [RAG Assistant](../RAG/RAGAssistantsSection.md) |
 
-The `messages` element defines the desired messages to be added, the minimal value needs to be the following where the `content` details the user input.
+The `messages` element defines the desired messages to be added. The minimal value needs to be the following, where the `content` details the user input.
 
 ```json
 {
-    "role": "string", /* user, system and may support other depending on the selected model */
+    "role": "string", /* user, system and may support others depending on the selected model */
     "content": "string"
 }
 ```
@@ -72,7 +72,7 @@ You can add additional parameters; these are possible body samples.
 }
 ```
 
-The expected result is to `stream` the content translated depending on the Prompt defined by the.
+The expected result is to `stream` the translated content depending on the Prompt defined by the.
 
 ### RAG Sample
 
@@ -82,7 +82,7 @@ The expected result is to `stream` the content translated depending on the Promp
     "messages": [
         {
             "role": "user",
-            "content": "Resume to me the GeneXus Enterprise AI features"
+            "content": "Summarize the features of GeneXus Enterprise AI"
         }
     ],
     "stream": true,
@@ -91,7 +91,7 @@ The expected result is to `stream` the content translated depending on the Promp
 }
 ```
 
-The expected result is to query the Default RAG Assistant, streaming a reply once the sources were obtained.
+The expected result is to query the Default RAG Assistant and stream a reply once the sources were obtained.
 
 ### CURL samples
 
@@ -105,7 +105,7 @@ curl -X POST "$BASE_URL/chat" \
     "messages": [
         {
             "role": "user",
-            "content": "Resume to me the GeneXus Enterprise AI features"
+            "content": "Summarize the features of GeneXus Enterprise AI"
         }
     ],
     "stream": true,
