@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'How to create and test a RAG Assistant'
-sidebar_position: 6
+sidebar_position: 2
 ---
 # How to create and test a RAG Assistant
 
