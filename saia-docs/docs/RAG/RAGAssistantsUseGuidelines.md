@@ -35,7 +35,7 @@ Be specific when you know what you need and clearly articulate what you're looki
 information.
 
 When possible, avoid ambiguity by phrasing your questions or requests in a way that minimizes ambiguity. This helps the 
-assistant provide precise responses.
+assistant to provide precise responses.
 
 **Do:** What is the process for Uruguayan citizens to apply for a tourist visa to Japan?
 **Don't:** How do I travel to Japan?
@@ -75,7 +75,7 @@ strategies?
 
 ## Questions that the Assistant Can't Answer
 
-* Avoid asking for information related to dates. For example, “show me the latest documents” or “what was the contract
+* Avoid asking for information related to dates. For example, “Show me the latest documents” or “What was the contract
   between March and April?”.
 *	Comparisons or contrasting information are not expected to get good results; all these use cases may require different
   techniques for interaction.
