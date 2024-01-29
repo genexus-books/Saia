@@ -465,8 +465,8 @@ Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice tha
 
 Possible return errors:
 
- * [2027](./ErrorCodes.md#2027)
- * [2028](./ErrorCodes.md#2028)
+ * [2027](ErrorCodes.md#2027)
+ * [2028](ErrorCodes.md#2028)
 
 ### CURL Example
 
@@ -524,4 +524,4 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/execute
 
-Execute a search query, for more detail [here](./ChatWithDocumentsAPI.md).
+Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
