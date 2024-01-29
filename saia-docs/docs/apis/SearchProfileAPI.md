@@ -392,8 +392,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a 
-[supported one](../RAG/HowtoRAGAssistants.md).
+Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a supported one.
 
 
 ### Request Body
@@ -425,7 +424,7 @@ If you want to attach metadata to the file to be processed during ingestion, add
 This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
 
 
-If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:nt to the associated `{name}` RAG Assistants. Notice that the file extension must be a [supported one](../RAG/HowtoRAGAssistants.md).
+If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:nt to the associated `{name}` RAG Assistants. Notice that the file extension must be a supported one.
 
 ### Request Bod
 
