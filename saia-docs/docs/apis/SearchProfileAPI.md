@@ -1,15 +1,15 @@
 ---
-sidebar_label: 'Search Profile API'
+sidebar_label: 'RAG Assistants API'
 sidebar_position: 3
 ---
 
-# GeneXus Enterprise AI SearchProfile API
+# GeneXus Enterprise AI RAG Assistants API
 
-This API allows you to define different search profiles to implement the [RAG Assistants](/Documents.md) scenario.
+This API allows you to define different RAG Assistants.
 
 Check the [generic variables](./APIReference.md#generic-variables) needed to use the API.
 
-Check the parameters explanation [here](../RAG/RAGAssistantsSection.md).
+Check the explanation about parameters [here](../RAG/RAGAssistantsSection.md).
 
 > The following endpoints require a GeneXus Enterprise AI API token related to **project** scope.
 
@@ -26,11 +26,11 @@ Below is a summary of the available endpoints for this API:
 | DELETE | /v1/search/profile/{name}           | Delete a profile         |
 | GET    | /v1/search/profile/{name}/documents | Get documents for a profile |
 | GET    | /v1/search/profile/{name}/document/{id} | Retrieve Document information |
-| POST   | /v1/search/profile/{name}/document  | Uploads a Document |
+| POST   | /v1/search/profile/{name}/document  | Upload a Document |
 | DELETE | /v1/search/profile/{name}/document/{id} | Delete a Document |
 | POST   | /v1/search/execute                  | Execute a search query   |
 
-## GET /profiles
+## GET/profiles
 
 Retrieve all the RAG Assistants for a Project.
 
@@ -63,7 +63,7 @@ curl -X GET "$BASE_URL/v1/search/profiles" \
   -H "Accept: application/json"
 ```
 
-## GET /v1/search/profile/{name}
+## GET/v1/search/profile/{name}
 
 Get RAG Assistants `{name}` details.
 
@@ -119,9 +119,9 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}" \
  -H "accept: application/json"
 ```
 
-## POST /v1/search/profile
+## POST/v1/search/profile
 
-Creates a RAG Assistant.
+Create a RAG Assistant.
 
 ### Request Body
 
@@ -192,9 +192,9 @@ curl -X POST "$BASE_URL/v1/search/profile" \
     }'
 ```
 
-## PUT /v1/search/profile/{name}
+## PUT/v1/search/profile/{name}
 
-Update a RAG Assistants.
+Update a RAG Assistant.
 
 ### Parameters
 
@@ -239,9 +239,9 @@ curl -X PUT "$BASE_URL/v1/search/profile/{name}" \
 }'
 ```
 
-## DELETE /v1/search/profile/{name}
+## DELETE/v1/search/profile/{name}
 
-Delete a RAG Assistants.
+Delete a RAG Assistant.
 
 ### Parameters
 
@@ -251,7 +251,7 @@ Delete a RAG Assistants.
 
 ### Response
 
-StatusCode `200` is detailed when successfully deleted, otherwise StatusCode `400*` with a collection of errors.
+StatusCode `200` is shown when successfully deleted; otherwise, StatusCode `400*` is shown with a collection of errors.
 
 ### CURL Example
 
@@ -261,7 +261,7 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}" \
  -H "accept: application/json"
 ```
 
-## GET /profile/{name}/documents
+## GET/profile/{name}/documents
 
 List the documents for a RAG Assistant.
 
@@ -304,7 +304,7 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/documents" \
 $BASE_URL/v1/search/profile/{name}/documents?skip={skip}&count={count}
 ```
 
-## GET /v1/search/profile/{name}/document/{id}
+## GET/v1/search/profile/{name}/document/{id}
 
 Using the `{name}` RAG Assistants, it gets details about the `{id}` document.
 
@@ -347,7 +347,8 @@ curl -X GET "$BASE_URL/v1/search/profile/{name}/document/{id}" \
 
 ## POST /v1/search/profile/{name}/document
 
-Uploads a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a [supported one](/Documents.md).
+Upload a Document to the associated `{name}` RAG Assistants. Notice that the file extension must be a supported one.
+
 
 ### Request Body
 
@@ -363,13 +364,13 @@ It is mandatory to set a `filename` header value with the document name and exte
 filename: SampleFile.pdf
 ```
 
-Notice that this option does not enable to upload metadata.
+Note that this option does not enable to upload metadata.
 
 #### form-data
 
 This format allows you to include both binary data and other form fields in a single request. Each part of the data (binary file, text fields, etc.) is separated by a boundary and sent as separate parts. It is expected to be used for large files.
 
-If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example the following is a valid metadata for a Document:
+If you want to attach metadata to the file to be processed during ingestion, add a `metadata` form-data variable with the desired value; remember that the expected format is a `key/value` JSON list. For example, the following is a valid metadata for a Document:
 
 ```json
 {
@@ -384,12 +385,12 @@ The metadata can be uploaded as `Text` or directly from a `File`.
 
 ### Response
 
-Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Notice that, once the document is uploaded, the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status, the expected result is `Success`.
+Equivalent to the [Get Response](#get-v1searchprofilenamedocumentid). Note that, once the document is uploaded, the `indexStatus` will be `Unknown` as it is queued to be ingested. Use the [Get Response](#get-v1searchprofilenamedocumentid) API to check the document status; the expected result is `Success`.
 
 Possible return errors:
 
- * [2027](./ErrorCodes.md#2027)
- * [2028](./ErrorCodes.md#2028)
+ * [2027](ErrorCodes.md#2027)
+ * [2028](ErrorCodes.md#2028)
 
 ### CURL Example
 
@@ -422,7 +423,7 @@ curl -X POST "$BASE_URL/v1/search/profile/{name}/document" \
  --form 'file=@"/C:/temp/SampleFile.pdf"'
 ```
 
-## DELETE /v1/search/profile/{name}/document/{id}
+## DELETE/v1/search/profile/{name}/document/{id}
 
 Delete a Document.
 
@@ -435,7 +436,7 @@ Delete a Document.
 
 ### Response
 
-StatusCode `200` is detailed when successfully deleted, otherwise `400*` is displayed with a collection of errors.
+StatusCode `200` is shown when successfully deleted; otherwise, `400*` is displayed with a collection of errors.
 
 ### CURL Example
 
@@ -445,6 +446,6 @@ curl -X DELETE "$BASE_URL/v1/search/profile/{name}/document/{id}" \
  -H "accept: application/json"
 ```
 
-## POST /v1/search/execute
+## POST/v1/search/execute
 
-Execute a search query, for more detail [here](ChatWithDocumentsAPI.md).
+Execute a search query. For more details, click [here](ChatWithDocumentsAPI.md).
