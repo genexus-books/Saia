@@ -28,7 +28,7 @@ This Panel contains:
 
 ### Assistants Section
 
-In the upper part of the panel, there is a list of Assistants, including those defined by default and those defined by your 
+In the upper part of the Panel, there is a list of Assistants, including those defined by default and those defined by your 
 organization. The default Assistants include "Search with Google", "Chat with LLMs", and "Create Images".
 
 ![image](https://github.com/genexus-books/Saia/blob/d231b62ad6401a9bfbf9a7aea78b485b3b16a5fd/saia-docs/assets/images/Frontend2.png?raw=true)
@@ -44,7 +44,7 @@ even organize your chats. For example, you may drag and drop your chats in the c
 organized and accessible.  
 
 *	Rename your conversations. This is done by clicking on the name of the chat, then selecting the pencil image, and then
-editing -based on your preferences. To end, you confirm the change by pressing Enter or by clicking the check mark. 
+editing based on your preferences. To end, you confirm the change by pressing Enter or by clicking the check mark. 
 
 *	Delete a specific chat when you no longer need it. To do this, you must select the chat to be deleted and then click on the
 Trash icon, and end by confirming with a click on the check mark. 
@@ -54,15 +54,15 @@ you change your browser, you will not see the same thing.
 
 ### User Menu
 
-The User Menu is in the lower part of the panel, with additional options to manage and customize your experience.
+The User Menu is in the lower part of the Panel, with additional options to manage and customize your experience.
 
 ![image](https://github.com/genexus-books/Saia/blob/d231b62ad6401a9bfbf9a7aea78b485b3b16a5fd/saia-docs/assets/images/Frontend3.png?raw=true)
 
 It includes the following options:
 
-*	Clear Conversation: it deletes all conversations. 
+*	Clear Conversations: it deletes all conversations. 
 
-*	Settings: it adjusts the panel’s appearance by changing between light and dark modes. 
+*	Settings: it adjusts the Panel's appearance by changing between light and dark modes. 
 
 *	Log out: to exit the system.
 
