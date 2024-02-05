@@ -91,7 +91,7 @@ By following the above steps, you can easily integrate GeneXus Enterprise AI Htt
 ### How to integrate GeneXus Enterprise AI with Third Party SDKs
 
 #### cURL
-```curl
+```shell
 curl https://api.openai.com/v1/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
@@ -154,27 +154,27 @@ main();
 
 #### DALL-E-2 - cURL ​
 
-```
-curl --location 'https://api.beta.saia.ai/proxy/openai/v1/images/generations' \
+```shell
+curl --location 'https://api.saia.ai/proxy/openai/v1/images/generations' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: $SAIA_APITOKEN" \
 -d '{
     "model": "dall-e-2", 
     "prompt": "a halloween pumpkin",
-    "size": "1024x1024" # Specify the image quality here.
+    "size": "1024x1024"
 }'
 ```
 #### DALL-E-3 - cURL ​
 
-```
-curl --location 'https://api.beta.saia.ai/proxy/openai/v1/images/generations' \
+```shell
+curl --location 'https://api.saia.ai/proxy/openai/v1/images/generations' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: $SAIA_APITOKEN" \
 -d'{
     "model": "dall-e-3",
-    "quality": "hd", /* quality="standard", */
+    "quality": "hd", 
     "prompt": "a halloween pumpkin",
-    "size": "1792x1024" /*1024×1024, 1024x1792, 1792x1024*/
+    "size": "1792x1024" 
 }'
 ```
 There are no specificities in the generation of requests to the GeneXus Enterprise AI Proxy, as compared to the direct requests to OpenAI. Therefore, it might prove useful to query the official documents of OpenAI for obtaining further details: [Image generation](https://platform.openai.com/docs/guides/images/usage).
@@ -183,7 +183,7 @@ There are no specificities in the generation of requests to the GeneXus Enterpri
 
 #### cURL
 
-```
+```shell
 curl https://api.saia.ai/proxy/openai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: $SAIA_APITOKEN" \
