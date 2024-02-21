@@ -11,14 +11,15 @@ Table of contents
 * [Introduction](#introduction)
 * [Dashboard](#dashboard)
 * [Projects](#projects)
-* [Members](#members)
 * [Assistants](#assistants)
    * [Creating a Prompt Assistant](#creating-a-prompt-assistant)
    * [Creating a Chat Assistant](#creating-a-chat-assistant)
 * [RAG Assistants](#rag-assistants)
+* [Playground](#Playground)
 * [Observability](#observability)
   * [Requests](#requests)   
 * [API Tokens](#api-tokens)
+* [Members](#members)
 
 ## Introduction
 
