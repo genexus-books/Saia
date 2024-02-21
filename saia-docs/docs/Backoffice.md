@@ -12,7 +12,6 @@ Table of contents
 * [Dashboard](#dashboard)
 * [Projects](#projects)
 * [Assistants](#assistants)
-   * [Creating a Prompt Assistant](#creating-a-prompt-assistant)
    * [Creating a Chat Assistant](#creating-a-chat-assistant)
 * [RAG Assistants](#rag-assistants)
 * [Playground](#Playground)
