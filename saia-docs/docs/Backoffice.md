@@ -57,34 +57,25 @@ The "Drop filters here" option makes it possible to set filters that affect the 
 
 In addition, the "Assistant" and "Model" columns can be customized by clicking on the cog icon. The "Assistant" column offers the following configuration options:
 
-  **Sorting:** Ascending, Descending
-  
-  **Subtotals:** Add or remove subtotals to summarize information.
-  
-  **Restore default view:** Revert to the original view settings.
-  
-  **Move to Column:** Change the arrangement of column-specific items.
-  
-  **Search:** Make quick searches for specific models.
+  * **Sorting:** Ascending, Descending
+  * **Subtotals:** Add or remove subtotals to summarize information.
+  * **Restore default view:** Revert to the original view settings.
+  * **Move to Column:** Change the arrangement of column-specific items.
+  * **Search:** Make quick searches for specific models.
  
 On the other hand, in the "Model" column, the configuration options when clicking on the cog icon are:
 Sorting: Ascending, Descending
 
-  **Subtotals:** Add or remove subtotals to summarize information.
-  
-  **Restore default view:** Restore the original view settings.
-  
-  **Move to Column:** Change the arrangement of column-specific items.
-  
-  **Search:** Make quick searches for specific models.
-  
-  **Model-specific list:** Filter information by models according to the user's preferences.
+  * **Subtotals:** Add or remove subtotals to summarize information.
+  * **Restore default view:** Restore the original view settings.
+  * **Move to Column:** Change the arrangement of column-specific items.
+  * **Search:** Make quick searches for specific models.
+  * **Model-specific list:** Filter information by models according to the user's preferences.
   
 Finally, by clicking on the three horizontal lines in the upper right corner of the Pivot Activity by Assistants table, you can access options such as export, column visibility:
 
-  **Export:** XML, HTML, PDF, XLS, XLSX.
-  
-  **Visible columns:** Customize which columns are visible in the table.
+  * **Export:** XML, HTML, PDF, XLS, XLSX.
+  * **Visible columns:** Customize which columns are visible in the table.
   
 The dashboard allows you to explore the users' metrics. To access these metrics, click on "User".
 
@@ -95,21 +86,14 @@ This specific panel is automatically filtered by the organization and project se
 Note that the filters by date range are independent in each Dashboard, both in "Project" and "User".
 The metrics provided in the user Dashboard include:
 
-  **Total active users:** This is obtained by running a select count distinct on the requests table; more specifically, on the "RequestUserId" field. This provides an accurate total of active users in the system.
-  
-  **Average Cost by User:** Calculate the average cost incurred by each user.
-  
-   **Average Requests by User:** Provide the average number of questions or interactions of each user with the various assistants.
-   
-  **Top Ten Users by Cost:** Identify and display the top ten users with the highest costs, considering the possibility that "RequestUserId" may be null.
-  
-  **Top Ten Users by Request:** List the ten users with the highest number of requests, even considering that "RequestUserId” may be null.
-  
-  **Timeline with Average Cost by User:** Display the time evolution of the average cost per user.
-  
-  **Timeline with Average Requests by User:** Display the temporal variation in the average number of requests per user.
-  
-  **Pivot Activity by Users:** Provide a detailed breakdown by UserId, Assistant, Model, Cost and number of Requests.
+  * **Total active users:** This is obtained by running a select count distinct on the requests table; more specifically, on the "RequestUserId" field. This provides an accurate total of active users in the system.
+  * **Average Cost by User:** Calculate the average cost incurred by each user.
+  * **Average Requests by User:** Provide the average number of questions or interactions of each user with the various assistants.
+  * **Top Ten Users by Cost:** Identify and display the top ten users with the highest costs, considering the possibility that "RequestUserId" may be null.
+  * **Top Ten Users by Request:** List the ten users with the highest number of requests, even considering that "RequestUserId” may be null.
+  * **Timeline with Average Cost by User:** Display the time evolution of the average cost per user.
+  * **Timeline with Average Requests by User:** Display the temporal variation in the average number of requests per user.
+  * **Pivot Activity by Users:** Provide a detailed breakdown by UserId, Assistant, Model, Cost and number of Requests.
 
 ## Projects
 
