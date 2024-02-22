@@ -30,7 +30,7 @@ This documentation will guide you through the various features and functionaliti
 
 When accessing the GeneXus Enterprise AI backoffice, a dashboard is shown on the home screen. This dashboard displays essential indicators related to usage and costs for the selected project. 
 
-![image](https://github.com/genexus-books/Saia/blob/cde4bf5b860f8d4676dff97688adaddf3599df3e/saia-docs/assets/images/Dashboard.png?raw=true)
+![image](https://github.com/genexus-books/Saia/blob/ed52729171f69e6294f976a49bb36fc20eab411f/saia-docs/assets/images/Dashboard.png?raw=true)
 
 At the right top of the header, you can select the project you want to view. After selecting a project, the information shown on the dashboard is filtered, as are all the options offered in the left menu.
 
