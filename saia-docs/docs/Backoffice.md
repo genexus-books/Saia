@@ -51,7 +51,7 @@ The Pivot Activity by Assistants table allows you to filter and explore the cont
 
 ![image](https://github.com/genexus-books/Saia/blob/cde4bf5b860f8d4676dff97688adaddf3599df3e/saia-docs/assets/images/Dashboard3.png?raw=true)
 
-The "Drop filters here" option makes it possible to set filters that affect the entire table. To do so, drag elements from the rows or columns and select a value. For example, by dragging "Assistant" to "Drop filters here", the table will be displayed as shown and you can select the values [all] or N/A: 
+The "Drop filters here" option makes it possible to set filters that affect the entire table. To do so, drag elements from the rows or columns and select a value. For example, by dragging "Assistant" to "Drop filters here", the table will be displayed as shown and you can select the values [all] or N/D: 
 
 ![image](https://github.com/genexus-books/Saia/blob/cde4bf5b860f8d4676dff97688adaddf3599df3e/saia-docs/assets/images/Dashboard4.png?raw=true)
 
@@ -86,7 +86,7 @@ This specific panel is automatically filtered by the organization and project se
 Note that the filters by date range are independent in each Dashboard, both in "Project" and "User".
 The metrics provided in the user Dashboard include:
 
-  * **Total active users:** This is obtained by running a select count distinct on the requests table; more specifically, on the "RequestUserId" field. This provides an accurate total of active users in the system.
+  * **Total Active Users:** This is obtained by running a select count distinct on the requests table; more specifically, on the "RequestUserId" field. This provides an accurate total of active users in the system.
   * **Average Cost by User:** Calculate the average cost incurred by each user.
   * **Average Requests by User:** Provide the average number of questions or interactions of each user with the various assistants.
   * **Top Ten Users by Cost:** Identify and display the top ten users with the highest costs, considering the possibility that "RequestUserId" may be null.
