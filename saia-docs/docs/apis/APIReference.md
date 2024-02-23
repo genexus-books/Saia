@@ -77,7 +77,7 @@ In the case of APIs, to take advantage of cached content with CacheHit, the quer
 
 To control the state of the cache in APIs, the HTTP header is used in requests:
 
-To enable caching: X-Saia-Cache-Enabled=true 
-To disable caching: X-Saia-Cache-Enabled=false
+* To enable caching: X-Saia-Cache-Enabled=true
+* To disable caching: X-Saia-Cache-Enabled=false
 
 It is important to note that the cache is automatically refreshed every 7 days.
