@@ -72,7 +72,7 @@ You can add additional parameters; these are possible body samples.
 }
 ```
 
-The expected result is to `stream` the translated content depending on the Prompt defined by the.
+The expected result is to `stream` the translated content depending on the Prompt defined.
 
 ### RAG Sample
 
