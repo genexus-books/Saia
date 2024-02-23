@@ -1,9 +1,9 @@
 ---
-sidebar_label: 'RAG Assistants'
-sidebar_position: 15
+sidebar_label: 'Introduction'
+sidebar_position: 1
 ---
 
-# RAG Assistants
+# RAG Assistants Introduction
 
 [Retrieval Augmented Generation](https://www.promptingguide.ai/techniques/rag) (RAG) is an approach that combines information retrieval from unstructured data and text generation to improve performance on tasks such as question answering.
 

@@ -1,8 +1,8 @@
 ---
-sidebar_label: 'General Information'
-sidebar_position: 3
+sidebar_label: 'Configuration - General Information'
+sidebar_position: 5
 ---
-# General Information
+# Configuration - General Information
 
 ![image](https://github.com/genexus-books/Saia/blob/25b9adecc75e4453e71780bc32e6ff7f37151de1/saia-docs/assets/images/RAGAssistantsSection3.png?raw=true)
 

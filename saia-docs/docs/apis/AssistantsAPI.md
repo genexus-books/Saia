@@ -22,7 +22,6 @@ Check the [generic variables](./APIReference.md#generic-variables) needed to use
 | POST   | /v1/assistant/text/begin       | Begins a text conversation with the GeneXus Enterprise AI Assistant |
 | POST   | /v1/assistant/text             | Sends a text prompt to the GeneXus Enterprise AI Assistant |
 | POST   | /v1/assistant/chat             | Sends a chat request to the GeneXus Enterprise AI Assistant |
-| POST   | /v1/assistant/text2img         | Generates an image based on the given text |
 | GET    | /v1/assistant/request/{id}/status | Retrieves the status of a request |
 | POST   | /v1/assistant/request/{id}/cancel | Cancels a request |
 
@@ -451,49 +450,6 @@ curl -X POST $BASE_URL/v1/assistant/chat \
 ```
 
 Notice the [variables](../Prompt.md#design) section is optional and depends on your Prompt configuration.
-
-## POST /text2img
-
-Generates an image based on the given text.
-
-### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| prompt | string | The text to generate the image from. |
-
-### Response
-
-```json
-{
-  "requestId": "string",
-  "error": {
-    "code": 0,
-    "message": "string"
-  },
-  "providerName": "string",
-  "providerResponse": "string",
-  "progress": 0,
-  "timestamp": "string",
-  "status": "string",
-  "hotlink": true,
-  "output": [
-    {
-      "image_url": "string"
-    }
-  ]
-}
-```
-
-### CURL Example
-
-```shell
-curl -X POST $BASE_URL/v1/assistant/text2img \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "string"
-  }'
-```
 
 ## GET /request/{requestId}/status
 
