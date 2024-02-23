@@ -96,8 +96,7 @@ generation process.
 
 * ### Stream
 
-It enables or disables the transmission of results in a continuous or non-continuous manner during the process. It is configured using 
-Boolean values, where 'true' enables the transmission and 'false' disables it, so the end result is obtained directly.
+This value is deprecated. Check [here](../apis/Chat.md) for streaming usage.
 
 * ### Verbose
 
