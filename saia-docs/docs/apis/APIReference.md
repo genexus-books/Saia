@@ -12,7 +12,8 @@ Table of contents
 * [Generic Variables](#generic-variables)
 * [Authentication ](#authentication)
 * [Errors ](#errors)
-* [Versioning ](#versioning)
+* [Versioning](#versioning)
+* [Cache control](#Cache-control)
 * [Proxy AI API](../ProxyAPI.md)
 * [Organization API](OrganizationAPI.md)
 * [Assistants API](AssistantsAPI.md)
@@ -20,10 +21,10 @@ Table of contents
 * [Chat with Documents API](ChatWithDocumentsAPI.md)
 
 
-# Introduction
+## Introduction
 GeneXus Enterprise AI provides various APIs that, on one hand, allow integration with Large Language Model (LLM) systems and perform actions that modify the platform's metadata. On the other hand, a different set of APIs enables interaction with defined assistants.
 
-### Generic Variables
+## Generic Variables
 Notice the following properties needed when using the API.
 
 | Variable | Description |
@@ -39,7 +40,7 @@ To authenticate your requests, you need to provide your token via HTTP Basic Aut
 
 For security purposes, it is strongly recommended that you do not share your API tokens with anyone and revoke them immediately if they are compromised.
 
-# Errors
+## Errors
 REST API employs the widely accepted practice of using HTTP response codes to convey the status of an API request. The codes in the 2xx range indicate that the request was successful and the server has returned the expected data. On the other hand, the codes in the 4xx range signify that the request failed because of a client-side error, such as missing or invalid parameters, unauthorized access, or any other fault in the request. The codes in the 5xx range suggest that there's an error on the server-side, and the request couldn't be completed due to a server malfunction or connectivity issues. Such errors, fortunately, are infrequent in the service.
 
 By following these HTTP response codes, users can easily understand whether their API requests have succeeded or failed, and the probable causes of failure if there are any.
@@ -67,3 +68,16 @@ Whenever changes are made to the API, a new version is released. This approach a
 It is strongly recommended that you always specify the version number when making API requests to ensure the correct behavior of your application. You can find the latest version number in the documentation or by contacting the support team.
 
 By using versioning, you ensure that your application remains stable and functional, while still providing access to the latest API features and functionality.
+
+## Cache control
+
+GeneXus Enterprise AI has a cache control that is enabled by default for APIs ([Chat API](https://docs.saia.ai/apis/Chat) and [RAG Assistants API](https://docs.saia.ai/apis/SearchProfileAPI)), but disabled when accessing from the Frontend.
+
+In the case of APIs, to take advantage of cached content with CacheHit, the query must be identical in terms of assistantname, version, llmsettings, and prompt. Any modification to these parameters will result in cache invalidation.
+
+To control the state of the cache in APIs, the HTTP header is used in requests:
+
+To enable caching: X-Saia-Cache-Enabled=true 
+To disable caching: X-Saia-Cache-Enabled=false
+
+It is important to note that the cache is automatically refreshed every 7 days.
