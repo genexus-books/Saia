@@ -11,11 +11,19 @@ This log shows the most important fixes or features being added to the platform.
 
 ## 2024
 
+### February 29th
+
+* [Frontend](https://docs.saia.ai/Frontend) improvements in UI/UX.
+* Option to get feedback from end users when interacting with [RAG Assistant](https://docs.saia.ai/RAG/Documents).
+* Gemini Pro LLM support.
+* New [Dashboard](https://docs.saia.ai/Backoffice#introduction) with user metrics.
+* New Average Request Time metric added in the Project Dashboard.
+
 ### January 8th
 
 * The option formerly known as 'Search Documents' has been improved and renamed to RAG Assistant (Retrieval Augmented Generation), thus providing an optimized experience when searching and generating information.
 
-#### FrontEnd
+#### Frontend
 
 * Feedback is provided during conversations with RAG Assistants, indicating where you are in the process.
 * 'Response streaming' support for RAG Assistants.
