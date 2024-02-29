@@ -80,4 +80,4 @@ To control the state of the cache in APIs, the HTTP header is used in requests:
 * To enable caching: X-Saia-Cache-Enabled=true
 * To disable caching: X-Saia-Cache-Enabled=false
 
-It is important to note that the cache is automatically refreshed every 7 days.
+It is important to note that the cache expires after 7 days.
