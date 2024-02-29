@@ -6,17 +6,13 @@ sidebar_position: 27
 
 Explore the key innovation points in this roadmap, which reveal the improvements and breakthroughs that are on the way.
 
-* New Dashboard with user metrics.
-* New metric Average Request Time added in the Project Dashboard.
-* Support for Google Gemini Pro model.
-* Renaming Search Documents for RAG Assistants.
-* Improvements in RAG Assistant's configuration.
+* Chat with REST API assistants. This means that it is possible to define an assistant that operates in natural language with its methods.
+* Chat with your database assistants.
+* Chat with data analytics assistants.
+* Permissions by assistants in role-based access control.
 * Support for Dall-e 2 and Dall-e 3 model.
 * Support for content ingestion from JIRA and Confluence.
-* Possibility to chat with an API. This means that it is possible to define an assistant that operates in natural language
-  with its methods.
-* Upload images and videos from the front end for analysis with GPT-4 Vision.
-* Upload documents from the front end to chat with it.
+* Upload videos from the Frontend for analysis with GPT-4 Vision.
+* Upload documents from the Frontend to chat with them.
 * Function calling support.
-* Chat with your database assistants.
-* Permissions by assistants in a role-based access control.
+
